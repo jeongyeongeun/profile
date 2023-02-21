@@ -1,0 +1,45 @@
+
+/* ::selection{background:aquamarine;color:white;}
+::-webkit-selection{background:aquamarine;color:white;}
+::-moz-selection{background:aquamarine;color:white;}
+body{background:lightyellow;color:mediumslateblue;}
+*{cursor:default;font-family:'vt323',monospace;line-height:3.5vw;font-size:3vw;padding:0;outline:0;margin:0;}
+#t{position:absolute;bottom:20%;left:50%;width:600px;margin-left:-300px;visibility:hidden;white-space:pre-wrap;}
+a{color:mediumslateblue;text-decoration:none;border-bottom:1px solid aquamarine;}
+code{background:yellow;}
+.g{color:#0f0;}
+.p{color:pink;} */
+/* t.js-related: */
+/* ins,del{text-decoration:none;}
+s{display:none;}
+kbd{font-family:inherit;}
+
+#t{
+    display: none;
+}
+
+.t-caret{font-size:inherit;color:magenta;} */
+/* @media(max-width:800px){#t{width:400px;margin-left:-200px;}} */
+.tt{
+    display: none;
+}
+
+.ttt::after {
+    content :"\0020";
+    animation: pulse1s infinite;
+    color:transparent;
+    border-right:3px solid black;
+    margin-left:4px;
+    }
+
+    @keyframes pulse {
+    0% {
+    border-right:3px solid  black;
+    }
+    50% {
+    border-right:3px solid  transparent;
+    }
+    100% {
+    border-right:3px solid  black;
+    }
+}

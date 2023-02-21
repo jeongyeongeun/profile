@@ -35,18 +35,19 @@
     <link href="vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/device-mockups/device-mockups.min.css" rel="stylesheet" type="text/css">
 
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js">
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/index.min.js"></script>
+
+    <!-- <script src="./js/t.min.js"></script> -->
+    <!-- <script src="./js/custom.js"></script> -->
+
     <!-- Vitality Theme CSS -->
     <!-- INSTRUCTIONS: Uncomment the color scheme you want to use. Red is chosen by default. -->
+    <link rel="stylesheet" href="./css/custom.css">
     <link href="css/vitality-red.css" rel="stylesheet" type="text/css">
-    <!-- <link href="css/vitality-aqua.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-blue.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-green.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-orange.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-pink.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-purple.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-tan.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-turquoise.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="css/vitality-yellow.css" rel="stylesheet" type="text/css"> -->
 
     <!-- IE8 support for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -103,7 +104,12 @@
     <header style="background-image: url('img/agency/backgrounds/bg-header.jpg');">
         <div class="intro-content">
             <img src="img/agency/profile.svg" class="img-responsive img-centered" alt="">
-            <div class="brand-name">Hello!</div>
+            <div id="t" class="brand-name">
+                <div class="tt-holder">
+                    <p class="tt">hello</p>
+                    <span class="ttt"></span>
+                </span>
+            </div>
             <hr class="colored">
             <div class="brand-name-subtext">Here's my bio</div>
         </div>
@@ -111,6 +117,31 @@
             <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
         </div>
     </header>
+    <script>
+            const vis = (function () {
+    let stateKey,
+    eventKey,
+    keys = {
+        hidden: "visibilitychange",
+        webkitHidden: "webkitvisibilitychange",
+        mozHidden: "mozvisibilitychange",
+        msHidden: "msvisibilitychange"
+    };
+    for (stateKey in keys) {
+    if (stateKey in document) {
+        eventKey = keys[stateKey];
+        break;
+    }
+    }
+    return function (c) {
+    if (c) document.addEventListener(eventKey, c);
+    return !document[stateKey];
+    }
+})();
+    // tickerText(contents, keep, seconds, delay = 20, iterations = 0, ratio, secondsout, dev = false, pausetarget, stoptarget);
+    let $elements = $(".tt-holder .tt");
+    $(".ttt").tickerText($elements, 8, 3, 30, 1, 0.5, 2, false, "timerpause", "timerstop");
+    </script>
 
     <!-- About Section -->
     <section id="about">
