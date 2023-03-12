@@ -39,6 +39,9 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/index.min.js"></script>
+    <script type="module" src="./js/gradient/Gradient.js"></script>
+    
+    <script src="./js/script.js"></script>
 
     <!-- <script src="./js/t.min.js"></script> -->
     <!-- <script src="./js/custom.js"></script> -->
@@ -71,7 +74,7 @@
                     <i class="fa fa-bars"></i> Menu
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/agency/logo.svg" class="img-responsive" alt="">
+                    <img src="img/agency/Myname.svg" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -100,21 +103,31 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url('img/agency/backgrounds/bg-header.jpg');">
-        <div class="intro-content">
-            <img src="img/agency/profile.svg" class="img-responsive img-centered" alt="">
-            <div id="t" class="brand-name">
-                <div class="tt-holder">
-                    <p class="tt">hello</p>
-                    <span class="ttt"></span>
-                </span>
+    <header>
+        <div class="custom-shape-divider-bottom-1678639981">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="demo">
+            <canvas id="demo"></canvas>
+        </div>
+            <div class="intro-content">
+                <!-- <img src="img/agency/profile.svg" class="img-responsive img-centered" alt=""> -->
+                <div id="t" class="brand-name">
+                    <div class="tt-holder">
+                        <p class="tt">미래를 향해 나아가는 퍼블리셔</p>
+                        <p class="tt">준비된 퍼블리셔</p>
+                        <span class="ttt"></span>
+                    </span>
+                </div>
+                <!-- <hr class="colored"> -->
+                <div class="brand-name-subtext">Here's my bio</div>
+                </div>
             </div>
-            <hr class="colored">
-            <div class="brand-name-subtext">Here's my bio</div>
-        </div>
-        <div class="scroll-down">
-            <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
-        </div>
+            <div class="scroll-down">
+                <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
+            </div>
     </header>
     <script>
             const vis = (function () {
@@ -139,7 +152,7 @@
 })();
     // tickerText(contents, keep, seconds, delay = 20, iterations = 0, ratio, secondsout, dev = false, pausetarget, stoptarget);
     let $elements = $(".tt-holder .tt");
-    $(".ttt").tickerText($elements, 8, 3, 30, 1, 0.5, 2, false, "timerpause", "timerstop");
+    $(".ttt").tickerText($elements, 0, 3, 30, 1, 0.5, 2, false, "timerpause", "timerstop");
     </script>
 
     <!-- About Section -->

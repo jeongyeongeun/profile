@@ -177,8 +177,9 @@ hr.colored {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  color: #EF4035;
-  background-color: white;
+  /* color: #EF4035; */
+  font-weight: bold;
+  background: none;
   border-radius: 0;
 }
 .navbar-default {
@@ -189,7 +190,7 @@ hr.colored {
   border-color: rgba(255, 255, 255, 0.5);
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #9836ff;
 }
 .navbar-default,
 .navbar-inverse {
@@ -287,6 +288,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   padding: 100px 0;
+  overflow: hidden;
 }
 header .intro-content {
   color: white;
@@ -319,12 +321,12 @@ header .scroll-down {
 header .scroll-down .btn {
   height: 50px;
   width: 50px;
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 100% !important;
   line-height: 50px;
   padding: 0;
   letter-spacing: normal;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 30px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -349,7 +351,7 @@ header .scroll-down .btn:hover {
     margin: auto;
     position: absolute;
     top: 50%;
-    left: 50%;
+    right: 11%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
