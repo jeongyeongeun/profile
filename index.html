@@ -34,6 +34,7 @@
     <link href="vendor/formstone/background.css" rel="stylesheet" type="text/css">
     <link href="vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/device-mockups/device-mockups.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -103,7 +104,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="header">
         <!-- <div class="custom-shape-divider-bottom-1678639981">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
@@ -114,16 +115,20 @@
         </div>
             <div class="intro-content">
                 <!-- <img src="img/agency/profile.svg" class="img-responsive img-centered" alt=""> -->
+                <div class="brand-name-subtext">준비된 퍼블리셔, 정영은입니다</div>
+                </div>
                 <div id="t" class="brand-name">
-                    <div class="tt-holder">
-                        <p class="tt">미래를 향해 나아가는 퍼블리셔</p>
-                        <p class="tt">준비된 퍼블리셔</p>
+                    <div class="tt-holder txt anim-text-flow">
+                        <p class="tt">I'm get ready!</p>
+                        <p class="tt">are you ready?</p>
+                        <p class="tt">3</p>
+                        <p class="tt">2</p>
+                        <p class="tt">1</p>
+                        <p class="tt">GO!</p>
                         <span class="ttt"></span>
                     </span>
                 </div>
                 <!-- <hr class="colored"> -->
-                <div class="brand-name-subtext">Here's my bio</div>
-                </div>
             </div>
             <div class="scroll-down">
                 <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
@@ -152,7 +157,7 @@
 })();
     // tickerText(contents, keep, seconds, delay = 20, iterations = 0, ratio, secondsout, dev = false, pausetarget, stoptarget);
     let $elements = $(".tt-holder .tt");
-    $(".ttt").tickerText($elements, 0, 3, 30, 1, 0.5, 2, false, "timerpause", "timerstop");
+    $(".ttt").tickerText($elements, 0, 3, 30, 1, 0.5, 0, false, "timerpause", "timerstop");
     </script>
 
     <!-- About Section -->
@@ -899,6 +904,9 @@
     <!-- Block Button Call to Action -->
     <a href="https://wrapbootstrap.com/theme/vitality-multipurpose-one-page-theme-WB02K3KK3" class="btn btn-block btn-full-width">Buy Vitality Now!</a>
 
+    <div class="top_btn" id="topBtn">
+        <span>Top</span>
+    </div>
     <!-- Footer -->
     <footer class="footer" style="background-image: url('img/agency/backgrounds/bg-footer.jpg')">
         <div class="container text-center">

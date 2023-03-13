@@ -302,11 +302,14 @@ header .brand-name {
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 15px;
+  text-align: center;
 }
 header .brand-name-subtext {
+  position: relative;
   font-size: 20px;
   line-height: 20px;
   font-weight: 300;
+  color: #222;
 }
 header img {
   max-width: 150px;
@@ -333,9 +336,16 @@ header .scroll-down .btn {
   transition: all 0.5s;
 }
 header .scroll-down .btn:hover {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.5);
+  color: #9836ff;
+  border-color:#9836ff;
   outline: none;
+}
+
+header .scroll-down .btn::after{
+  display: block;
+  content: GO!;
+
+
 }
 @media (min-width: 768px) {
   header {
@@ -347,11 +357,11 @@ header .scroll-down .btn:hover {
   header .intro-content {
     color: white;
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin: auto;
     position: absolute;
     top: 50%;
-    right: 11%;
+    right: -50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -361,6 +371,7 @@ header .scroll-down .btn:hover {
     line-height: 80px;
   }
   header .brand-name-subtext {
+    top: 10px;
     font-size: 30px;
     line-height: 30px;
   }

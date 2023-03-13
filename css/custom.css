@@ -24,9 +24,9 @@ kbd{font-family:inherit;}
     display: none;
 }
 
-.ttt::after {
+/* .ttt::after {
     content :"\0020";
-    animation: pulse1s infinite;
+    animation: pulse infinite;
     color:transparent;
     border-right:3px solid black;
     margin-left:4px;
@@ -42,7 +42,7 @@ kbd{font-family:inherit;}
     100% {
     border-right:3px solid  black;
     }
-}
+} */
 
 .custom-shape-divider-bottom-1678639981 {
     position: absolute;
@@ -76,3 +76,26 @@ kbd{font-family:inherit;}
     overflow: hidden;
     content: "";
 }
+
+.top_btn{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #bd85f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.top_btn span{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
