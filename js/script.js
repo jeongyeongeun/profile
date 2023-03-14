@@ -1,6 +1,5 @@
 let isScroll = false;
 const nav = ".navbar";
-
 $(function(){
     // As A jQuery Plugin
     $('#demo').gradient({
@@ -13,7 +12,10 @@ $(function(){
     setTimeout(function(){
         console.log(isScroll)
         if(isScroll == 0){
-            location.href = "#about"
+            location.replace('#about');
+            // $('html, body').animate({
+            //     scrollTop: (document.getElementById('about').getBoundingClientRect().height)
+            //   }, 400);
         }
     }, 5000)
 
@@ -33,7 +35,7 @@ $(function(){
         })
         $(window).on({
             scroll:function(){
-                if ($(this).scrollTop() > 900) {
+                if ($(this).scrollTop() > 250) {
                     $("#topBtn").fadeIn();
                 } else {
                     $("#topBtn").fadeOut();
@@ -54,14 +56,16 @@ $(function(){
 
 })
 
-const f_isScroll = (element) => {
-    return ($(element).offset().top <= $(window).scrollTop());
+const f_isScroll = () => {
+    let scrollY = $(window)[0].scrollY;
+    return 0 < scrollY;
 }
 
 const f_scroll = () => {
-    if(f_isScroll(nav)){     //스크롤 했을 때
+    if(f_isScroll()){     //스크롤 했을 때
         isScroll = true;
         return;
     }
     isScroll = false;
 }
+
