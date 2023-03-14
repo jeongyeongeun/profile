@@ -46,10 +46,17 @@ $(function(){
         $("#topBtn").on("click",function() {
             $('html').animate({
                 scrollTop : 0
-            }, 400);
+            }, 600);
+            $("#topBtn span").text("슈웅")
             return false;
         });
 
+        //텍스트 쪼개서 서로 다른 색 나오게 하기
+        // $('.text').html(function(i, html) {
+        //     let chars = $.trim(html).split("");
+        
+        //     return '<span>' + chars.join('</span><span>') + '</span>';
+        // });
 
 
 

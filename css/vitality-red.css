@@ -202,14 +202,23 @@ hr.colored {
   color: white;
   font-size: 14px;
   padding: 6px 10px;
+  border: 0;
+  transition: 0.3s;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: white;
-  color: #222;
+  background: none;
+  border: 0;
+  transform: rotate(180deg);
 }
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+  border: 0;
+}
+
+
 .navbar-default .navbar-brand,
 .navbar-inverse .navbar-brand {
   color: white;
@@ -296,6 +305,7 @@ header .intro-content {
   position: relative;
 }
 header .brand-name {
+  position: relative;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 55px;
   line-height: 55px;
