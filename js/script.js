@@ -60,6 +60,10 @@ $(function(){
                     page--;
                 } 
                 if(page == 1) isScroll = false;
+                if(page == 2) {
+                    console.log("1")
+                    $(".chart__bar").data('animate')
+                }
                 var posTop =(page-1) * $(window).height();
                 mHtml.animate({scrollTop : posTop}, 500);
             }

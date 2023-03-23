@@ -107,7 +107,7 @@ kbd{font-family:inherit;}
 }
 
 .demo{
-    transform: rotate(355deg) translate(-4px, -296px) scale(1.1);
+    /* transform: rotate(355deg) translate(-4px, -296px) scale(1.1); */
     width: 100%;
     height: 500px;
     overflow: hidden;
