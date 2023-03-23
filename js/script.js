@@ -48,6 +48,21 @@ $(function(){
                     $("#topBtn").fadeOut();
                     $("#topBtn span").text("Top")
                 }
+                var elem = $('.chart__bar');
+    
+                elem.each(function () {
+            
+                var isAnimate = $(this).data('animate');
+                var elemOffset = $(this).offset().top;
+                var scrollPos = $(window).scrollTop();
+                var wh = $(window).height();
+            
+                if(scrollPos > elemOffset - wh + (wh / 2)){
+                    $(this).addClass(isAnimate);
+                }else{
+                    $(this).removeClass(isAnimate);
+                }
+                });
             },
             wheel: function(e){
                 if(mHtml.is(":animated")) return;
@@ -60,10 +75,13 @@ $(function(){
                     page--;
                 } 
                 if(page == 1) isScroll = false;
-                if(page == 2) {
-                    console.log("1")
-                    $(".chart__bar").data('animate')
-                }
+
+                // if(page == 2) {
+                //     console.log("1")
+                    
+                //     var isAnimate = $(this).data('animate');
+                //     $(this).addClass(isAnimate);
+                // }
                 var posTop =(page-1) * $(window).height();
                 mHtml.animate({scrollTop : posTop}, 500);
             }
@@ -76,6 +94,13 @@ $(function(){
             }, 600);
             $("#topBtn span").text("슈웅");
         });
+        // $(".chart__bar").each(function () {
+        //     var isAnimate = $(this).data('animate');
+        
+        //     if(page =2 ){
+        //         $(this).addClass(isAnimate);
+        //     }
+        //     })
 
         //텍스트 쪼개서 서로 다른 색 나오게 하기
         // $('.text').html(function(i, html) {

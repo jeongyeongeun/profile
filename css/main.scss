@@ -190,16 +190,16 @@ $chartBarGap: 10px;
     border-bottom-right-radius: $border-rad;
     opacity: 0;
 
-    animation: 1s anim-lightspeed-in ease forwards;
+    // animation: 1s anim-lightspeed-in ease forwards;
 
     .chart--dev & {
-    @include stagger-anim-delay($chartOneCount, 5s, 0.2s);
+    @include stagger-anim-delay($chartOneCount, 1s, 0.2s);
     }
     .chart--prod & {
     @include stagger-anim-delay($chartTwoCount, 3.8s, 0.2s);
     }
     .chart--design & {
-    @include stagger-anim-delay($chartThreeCount, 5s, 0.2s);
+    @include stagger-anim-delay($chartThreeCount, 1s, 0.2s);
     }
 }
 
