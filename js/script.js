@@ -102,13 +102,13 @@ $(function(){
         //     }
         //     })
 
-        //텍스트 쪼개서 서로 다른 색 나오게 하기
-        // $('.text').html(function(i, html) {
-        //     let chars = $.trim(html).split("");
+        // 텍스트 쪼개서 서로 다른 색 나오게 하기
+        $('.text').html(function(i, html) {
+            let chars = $.trim(html).split("");
         
-        //     return '<span>' + chars.join('</span><span>') + '</span>';
-        // });
-        //
+            return '<span>' + chars.join('</span><span>') + '</span>';
+        });
+        
 
         
         

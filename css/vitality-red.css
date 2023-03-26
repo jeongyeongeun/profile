@@ -691,6 +691,7 @@ aside.cta-quote span.quote {
   display: block;
   font-size: 18px;
   line-height: 18px;
+  padding-bottom: 30px;
 }
 .portfolio-carousel .item .device-container {
   padding: 25px;
@@ -1104,20 +1105,23 @@ footer.footer .copyright p.small {
 .btn-outline-light {
   color: white;
   border: 1px solid white;
-  background: transparent;
+
+  /* background: transparent; */
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
 .btn-outline-light:hover,
 .btn-outline-light:focus {
-  color: #EF4035;
-  background: white;
+  color: #9836ff;
+  /* background: white; */
   outline: none;
+  background-position: left;
 }
 .btn-outline-dark {
   color: #222;
   border: 1px solid #222;
+
   background: transparent;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -1126,9 +1130,10 @@ footer.footer .copyright p.small {
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
   color: white;
-  background: #EF4035;
-  border-color: #EF4035;
+  /* background: #EF4035; */
+  border-color: #9836ff;
   outline: none;
+  background-position: left;
 }
 .btn {
   border-radius: 0;
@@ -1136,6 +1141,11 @@ footer.footer .copyright p.small {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 1px;
+  background: linear-gradient(90deg, #9836ff 50%, #fff 50%);
+  background-size: 200%;
+  background-position: right;
+  transition: background-position 0.6s;
+
 }
 .btn:focus,
 .btn:active,
