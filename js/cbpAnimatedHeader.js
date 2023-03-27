@@ -28,9 +28,11 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.remove( header, 'navbar-expanded' );
+			classie.add( header, 'navbar-left' );
 		}
 		else {
 			classie.add( header, 'navbar-expanded' );
+			classie.remove( header, 'navbar-left' );
 		}
 		didScroll = false;
 	}
