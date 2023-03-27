@@ -141,7 +141,7 @@ section{
 
 .p_img_box{
     width: 70%;
-    height: 500px;
+    height: 400px;
     background: url(../img/agency/portfolio/mockup2.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ section{
 
 .p_img_box_h{
     width: 70%;
-    height: 500px;
+    height: 400px;
     background: url(../img/agency/portfolio/mockup3.png);
     background-size: cover;
     border-radius: 20px;
@@ -159,11 +159,16 @@ section{
     /* float: right; */
 }
 
+#about .content-row{
+    /* margin-top: 120px; */
+}
+
 #cms > div,
 #hard > div{
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 #cms > div > div,
@@ -208,7 +213,7 @@ section{
 
 #renewal .owl-wrapper-outer{
     position: relative;
-    top: 81px;
+    /* top: 81px; */
 }
 
 .todo{

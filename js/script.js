@@ -1,8 +1,8 @@
 let isScroll = false;
 
-window.addEventListener("wheel", function(e){
-    e.preventDefault();
-},{passive : false});
+// window.addEventListener("wheel", function(e){
+//     e.preventDefault();
+// },{passive : false});
 
 $(function(){
     // As A jQuery Plugin
@@ -57,7 +57,7 @@ $(function(){
                 var scrollPos = $(window).scrollTop();
                 var wh = $(window).height();
             
-                if(scrollPos > elemOffset - wh + (wh / 2)){
+                if(scrollPos > elemOffset - wh + (wh / 2)-140){
                     $(this).addClass(isAnimate);
                 }else{
                     $(this).removeClass(isAnimate);

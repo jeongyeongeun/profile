@@ -3,8 +3,6 @@
  */
 .anim-text-flow,
 .anim-text-flow-hover:hover,
-.top_btn,
-.top_btn:hover,
 .navbar-inverse {
     /*
     * Animation variables
@@ -59,7 +57,7 @@
 
 
 .top_btn,
-.top_btn:hover {
+.top_btn:hover{
     /*
     * Animation variables
     */
@@ -104,6 +102,7 @@
     }
 }
 
+
 // 그래프 애니메이션
 
 //Setup
@@ -122,7 +121,7 @@ $baseFontSize: 16px;
 $baseLineHeight: 1;
 
 $chartGap: 10px;
-$chartCount: 3;
+$chartCount: 2;
 $chartOneCount: 11;
 $chartTwoCount: 2;
 $chartThreeCount: 4;
@@ -137,8 +136,8 @@ $chartBarGap: 10px;
 
 //Demo
 .skills {
-    width: 80%;
-    max-width: 1000px;
+    // width: 80%;
+    // max-width: 1000px;
     height: 100px;
     height: $totalChartCount * ($chartBarHeight + $chartBarGap) + ($chartCount * ($chartGap + $titleHeight));
     margin: auto;
@@ -166,18 +165,20 @@ $chartBarGap: 10px;
     font-weight: bold;
     opacity: 0;
     animation: 1s anim-lightspeed-in ease forwards;
+    animation-delay: 1s;
 
-    .chart--dev & {}
-    .chart--prod & {
-    animation-delay: 3.3s;
+    .chart--dev & {
+        // animation-delay: 1s;
     }
+
     .chart--design & {
-    animation-delay: 4.5s;
+    // animation-delay: 1.8s;
     }
 }
 
 .chart--horiz {
     overflow: hidden;
+    transform: skewY(-2deg)translateY(-12px);
 }
 
 .chart__bar {
@@ -195,9 +196,7 @@ $chartBarGap: 10px;
     .chart--dev & {
     @include stagger-anim-delay($chartOneCount, 1s, 0.2s);
     }
-    .chart--prod & {
-    @include stagger-anim-delay($chartTwoCount, 3.8s, 0.2s);
-    }
+
     .chart--design & {
     @include stagger-anim-delay($chartThreeCount, 1s, 0.2s);
     }
