@@ -6,10 +6,10 @@ let isScroll = false;
 
 $(function(){
     // As A jQuery Plugin
-    $('#demo').gradient({
-        colors: ['#a960ee', '#ff333d', '#90e0ff', '#ffcb57'],
-        height: '1000'
-    });
+    // $('#demo').gradient({
+    //     colors: ['#a960ee', '#ff333d', '#90e0ff', '#ffcb57'],
+    //     height: '1000'
+    // });
 
     // f_scroll();
 
@@ -68,7 +68,7 @@ $(function(){
                 if(mHtml.is(":animated")) return;
                 if(e.originalEvent.deltaY > 0) {
                     isScroll = true;
-                    if(page == 12) return;
+                    if(page == 9) return;
                     page++;
                 } else if(e.originalEvent.deltaY < 0) {
                     if(page == 1) return;

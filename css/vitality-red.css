@@ -274,7 +274,7 @@ hr.colored {
   }
   .navbar-default.navbar-expanded,
   .navbar-inverse.navbar-expanded {
-    background: transparent;
+    background: #2c2c2c;
     border: none;
   }
 }
