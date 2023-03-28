@@ -16,6 +16,7 @@ section{
     width: 100%;
     height: 100%;
     position: relative;
+    background: #333;
 }
 
 html body{
@@ -64,6 +65,8 @@ section{
     }
 } */
 
+/* svg */
+
 .custom-shape-divider-bottom-1678639981 {
     position: absolute;
     top: 120px;
@@ -85,9 +88,11 @@ section{
     fill: #FFFFFF;
 }
 
-.tt-holder{
+/* .tt-holder{
     color: #bd85f9;
-}
+} */
+
+/* 캔버스 */
 
 .demo{
     /* transform: rotate(355deg) translate(-4px, -296px) scale(1.1); */
@@ -96,6 +101,8 @@ section{
     overflow: hidden;
     content: "";
 }
+
+/* 탑버튼 */
 
 .top_btn{
     width: 50px;
@@ -139,29 +146,63 @@ section{
     font-weight: bold;
 }
 
+/* 이미지 */
+
+@keyframes flow{
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -1000px;
+    }
+}
+
+.img_box{
+    height: 300px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
 .p_img_box{
     width: 100%;
     height: 300px;
-    background: url(../img/agency/portfolio/mockup2.png);
-    background-size: contain;
+    overflow: hidden;
+    background: url(../img/agency/portfolio/cafe24.png);
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+.p_img_box:hover,
+.p_img_box_h:hover
+{
+    /* height: 1000px; */
+    animation: flow 10s 0.3s linear;
+}
+
 .p_img_box_h{
     width: 100%;
     height: 300px;
-    background: url(../img/agency/portfolio/mockup3.png);
+    overflow: hidden;
+    background: url(../img/agency/portfolio/hard.png);
     background-size: cover;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
     /* float: right; */
+}
+
+/* 소개컨텐츠 */
+
+#about{
+    color: #FFFFFF;
 }
 
 #about .content-row{
     /* margin-top: 120px; */
 }
+
+/* cms,하드코딩 */
 
 #cms > div,
 #hard > div{
@@ -174,6 +215,8 @@ section{
 #hard > div > div{
     width: 100%;
 }
+
+/* 하드코딩 */
 
 #hard h2{
     display: flex;
@@ -191,6 +234,8 @@ section{
 #hard ul li{
     /* width: 50%; */
 }
+
+/* 리뉴얼 */
 
 #renewal a{
     /* background: linear-gradient(90deg, #fff 50%, #9836ff 50% );
@@ -215,17 +260,29 @@ section{
     /* top: 81px; */
 }
 
+/* 투두 */
+
+#jas{
+    color: #FFFFFF;
+}
+
 .todo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
 }
 
 .todo .todo_img{
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     background-color: #bd85f9;
+    background: url(../img/agency/portfolio/todo.png);
+    background-size: 1280px;
+    background-position: center -67px;
 }
 
 .todo a{
@@ -254,6 +311,27 @@ section{
     transform: translate(-50%,150%);
     overflow: hidden;
     transition: 0.3s;
+}
+
+/* 네비바 픽스 */
+
+.navbar-left{
+    width: 110px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .container{
+    width: 100%;
+}
+
+.navbar-left .navbar-header{
+    display: none;
+}
+
+.navbar-left .navbar-collapse{
+    width: 100px;
 }
 
 /* 미디어 */
