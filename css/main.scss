@@ -194,7 +194,7 @@ $chartBarGap: 10px;
     // animation: 1s anim-lightspeed-in ease forwards;
 
     .chart--dev & {
-    @include stagger-anim-delay($chartOneCount, 1s, 0.2s);
+    @include stagger-anim-delay($chartOneCount, 0.1s, 0.2s);
     }
 
     .chart--design & {
@@ -222,4 +222,53 @@ $chartBarGap: 10px;
 
 .anim-lightspeed-in{
     animation: 1s anim-lightspeed-in ease forwards;
+}
+
+// 타이틀 텍스트 타이핑 애니메이션
+@keyframes typing {
+    from { width: 0; 
+    }
+    to   { width: 100%; 
+    }
+}
+
+@keyframes blink-start {
+    from, to { border-color: #ae274f; 
+    }
+    50% { border-color: transparent; 
+    }
+}
+
+@keyframes blink-end {
+    from, to { border-color: transparent; 
+    }
+    50% { border-color: transparent; 
+    }
+}
+
+// 
+
+.tt{
+    border-right: 3px solid #27ae60;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    animation-name:blink-start, typing, blink-end;
+    animation-duration:1s, 1s, 1s;
+    animation-timing-function:linear, steps(13, end), linear;
+    animation-iteration-count:1,1,infinite;
+    animation-delay:0s, 1s, 2s;
+    animation-fill-mode:forwards;
+    font-size: 80px;
+    span { 
+        display: block;
+        width: 600px; 
+    }
+}
+@media (max-width: 768px){
+    .tt{
+        span{
+            width: 100%;
+        }
+    }
 }

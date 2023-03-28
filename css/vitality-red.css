@@ -274,7 +274,7 @@ hr.colored {
   }
   .navbar-default.navbar-expanded,
   .navbar-inverse.navbar-expanded {
-    background: #2c2c2c;
+    background: transparent;
     border: none;
   }
 }
@@ -370,7 +370,7 @@ header .scroll-down .btn::after{
     width: 100%;
     margin: auto;
     position: absolute;
-    top: 50%;
+    top: 56%;
     right: -50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
