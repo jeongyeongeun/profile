@@ -112,6 +112,7 @@ a:focus {
 p {
   font-size: 18px;
   line-height: 1.5;
+  font-family: "NanumSquareAcr";
 }
 p.lead {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -126,7 +127,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
 }
 @media (min-width: 481px) {
@@ -177,7 +178,7 @@ hr.colored {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  /* color: #EF4035; */
+  color: var(--color);
   font-weight: bold;
   background: none;
   border-radius: 0;
@@ -249,7 +250,9 @@ hr.colored {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
+  color: var(--color);
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .navbar-default .navbar-nav > .active > a,
@@ -1142,7 +1145,7 @@ footer.footer .copyright p.small {
   font-weight: 900;
   letter-spacing: 1px;
   background: linear-gradient(90deg, #9836ff 50%, #fff 50%);
-  background-size: 200%;
+  background-size: 201%;
   background-position: right;
   transition: background-position 0.6s;
 
