@@ -164,8 +164,8 @@
                 </div>
             </div>
             <div class="row content-row">
-                <div class="col-lg-6">
-                    <div class="col-lg-6 pull-right">Myphoto</div>
+                <div class="photo col-lg-6">
+                    <div class=" col-lg-6 pull-right">Myphoto</div>
                 </div>
                 <div class="skills col-lg-6 pull-right">
                     <div class="charts">
@@ -217,6 +217,41 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="certificate col-lg-6">
+                <table>
+                    <tr>
+                        <th rowspan="4">certificate</th>
+                        <td>GTQ 1급</td>
+                        <td>2023-03</td>
+                    </tr>
+                    <tr>
+                        <td>웹 디자인 기능사</td>
+                        <td>2023-00</td>
+                    </tr>
+                    <tr>
+                        <td>JLPT N1</td>
+                        <td>2019-01</td>
+                    </tr>
+                    <tr>
+                        <td>ITT 일어전문번역 2급</td>
+                        <td>2021-10</td>
+                    </tr>
+                </table>
+                <!-- <p><span>certificate</span>GTQ 1급</p> -->
+            </div>
+            <div class="certificate col-lg-6 pull-left">
+                <table class="history">
+                    <tr>
+                        <th rowspan="4">history</th>
+                        <td>Graduated Suri HighScool</td>
+                        <td>2015-02</td>
+                    </tr>
+                    <tr>
+                        <td>Graduated Suwon Univ. majoring in Japanese</td>
+                        <td>2019-02</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
@@ -275,7 +310,6 @@
                     </div>
                     <div class="col-lg-6 img_box">
                         <div class="p_img_box_h pull-right">
-                            <!-- <img class="col-lg-12" src="./img/agency/portfolio/Snipaste_2023-03-26_21-25-34.png" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -285,14 +319,14 @@
 
     <section id="renewal" class="services bg-dark">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 wow fadeIn anim-text-flow">
+            <div class="row ">
+                <div class="col-lg-12 wow fadeIn anim-text-flow text_box">
                     <h2><span>Renewal List</span></h2>
 
                     <p>Here is my redesign Page with bootstrap V4</p>
                 </div>
             </div>
-            <div class="testimonials-carousel">
+            <div class="testimonials-carousel wow fadeIn">
                 <!-- calpis -->
                 <div class="item renew pull-left ">
                     <div class="renewal_img col-lg-8">
@@ -301,10 +335,14 @@
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4">
                         <h4><em>1</em> Calpis Renewal</h4>
-                    </div>
-                    <div class="before mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                        <div class="before_wrap">
+                            <input class="disN" type="checkbox" id="before_img1">
+                            <label class="b_label" for="before_img1" style="--color: lightcyan">Before</label>
+                            <div class="before mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="btn_box bg-dark"></div> -->
                 </div>
@@ -316,13 +354,18 @@
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4">
                         <h4><em>2</em> Page Renewal</h4>
+                        <div class="before_wrap">
+                            <input class="disN" type="checkbox" id="before_img2">
+                            <label class="b_label" for="before_img2" style="--color: lightpink">Before</label>
+                            <div class="before before2 mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                            </div>
+                        </div>
                     </div>
-                    <div class="before">
-                    </div>
-                    <!-- <div class="btn_box bg-dark"></div> -->
                 </div>
+                    <!-- <div class="btn_box bg-dark"></div> -->
+
                 <!-- renew 3 -->
                 <div class="item renew pull-left">
                     <div class="renewal_img  col-lg-8">
@@ -331,10 +374,14 @@
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4">
                         <h4><em>3</em> Page Renewal</h4>
-                    </div>
-                    <div class="before mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                        <div class="before_wrap">
+                            <input class="disN" type="checkbox" id="before_img3">
+                            <label class="b_label" for="before_img3" style="--color: tomato">Before</label>
+                            <div class="before before3 mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="btn_box bg-dark"></div> -->
                 </div>
@@ -1013,6 +1060,7 @@
     <script src="vendor/formstone/background.js"></script>
     <script src="vendor/mixitup/jquery.mixitup.js"></script>
     <script src="vendor/wow/wow.min.js"></script>
+    <!-- <script src="./js/owlmouse.min.js"></script> -->
 
     <!-- Contact Form Scripts -->
     <script src="js/contact_me.js"></script>

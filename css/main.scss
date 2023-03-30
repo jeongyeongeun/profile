@@ -138,8 +138,8 @@ $chartBarGap: 10px;
 .skills {
     // width: 80%;
     // max-width: 1000px;
-    height: 100px;
-    height: $totalChartCount * ($chartBarHeight + $chartBarGap) + ($chartCount * ($chartGap + $titleHeight));
+    // height: 500px;
+    // height: $totalChartCount * ($chartBarHeight + $chartBarGap) + ($chartCount * ($chartGap + $titleHeight));
     margin: auto;
     position: relative;
 }
@@ -178,7 +178,6 @@ $chartBarGap: 10px;
 
 .chart--horiz {
     overflow: hidden;
-    // transform: skewY(-2deg)translateY(-12px);
 }
 
 .chart__bar {

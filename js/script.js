@@ -180,4 +180,14 @@ $(function(){
         //         $("#navi").removeClass("navbar-left");
         //     }
         // });
+        // var owl = $('.owl-carousel');
+        // owl.on('mousewheel', '.owl-wrapper', function (e) {
+        //     console.log("hi")
+        //     if (e.deltaY>0) {
+        //         owl.trigger('next.owl');
+        //     } else {
+        //         owl.trigger('prev.owl');
+        //     }
+        //     e.preventDefault();
+        // });
 })
