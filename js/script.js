@@ -172,22 +172,5 @@ $(function(){
             canvas.height = window.innerHeight;
         });
 
-        // let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-        // $(window).on('resize', function() {
-        //     let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-        //     if (newWChk != oldWChk) {
-        //         oldWChk = newWChk;
-        //         $("#navi").removeClass("navbar-left");
-        //     }
-        // });
-        // var owl = $('.owl-carousel');
-        // owl.on('mousewheel', '.owl-wrapper', function (e) {
-        //     console.log("hi")
-        //     if (e.deltaY>0) {
-        //         owl.trigger('next.owl');
-        //     } else {
-        //         owl.trigger('prev.owl');
-        //     }
-        //     e.preventDefault();
-        // });
+
 })

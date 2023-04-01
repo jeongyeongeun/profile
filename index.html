@@ -39,9 +39,6 @@
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/index.min.js"></script>
-    <!-- <script type="module" src="./js/gradient/Gradient.js"></script> -->
     
     <script src="./js/script.js"></script>
 
@@ -89,16 +86,16 @@
                         <a class="page-scroll" href="#about" style="--color: tomato">skills</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#cms" style="--color: yellow">Process</a>
+                        <a class="page-scroll" href="#cms" style="--color: yellow">Project1</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#hard" style="--color: cyan">Work</a>
+                        <a class="page-scroll" href="#hard" style="--color: cyan">Project2</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#renewal" style="--color: lime">Renewal</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#jas" style="--color: pink">Contact</a>
+                        <a class="page-scroll" href="#jas" style="--color: pink">JS Work</a>
                     </li>
                 </ul>
             </div>
@@ -128,31 +125,6 @@
                 <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
             </div> -->
     </header>
-    <!-- <script>
-            const vis = (function () {
-    let stateKey,
-    eventKey,
-    keys = {
-        hidden: "visibilitychange",
-        webkitHidden: "webkitvisibilitychange",
-        mozHidden: "mozvisibilitychange",
-        msHidden: "msvisibilitychange"
-    };
-    for (stateKey in keys) {
-    if (stateKey in document) {
-        eventKey = keys[stateKey];
-        break;
-    }
-    }
-    return function (c) {
-    if (c) document.addEventListener(eventKey, c);
-    return !document[stateKey];
-    }
-})();
-    // tickerText(contents, keep, seconds, delay = 20, iterations = 0, ratio, secondsout, dev = false, pausetarget, stoptarget);
-    let $elements = $(".tt-holder .tt");
-    $(".ttt").tickerText($elements, 0, 3, 30, 1, 0.5, 0, false, "timerpause", "timerstop");
-    </script> -->
 
     <!-- About Section -->
     <section id="about" class="bg-dark">
@@ -165,93 +137,107 @@
             </div>
             <div class="row content-row">
                 <div class="photo col-lg-6">
-                    <div class=" col-lg-6 pull-right">Myphoto</div>
+                    <div class=" col-lg-6">Myphoto</div>
                 </div>
-                <div class="skills col-lg-6 pull-right">
-                    <div class="charts">
-                        <div class="chart chart--dev" >
-                            <span class="chart__title" data-animate="anim-lightspeed-in">Development</span>
-                        <ul class="chart--horiz">
-                            <li class="chart__bar" style="width: 80%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                    HTML5
-                                </span>
-                            </li>
-                            <li class="chart__bar" style="width: 80%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                    CSS
-                                </span>
-                            </li>
-                            <li class="chart__bar" style="width: 70%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                    SCSS
-                                </span>
-                            </li>
-                            <li class="chart__bar" style="width: 60%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                    JavaScript
-                                </span>
-                            </li>
-                            <li class="chart__bar" style="width: 60%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                jQuery
-                                </span>
-                            </li>
-                        </ul>
+                <ul class="about_me row pull-left col-lg-6">
+                    <li id="skills" class="pull-left">
+                        <input class="disN" type="radio" id="skill" name="about" checked>
+                        <label for="skill" style="--color: #3cd3ad">skills</label>
+                        <div class="skills about_depth">
+                            <div class="charts">
+                                <div class="chart chart--dev" >
+                                    <span class="chart__title" data-animate="anim-lightspeed-in">Development</span>
+                                <ul class="chart--horiz">
+                                    <li class="chart__bar" style="width: 80%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                            HTML5
+                                        </span>
+                                    </li>
+                                    <li class="chart__bar" style="width: 80%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                            CSS
+                                        </span>
+                                    </li>
+                                    <li class="chart__bar" style="width: 70%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                            SCSS
+                                        </span>
+                                    </li>
+                                    <li class="chart__bar" style="width: 60%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                            JavaScript
+                                        </span>
+                                    </li>
+                                    <li class="chart__bar" style="width: 60%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                        jQuery
+                                        </span>
+                                    </li>
+                                </ul>
+                                </div>
+                    
+                                <div class="chart chart--design">
+                                <span class="chart__title" data-animate="anim-lightspeed-in">Design</span>
+                                <ul class="chart--horiz">
+                                    <li class="chart__bar" style="width: 40%;" data-animate="anim-lightspeed-in">
+                                        <span class="chart__label">
+                                        Photoshop
+                                        </span>
+                                    </li>
+                                    <li class="chart__bar" style="width: 35%;" data-animate="anim-lightspeed-in" >
+                                        <span class="chart__label">
+                                        Illustrator
+                                        </span>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
                         </div>
-            
-                        <div class="chart chart--design">
-                        <span class="chart__title" data-animate="anim-lightspeed-in">Design</span>
-                        <ul class="chart--horiz">
-                            <li class="chart__bar" style="width: 40%;" data-animate="anim-lightspeed-in">
-                                <span class="chart__label">
-                                Photoshop
-                                </span>
-                            </li>
-                            <li class="chart__bar" style="width: 35%;" data-animate="anim-lightspeed-in" >
-                                <span class="chart__label">
-                                Illustrator
-                                </span>
-                            </li>
-                        </ul>
+                    </li>
+                    <li id="certificate" class="pull-left">
+                        <input class="disN" type="radio" id="cert" name="about">
+                        <label for="cert" style="--color: #3cbdd3">certificate</label>
+                        <div class="certificate about_depth">
+                            <table>
+                                <tr>
+                                    <th rowspan="4">certificate</th>
+                                    <td>GTQ 1급</td>
+                                    <td>2023-03</td>
+                                </tr>
+                                <tr>
+                                    <td>웹 디자인 기능사</td>
+                                    <td>2023-00</td>
+                                </tr>
+                                <tr>
+                                    <td>JLPT N1</td>
+                                    <td>2019-01</td>
+                                </tr>
+                                <tr>
+                                    <td>ITT 일어전문번역 2급</td>
+                                    <td>2021-10</td>
+                                </tr>
+                            </table>
+                            <!-- <p><span>certificate</span>GTQ 1급</p> -->
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="certificate col-lg-6">
-                <table>
-                    <tr>
-                        <th rowspan="4">certificate</th>
-                        <td>GTQ 1급</td>
-                        <td>2023-03</td>
-                    </tr>
-                    <tr>
-                        <td>웹 디자인 기능사</td>
-                        <td>2023-00</td>
-                    </tr>
-                    <tr>
-                        <td>JLPT N1</td>
-                        <td>2019-01</td>
-                    </tr>
-                    <tr>
-                        <td>ITT 일어전문번역 2급</td>
-                        <td>2021-10</td>
-                    </tr>
-                </table>
-                <!-- <p><span>certificate</span>GTQ 1급</p> -->
-            </div>
-            <div class="certificate col-lg-6 pull-left">
-                <table class="history">
-                    <tr>
-                        <th rowspan="4">history</th>
-                        <td>Graduated Suri HighScool</td>
-                        <td>2015-02</td>
-                    </tr>
-                    <tr>
-                        <td>Graduated Suwon Univ. majoring in Japanese</td>
-                        <td>2019-02</td>
-                    </tr>
-                </table>
+                    </li>
+                    <li id="history" class="pull-left">
+                        <input class="disN" type="radio" id="his" name="about">
+                        <label for="his" style="--color: #9060eb">history</label>
+                        <div class="certificate about_depth">
+                            <table class="history">
+                                <tr>
+                                    <th rowspan="4">history</th>
+                                    <td><i class="fa fa-graduation-cap"></i> Graduated Suri HighScool</td>
+                                    <td>2015-02</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-graduation-cap"></i>Graduated Suwon Univ. majoring in Japanese</td>
+                                    <td>2019-02</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -316,7 +302,7 @@
             </div>
         </div>
     </section>
-
+    <!-- renewal section -->
     <section id="renewal" class="services bg-dark">
         <div class="container">
             <div class="row ">
@@ -355,11 +341,11 @@
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <h4><em>2</em> Page Renewal</h4>
+                        <h4><em>2</em> Hursh Renewal</h4>
                         <div class="before_wrap">
                             <input class="disN" type="checkbox" id="before_img2">
                             <label class="b_label" for="before_img2" style="--color: lightpink">Before</label>
-                            <div class="before before2 mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                            <div class="before before2 mix identity" href="./img/agency/portfolio/hursh_b.png" title="Before">
                             </div>
                         </div>
                     </div>
@@ -375,11 +361,11 @@
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <h4><em>3</em> Page Renewal</h4>
+                        <h4><em>3</em> Monblanc Renewal</h4>
                         <div class="before_wrap">
                             <input class="disN" type="checkbox" id="before_img3">
                             <label class="b_label" for="before_img3" style="--color: tomato">Before</label>
-                            <div class="before before3 mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
+                            <div class="before before3 mix identity" href="./img/agency/portfolio/monblanc_b.png" title="Before">
                             </div>
                         </div>
                     </div>
@@ -765,7 +751,7 @@
     <!-- <a href="https://wrapbootstrap.com/theme/vitality-multipurpose-one-page-theme-WB02K3KK3" class="btn btn-block btn-full-width">Buy Vitality Now!</a> -->
 
     <span class="top_btn" id="topBtn">
-        <span>Top</span>
+        <span class="heart">Top</span>
     </span>
     <!-- Footer -->
     <footer class="footer" style="background-image: url('img/agency/backgrounds/bg-footer.jpg')">

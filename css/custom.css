@@ -36,6 +36,10 @@ section{
     height: 100%; */
 }
 
+section .container{
+    /* left: 100px; */
+}
+
 /* @media (min-width: 1200px){
     section .container{
         width: calc(1170px - 110px);
@@ -105,7 +109,36 @@ section{
     cursor: pointer;
     display: none;
     transition: 0.3s;
+    
 }
+.heart {
+    /* Modify size here: */
+    --size: 50px;
+  
+    position: relative;
+    width: var(--size);
+    height: calc(var(--size) * 0.3);
+  }
+  
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: calc(var(--size) * 0.55);
+    top: 0;
+    width: calc(var(--size) * 0.55);
+    height: calc(var(--size) * 0.85);
+    background: #ff8b8b;
+    border-radius: calc(var(--size) * 0.55) calc(var(--size) * 0.55) 0 0;
+    transform: rotate(-50deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart:after {
+    left: 0;
+    transform: rotate(50deg);
+    transform-origin: 100% 100%;
+  }
 
 @keyframes jump{
     0%{
@@ -200,24 +233,89 @@ section{
 
 .photo{
     height: 400px;
+    margin: 80px 0 0;
+}
+
+.photo div{
+    height: 300px;
+    background-color: #ccc;
+    margin: 20px 0 0;
+}
+
+.about_me{
+    position: relative;
+    /* width: 300px; */
+}
+
+.about_me li{
+    width: 33.33%;
+}
+
+.about_me li input:checked +label{
+    color: var(--color);
+    border-bottom: var(--color);
+}
+
+.about_me li input:checked +label:after{
+    max-width: 100px;
+    border-bottom: 2px solid var(--color);
+}
+
+.about_me li input:checked ~ .about_depth{
+    z-index: 10;
+}
+
+.about_me li label{
+    cursor: pointer;
+}
+
+.about_me li label::after{
+    content: "";
+    display: block;
+    max-width: 0;
+    height: 2px;
+    margin: 0 auto;
+    transition: 0.36s ease-in-out;
+
+}
+
+.about_depth{
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #222;
 }
 
 .certificate{
     color: #FFFFFF;
+    
+}
+.certificate table{
+    margin: 70px auto;
 }
 
 .certificate th{
     width: 150px;
+    display: none;
 }
 
 .certificate .history td{
-    width: 300px;
+    /* width: 300px; */
 }
 
 .certificate td{
     width: 200px;
     padding: 6px 0;
 }
+
+.certificate td i{
+    position: absolute;
+    left: 52px;
+    margin: 5px 0;
+}
+
 
 /* cms,하드코딩 */
 
@@ -306,16 +404,17 @@ section a{
 #renewal a:hover,
 #renewal a:focus
 {
-    animation: flowBtn 2s linear;
-    /* background-position: right; */
-    color: #fff;
+    /* animation: flowBtn 2s linear; */
+    background-position: right;
+    color: #9836ff;
 }
 
-.renewal_img:hover a{
-    /* transform: translate(-50%,-50%); */
+.renewal_img{
+    overflow: hidden;
 }
 
 .renewal_img:hover img{
+    transform: scale(1.1);
     opacity: 0.8;
 }
 
@@ -426,6 +525,7 @@ section a{
     background-size: cover;
     border-radius: 0 0 20px 20px;
     cursor: pointer;
+    transition: 0.42s ease-in-out;
 }
 
 .before{
@@ -433,12 +533,24 @@ section a{
     background-size: cover;
 }
 
+.before2{
+    background: url(../img/agency/portfolio/hursh_b.png) no-repeat;
+    background-size: cover;
+}
+
+.before3{
+    background: url(../img/agency/portfolio/monblanc_b1.png) no-repeat;
+    background-size: 423px;
+}
+
 .before::after{
     content: "";
     display: block;
     border-radius: 10px 10px 0 0;
+}
 
-
+.before:hover{
+    opacity: 0.8;
 }
 
 .renew h4{
@@ -472,6 +584,11 @@ section a{
     background: url(../img/agency/portfolio/todo.png);
     background-size: 1280px;
     background-position: center -67px;
+    transition: 0.3s;
+}
+
+.todo .todo_img:hover{
+    background-size: 120%;
 }
 
 .todo a{
