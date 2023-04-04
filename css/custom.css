@@ -43,8 +43,9 @@ section{
     height: 100%; */
 }
 
-section .container{
-    /* left: 100px; */
+section .container .left{
+    position: relative;
+    left: 100px;
 }
 
 /* @media (min-width: 1200px){
