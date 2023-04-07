@@ -402,11 +402,20 @@ section a{
     }
 }
 
+.item{
+    overflow: hidden;
+}
+
 #renewal a{
     /* background: linear-gradient(90deg, #fff 50%, #9836ff 50% );
     background-size: 200%;
     background-position: right;
     transition: background-position 0.6s; */
+}
+
+#renewal >div >div{
+    position: relative;
+    left: 100px;
 }
 
 #renewal a:hover,
@@ -417,17 +426,31 @@ section a{
     color: #9836ff;
 }
 
-.renewal_img{
-    overflow: hidden;
+.renewal_img
+{
+    /* overflow: hidden; */
+}
+
+.re_hidden{
+    /* overflow: hidden; */
+    /* background: url(../img/agency/portfolio/hershey_after.png);
+    background-size: cover; */
+}
+
+.img2 img{
+    object-fit: cover;
+    object-position: 10px;
 }
 
 .renewal_img:hover img{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     opacity: 0.8;
+    transform: translateX(10px);
 }
 
 .renewal_img img{
     transition: 0.36s ease-in;
+    height: 470px;
 }
 
 .renew a{
@@ -564,6 +587,27 @@ section a{
 .renew h4{
     font-size: 4rem;
 }
+
+.renew h4::after{
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: 70px;
+    /* right: calc(45% - 4px); */
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* .re_right2 h4:after{
+    right: 110px;
+}
+
+.re_right3 h4:after{
+    right: 70px;
+} */
 
 .renew h4 em{
     font-size: 2em;
