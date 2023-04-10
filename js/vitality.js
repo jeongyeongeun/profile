@@ -65,7 +65,7 @@ $(document).ready(function() {
             "<i class='fa fa-angle-left'></i>",
             "<i class='fa fa-angle-right'></i>"
         ],
-        autoHeight: true,
+        autoHeight: false,
         mouseDrag: false,
         touchDrag: false,
         transitionStyle: "fadeUp"
@@ -75,12 +75,12 @@ $(document).ready(function() {
         singleItem: true,
         navigation: true,
         pagination: true,
-        autoHeight: true,
+        autoHeight: false,
         navigationText: [
             "<i class='fa fa-angle-left'></i>",
             "<i class='fa fa-angle-right'></i>"
         ],
-        transitionStyle: "backSlide"
+        transitionStyle: "fadeUp"
     });
 
     $(".portfolio-gallery").owlCarousel({

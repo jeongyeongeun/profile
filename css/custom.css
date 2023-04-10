@@ -22,6 +22,67 @@ section{
     height: 100%;
     position: relative;
     background: #333;
+    overflow: hidden;
+}
+
+#cms .dot_top,
+/* #cms .dot_top::before, */
+#cms .dot_bottom,
+#cms .img_box::after,
+#hard::before,
+#hard::after{
+    content: "";
+    width: 300px;
+    height: 300px;
+    display: block;
+    background: linear-gradient(90deg, #fff 50%, #bd85f9 50%);
+    background-size: 200%;
+    border-radius: 50%;
+    /* background: url(../img/agency/backgrounds/SVG/Asset\ 1.svg) no-repeat ; */
+    background-position: right;
+    position: absolute;
+    transition: 0.4s linear;
+}
+
+#cms .dot_top:hover{
+    background-position: left;
+    /* transform: translateX(-300px); */
+}
+
+#cms .dot_top:hover ::before{
+    transform: none;
+}
+
+#cms .img_box::after{
+    top: -131px;
+    right: -100px;
+    z-index: 1;
+}
+
+#cms::before:hover{
+    background-position: right;
+}
+
+#cms .dot_top,
+#cms .dot_top::before
+#hard::before{
+    top: -50px;
+    left: -65px;
+}
+
+#cms .dot_bottom{
+    bottom: 59px;
+    left: 200px;
+}
+
+/* #hard::before{
+    top: -50px;
+    right: -65px;
+} */
+
+#hard::after{
+    bottom: 65px;
+    right: 200px;
 }
 
 html body{
@@ -148,20 +209,17 @@ section .container .left{
     transform-origin: 100% 100%;
   }
 
-@keyframes jump{
+@keyframes shrink{
     0%{
-        transform: translateY(5px);
-    }
-    50%{
-        transform: translateY(-5px);
+        transform: scale(0.8);
     }
     100%{
-        transform: translateY(5px);
+        transform: scale(1.2);
     }
 }
 
 .top_btn:hover{
-    animation: jump 1s ease-in-out 0s infinite forwards;
+    animation: shrink 1.2s ease-in-out 0s infinite forwards alternate;
 }
 
 .top_btn span{
@@ -197,6 +255,7 @@ section .container .left{
 }
 
 .p_img_box{
+    position: relative;
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -205,6 +264,7 @@ section .container .left{
     background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    z-index: 2;
 }
 
 .p_img_box:hover,
@@ -439,26 +499,35 @@ section a{
 
 .img2 img{
     object-fit: cover;
-    object-position: 10px;
+    /* object-position: 10px; */
 }
 
-.renewal_img:hover img{
+.renewal_img img:hover{
     /* transform: scale(1.1); */
-    opacity: 0.8;
-    transform: translateX(10px);
+    /* opacity: 0.8; */
+    filter: grayscale(20);
+    object-position: right;
+    /* transform: translateX(10px); */
 }
 
 .renewal_img img{
     transition: 0.36s ease-in;
-    height: 470px;
+    height: 450px;
+    object-fit: cover;
+    object-position: left;
 }
 
 .renew a{
-    position: absolute;
-    bottom: 10%;
+    /* position: absolute; */
+    /* bottom: 10%; */
     left: calc(50% - 70px);
     overflow: hidden;
     transition: 0.3s;
+    margin: 30px 0 ;
+}
+
+.renew a:hover{
+    -webkit-box-reflect:inherit
 }
 
 .screen{
@@ -502,6 +571,36 @@ section a{
 }
 #renewal .owl-buttons .owl-prev:hover i{
     transform: scale(1.2) translateX(-5px);
+}
+
+#renewal .owl-theme .owl-controls .owl-page span{
+    /* background: #bd85f9; */
+    transition: 0.3s linear;
+    --size: 12px;
+  
+    position: relative;
+    width: var(--size);
+    height: calc(var(--size) * 0.3);
+}
+
+#renewal .owl-theme .owl-controls .owl-page span:before,
+#renewal .owl-theme .owl-controls .owl-page span:after {
+  position: absolute;
+  content: "";
+  left: calc(var(--size) * 0.55);
+  top: 0;
+  width: calc(var(--size) * 0.55);
+  height: calc(var(--size) * 0.85);
+  background: #bd85f9;
+  border-radius: calc(var(--size) * 0.55) calc(var(--size) * 0.55) 0 0;
+  transform: rotate(-50deg);
+  transform-origin: 0 100%;
+}
+
+#renewal .owl-theme .owl-controls .owl-page span:after {
+  left: 0;
+  transform: rotate(50deg);
+  transform-origin: 100% 100%;
 }
 
 
@@ -588,18 +687,21 @@ section a{
     font-size: 4rem;
 }
 
-.renew h4::after{
+.renew h4 em::after{
     content: "";
     position: absolute;
-    top: 39px;
-    left: 70px;
+    top: 19px;
+    
     /* right: calc(45% - 4px); */
     display: block;
     width: 8px;
     height: 8px;
     background: #fff;
     border-radius: 50%;
+    animation: shrink 1s 0.5s infinite alternate;
 }
+
+
 
 /* .re_right2 h4:after{
     right: 110px;
@@ -611,6 +713,7 @@ section a{
 
 .renew h4 em{
     font-size: 2em;
+    position: relative;
 }
 
 /* 투두 */
