@@ -269,9 +269,11 @@ $chartBarGap: 10px;
     animation-fill-mode:forwards;
     font-size: 120px;
     font-family: "Raleway";
+    height: 150px;
+    width: 0;
     span { 
-        display: inline-block;
-        width: 80px; 
+        // display: inline-block;
+        // width: 78px; 
     }
 }
 @media (max-width: 768px){

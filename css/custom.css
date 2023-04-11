@@ -11,9 +11,13 @@ ul,ol,dl{
     width: 1400px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     height: 100%;
+}
+
+.title{
+    margin: 100px 0;
 }
 
 @keyframes flow_text {
@@ -26,12 +30,15 @@ ul,ol,dl{
     position: absolute;
     top: 0;
     width: 100%;
-    text-align: center;
-    font-size: 60px;
-    opacity: 0.6;
+    /* text-align: center; */
+    font-size: 100px;
+    opacity: 0.2;
     font-style: italic;
+    color: #222;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     /* animation: flow_text 10s 0s alternate infinite; */
 }
+
 
 .container_lg h2{
     font-size: 70px;
@@ -205,9 +212,15 @@ section .container .left{
     }
 } */
 
+/* 헤더 */
+
 #header{
     width: 100%;
     height: 100%;
+}
+
+.brand-name-subtext{
+    font-family: 'NanumSquareAceb';
 }
 
 .disN{
@@ -395,10 +408,15 @@ section .container .left{
     margin: 80px 0 0;
 }
 
-.photo div{
+.photo_zone{
     height: 300px;
     background-color: #ccc;
     margin: 20px 0 0;
+    float: none;
+}
+
+.My{
+    float: none;
 }
 
 .about_me{
@@ -440,7 +458,7 @@ section .container .left{
 
 .about_depth{
     position: absolute;
-    height: 400px;
+    height: 520px;
     width: 100%;
     top: 100%;
     left: 0;
@@ -490,6 +508,15 @@ section a{
 #cms > div > div,
 #hard > div > div{
     width: 100%;
+}
+
+.info span{
+    font-size: 50px;
+}
+
+#cms h2 span:nth-of-type(1){
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
 #cms h2 span:nth-of-type(2){
