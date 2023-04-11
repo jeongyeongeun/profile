@@ -53,7 +53,7 @@ $(function(){
                 var scrollPos = $(window).scrollTop();
                 var wh = $(window).height();
             
-                if(scrollPos > elemOffset - wh + (wh / 2)-180){
+                if(scrollPos > elemOffset - wh + (wh / 2)-300){
                     $(this).addClass(isAnimate);
                 }else{
                     $(this).removeClass(isAnimate);

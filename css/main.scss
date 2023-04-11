@@ -56,6 +56,10 @@
 }
 
 
+.dot{
+    animation: anim-text-flow-keys1 100s 0s infinite alternate forwards;
+}
+
 .top_btn,
 .top_btn:hover{
     /*
@@ -248,6 +252,10 @@ $chartBarGap: 10px;
 
 // 
 
+.tt-holder{
+    width: 100%;
+} 
+
 .tt{
     border-right: 3px solid #27ae60;
     overflow: hidden;
@@ -259,16 +267,17 @@ $chartBarGap: 10px;
     animation-iteration-count:1,1,infinite;
     animation-delay:0s, 1s, 2s;
     animation-fill-mode:forwards;
-    font-size: 80px;
+    font-size: 120px;
+    font-family: "Raleway";
     span { 
-        display: block;
-        width: 600px; 
+        display: inline-block;
+        width: 80px; 
     }
 }
 @media (max-width: 768px){
     .tt{
         span{
-            width: 100%;
+            width: 50px;
         }
     }
 }

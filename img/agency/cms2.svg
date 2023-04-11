@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="128" viewBox="0 0 268 128">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 72px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "BM DoHyeon";
+      }
+    </style>
+  </defs>
+  <text id="CMS" class="cls-1" x="133" y="57"><tspan x="133">CMS</tspan></text>
+</svg>
