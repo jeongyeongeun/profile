@@ -7,6 +7,14 @@ ul,ol,dl{
     /* overflow: hidden; */
 }
 
+/* body{
+    scroll-snap-type: y mandatory;
+}
+
+section,header{
+    scroll-snap-align: start;
+} */
+
 .container_lg{
     width: 1400px;
     margin: 0 auto;
@@ -37,6 +45,12 @@ ul,ol,dl{
     color: #222;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     /* animation: flow_text 10s 0s alternate infinite; */
+}
+
+#about .text_b,
+#renewal .text_b{
+    top: inherit;
+    bottom: -25px;
 }
 
 
@@ -145,7 +159,7 @@ section{
 .dot_top{
     top: -70px;
     left: -65px;
-    animation: spin 10s 0s infinite linear;
+
 }
 
 @keyframes spin {
@@ -154,13 +168,17 @@ section{
     }
 }
 
-.dot_top::before{
+.dot_bottom::after{
     content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
     display: block;
     background: url(../img/agency/portfolio/project.png) no-repeat;
     background-size: contain;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    animation: spin 10s 0s infinite linear;
 }
 
 .dot_bottom::before{
@@ -176,6 +194,7 @@ section{
 .dot_bottom{
     bottom: -150px;
     left: 200px;
+    
 }
 
 #cms .dot_bottom:hover{
@@ -243,7 +262,7 @@ section .container .left{
     position: relative;
     display: block;
     width: calc(300% + 1.3px);
-    height: 500px;
+    /* height: 500px; */
 }
 
 .custom-shape-divider-bottom-1678639981 .shape-fill {
@@ -266,6 +285,22 @@ section .container .left{
     position: absolute;
     font-size: 100px;
     /* font-weight: 300; */
+}
+
+/* 스크롤다운 */
+
+.down i{
+    font-size: 50px;
+    animation: scrollDown 1s 1s infinite linear alternate;
+}
+
+@keyframes scrollDown {
+    0%{
+        transform: translateY(-20%) scale(1.2);
+    }
+    100%{
+        transform: translateY(50%) scale(0.8);
+    }
 }
 
 /* 탑버튼 */
@@ -398,6 +433,8 @@ section .container .left{
 #about{
     color: #FFFFFF;
 }
+
+
 
 #about .content-row{
     /* margin-top: 120px; */
@@ -577,8 +614,10 @@ section a{
     }
 }
 
-.item{
+#renewal .item{
     overflow: hidden;
+    display: flex;
+    /* flex-direction: row-reverse; */
 }
 
 #renewal a{
@@ -588,9 +627,17 @@ section a{
     transition: background-position 0.6s; */
 }
 
+#renewal .container_lg{
+    flex-direction: column;
+}
+
 #renewal >div >div{
     position: relative;
-    left: 100px;
+    /* left: 100px; */
+}
+
+#renewal .owl-carousel{
+    overflow: hidden;
 }
 
 #renewal a:hover,
@@ -604,6 +651,12 @@ section a{
 .renewal_img
 {
     /* overflow: hidden; */
+}
+
+#renewal .renewal_text{
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
 
 .re_hidden{
@@ -635,10 +688,10 @@ section a{
 .renew a{
     /* position: absolute; */
     /* bottom: 10%; */
-    left: calc(50% - 70px);
+    /* left: calc(50% - 70px); */
     overflow: hidden;
     transition: 0.3s;
-    margin: 30px 0 ;
+    margin: 30px 20px 0 0 ;
 }
 
 .renew a:hover{
@@ -654,10 +707,19 @@ section a{
     /* top: 81px; */
 }
 
+#renewal .owl-pagination{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 #renewal .owl-buttons{
     position: absolute;
-    top: 23px;
-    right: 0;
+    /* width: 100%; */
+    top: 50%;
+    right: 27%;
     display: flex;
     justify-content: space-between;
 }
@@ -689,33 +751,27 @@ section a{
 }
 
 #renewal .owl-theme .owl-controls .owl-page span{
-    /* background: #bd85f9; */
+    background: #fff;
+    width: 50px;
+    height: 50px;
     transition: 0.3s linear;
-    --size: 12px;
-  
-    position: relative;
-    width: var(--size);
-    height: calc(var(--size) * 0.3);
 }
 
-#renewal .owl-theme .owl-controls .owl-page span:before,
-#renewal .owl-theme .owl-controls .owl-page span:after {
-  position: absolute;
-  content: "";
-  left: calc(var(--size) * 0.55);
-  top: 0;
-  width: calc(var(--size) * 0.55);
-  height: calc(var(--size) * 0.85);
-  background: #bd85f9;
-  border-radius: calc(var(--size) * 0.55) calc(var(--size) * 0.55) 0 0;
-  transform: rotate(-50deg);
-  transform-origin: 0 100%;
+#renewal .owl-theme .owl-controls .owl-page:nth-of-type(1) span::before {
+    content: "";
+    display: block;
+    background: url(../img/agency/calpisLogo.png) no-repeat;
+    /* background-size: contain; */
+    width: 50px;
+    height: 50px;
+    background-position-x: 8px;
+    background-position-y: 6px;
 }
 
 #renewal .owl-theme .owl-controls .owl-page span:after {
-  left: 0;
+  /* left: 0;
   transform: rotate(50deg);
-  transform-origin: 100% 100%;
+  transform-origin: 100% 100%; */
 }
 
 
@@ -724,6 +780,7 @@ section a{
 }
 .before_wrap{
     position: relative;
+    width: 90%;
 }
 
 #before_img1:checked + label,
@@ -750,10 +807,11 @@ section a{
     background-color: #FFFFFF;
     color: #2c2c2c;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    line-height: 40px;
     margin: 0;
     text-align: center;
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px;
     transition: 0.46s ease-out;
 
 }
@@ -776,6 +834,7 @@ section a{
 .before{
     background: url(../img/agency/portfolio/calpis_b.png) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .before2{
@@ -800,6 +859,7 @@ section a{
 
 .renew h4{
     font-size: 4rem;
+    /* text-align: end; */
 }
 
 .renew h4 em::after{

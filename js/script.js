@@ -19,20 +19,6 @@ $(function(){
         }
     }, 2500)
 
-    // $(window).on("scroll", f_scroll)
-
-        //#topBtn 마우스오버시 글씨바뀜
-        // $("#topBtn").on({
-        //     mousedown: function(){
-        //         $("span",this).text("슝")
-        //     },
-        //     mouseover: function(){
-        //         $("span",this).text("슝")
-        //     },
-        //     mouseout: function(){
-        //         $("span",this).text("Top")
-        //     }
-        // })
         const mHtml = $("html");
         var page = 1;
         mHtml.animate({scrollTop : 0},100);

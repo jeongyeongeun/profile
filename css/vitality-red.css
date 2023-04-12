@@ -375,7 +375,7 @@ header .scroll-down .btn::after{
     width: 100%;
     margin: auto;
     position: absolute;
-    top: 56%;
+    top: 60%;
     right: -50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
