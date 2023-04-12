@@ -46,20 +46,20 @@ $(function(){
                 }
                 });
             },
-            wheel: function(e){
-                if(mHtml.is(":animated")) return;
-                if(e.originalEvent.deltaY > 0) {
-                    isScroll = true;
-                    if(page == 9) return;
-                    page++;
-                } else if(e.originalEvent.deltaY < 0) {
-                    if(page == 1) return;
-                    page--;
-                } 
-                if(page == 1) isScroll = false;
-                var posTop =(page-1) * $(window).height();
-                mHtml.animate({scrollTop : posTop}, 500);
-            }
+            // wheel: function(e){
+            //     if(mHtml.is(":animated")) return;
+            //     if(e.originalEvent.deltaY > 0) {
+            //         isScroll = true;
+            //         if(page == 9) return;
+            //         page++;
+            //     } else if(e.originalEvent.deltaY < 0) {
+            //         if(page == 1) return;
+            //         page--;
+            //     } 
+            //     if(page == 1) isScroll = false;
+            //     var posTop =(page-1) * $(window).height();
+            //     mHtml.animate({scrollTop : posTop}, 500);
+            // }
         })
 
 
