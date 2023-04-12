@@ -61,6 +61,8 @@ $(function(){
                 mHtml.animate({scrollTop : posTop}, 500);
             }
         })
+
+
         $("#topBtn").on("click",function() {
             page = 1;
             isScroll = false;
