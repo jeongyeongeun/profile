@@ -28,6 +28,28 @@ section,header{
     margin: 100px 0;
 }
 
+.title span::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin: 0 auto;
+    background: #fafad2;
+}
+
+.rainbow{
+    margin-bottom: 30px;
+}
+
+.rainbow::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, hsl(284,91%,69%) 0%, hsl(284,91%,69%) 12.5%,hsl(329,91%,69%) 12.5%, hsl(329,91%,69%) 25%,hsl(14,91%,69%) 25%, hsl(14,91%,69%) 37.5%,hsl(59,91%,69%) 37.5%, hsl(59,91%,69%) 50%,hsl(104,91%,69%) 50%, hsl(104,91%,69%) 62.5%,hsl(149,91%,69%) 62.5%, hsl(149,91%,69%) 75%,hsl(194,91%,69%) 75%, hsl(194,91%,69%) 87.5%,hsl(239,91%,69%) 87.5%, hsl(239,91%,69%) 100%);
+}
+
 @keyframes flow_text {
     100%{
         transform: translateX(100%);
@@ -94,10 +116,6 @@ section{
     transition: 0.4s linear;
 }
 
-#cms .dot_top:hover{
-    /* background-position: left; */
-    /* transform: translateX(-300px); */
-}
 
 
 .dot{
@@ -266,7 +284,7 @@ section .container .left{
 }
 
 .custom-shape-divider-bottom-1678639981 .shape-fill {
-    fill: #2c2c2c;
+    fill: #d5c4e9;
 }
 
 /* 캔버스 */
@@ -431,7 +449,10 @@ section .container .left{
 /* 소개컨텐츠 */
 
 #about{
-    color: #FFFFFF;
+    color: #555;
+    background: url(../img/agency/aboutMe.svg) no-repeat;
+    background-size: 700px;
+    background-position-y: -50px;
 }
 
 
@@ -499,11 +520,11 @@ section .container .left{
     width: 100%;
     top: 100%;
     left: 0;
-    background-color: #222;
+    background-color: #fff;
 }
 
 .certificate{
-    color: #FFFFFF;
+    color: #555;
     
 }
 .certificate table{
@@ -537,11 +558,6 @@ section a{
     font-family: "NanumSquare";
 }
 
-#cms > div,
-#hard > div{
-
-}
-
 #cms > div > div,
 #hard > div > div{
     width: 100%;
@@ -549,6 +565,12 @@ section a{
 
 .info span{
     font-size: 50px;
+}
+
+#cms .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #cms h2 span:nth-of-type(1){
@@ -567,10 +589,11 @@ section a{
 
 /* 하드코딩 */
 
-#hard h2{
+#hard .info{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    margin: 0;
 }
 
 #hard h2 p:nth-of-type(2){
@@ -583,13 +606,14 @@ section a{
 }
 
 #hard ul{
-    width: 76%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 #hard ul li{
+    margin-top: 10px;
     /* width: 50%; */
 }
 
@@ -719,7 +743,7 @@ section a{
     position: absolute;
     /* width: 100%; */
     top: 50%;
-    right: 27%;
+    right: 24%;
     display: flex;
     justify-content: space-between;
 }
@@ -729,10 +753,10 @@ section a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
+    width: 50px;
     height: 30px;
-    background: #9836ff;
-    font-size: 20px;
+    background: none;
+    font-size: 30px;
     transition: 0.43s ease-in-out;
 }
 

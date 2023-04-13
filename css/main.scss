@@ -252,6 +252,52 @@ $chartBarGap: 10px;
 
 // 
 
+:root {
+    --interval: 0.65s;
+    --duration: calc(var(--interval) * 4);
+  }
+
+.tt-holder::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: var(--color);
+    animation: bounce var(--interval) calc(var(--interval) / -2)
+    cubic-bezier(0, 0, 0, 1) infinite,
+    color var(--duration) calc(var(--interval) / -2) linear infinite;
+}
+
+@keyframes bounce {
+    from,
+    to {
+      transform: translateY(-300%);
+      animation-timing-function: cubic-bezier(0, 0, 1, 0), linear;
+    }
+    50% {
+      transform: none;
+    }
+  }
+
+
+@keyframes color {
+    from,
+    to {
+        --color: #2358e6;
+    }
+    25% {
+        --color: #e58d2c;
+    }
+    50% {
+        --color: #27c05f;
+    }
+    75% {
+        --color: #df4b20;
+    }
+}
+
 .tt-holder{
     width: 100%;
 } 
@@ -261,21 +307,50 @@ $chartBarGap: 10px;
     overflow: hidden;
     position: relative;
     display: block;
-    animation-name:blink-start, typing, blink-end;
-    animation-duration:1s, 1s, 1s;
-    animation-timing-function:linear, steps(13, end), linear;
-    animation-iteration-count:1,1,infinite;
-    animation-delay:0s, 1s, 2s;
-    animation-fill-mode:forwards;
+    // animation-name:blink-start, typing, blink-end;
+    // animation-duration:1s, 1s, 1s;
+    // animation-timing-function:linear, steps(13, end), linear;
+    // animation-iteration-count:1,1,infinite;
+    // animation-delay:0s, 1s, 2s;
+    // animation-fill-mode:forwards;
+    --delay: calc(var(--interval) * (var(--item-index)));
+    display: block;
+    grid-area: layer;
+    --transform: translateX(0);
     font-size: 120px;
     font-family: "Raleway";
     height: 150px;
-    width: 0;
+    // width: 0;
+    animation: word-reveal var(--duration) linear both infinite,
+    word-bounce var(--duration) ease both infinite;
+    animation-delay: var(--delay);
     span { 
         // display: inline-block;
         // width: 78px; 
     }
 }
+@keyframes word-reveal {
+    0%,
+    25%,
+    100% {
+      visibility: hidden;
+    }
+    1%,
+    24% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes word-bounce {
+    from,
+    30%,
+    to {
+      transform: var(--transform);
+    }
+    12.5% {
+      transform: translateY(30%) var(--transform);
+    }
+  }
 @media (max-width: 768px){
     .tt{
         span{
