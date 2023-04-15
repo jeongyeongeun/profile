@@ -4,7 +4,9 @@ let isScroll = false;
 //     e.preventDefault();
 // },{passive : false});
 
+
 $(function(){
+    Splitting();
 
 
     // f_scroll();

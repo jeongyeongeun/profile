@@ -64,9 +64,14 @@ section,header{
     font-size: 100px;
     opacity: 0.2;
     font-style: italic;
+    color: #fff;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+    /* animation: flow_text 10s 0s alternate infinite; */
+}
+
+#hard .text_b{
     color: #222;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-    /* animation: flow_text 10s 0s alternate infinite; */
 }
 
 #about .text_b,
@@ -260,6 +265,23 @@ section .container .left{
     font-family: 'NanumSquareAceb';
 }
 
+#header .intro-content .brand-name-subtext{
+    text-align: end;
+    transform: rotate(352deg);
+    margin: 15px;
+}
+
+.text_wave .char{
+    animation: waveText 1s cubic-bezier(.5, 0, .5, 1) both infinite alternate;
+    animation-delay: calc(60ms * var(--char-index));
+}
+
+@keyframes waveText {
+    100%{
+        transform: translateY(-0.2em) ;
+    }
+}
+
 .disN{
     display: none;
 }
@@ -284,7 +306,7 @@ section .container .left{
 }
 
 .custom-shape-divider-bottom-1678639981 .shape-fill {
-    fill: #d5c4e9;
+    fill: #add8e6;
 }
 
 /* 캔버스 */
@@ -297,6 +319,7 @@ section .container .left{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(352deg, #fff 43%, #add8e6 50%);
 }
 
 .demo .brand-name{
@@ -565,6 +588,11 @@ section a{
 
 .info span{
     font-size: 50px;
+}
+
+#cms{
+    background: #e8faff;
+    color: #555;
 }
 
 #cms .info{
@@ -983,6 +1011,7 @@ section a{
 
 .navbar-left .container{
     width: 100%;
+    
 }
 
 .navbar-left .navbar-header{
@@ -991,6 +1020,16 @@ section a{
 
 .navbar-left .navbar-collapse{
     width: 100px;
+}
+
+#navi.navbar-left .navbar-nav >li>a{
+    color: #555;
+}
+
+#navi.navbar-left .navbar-nav > .active > a,
+#navi.navbar-left .navbar-nav > .active > a:hover,
+#navi.navbar-left .navbar-nav >li>a:hover{
+    color: var(--color);
 }
 
 @media (max-width:768px) {
