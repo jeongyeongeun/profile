@@ -11,9 +11,39 @@ ul,ol,dl{
     scroll-snap-type: y mandatory;
 }
 
+
 section,header{
     scroll-snap-align: start;
 } */
+
+section{
+    color: #555;
+}
+
+/* 로딩이미지 */
+
+#load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    background: #add8e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#load #L5{
+    width: 100px;
+}
+
+.p_img_box{
+    height: 500px;
+}
+
+
 
 .container_lg{
     width: 1400px;
@@ -25,16 +55,32 @@ section,header{
 }
 
 .title{
-    margin: 100px 0;
+    margin: 50px 0;
+    font-weight: 200;
+    position: relative;
 }
 
-.title span::after{
+.title::before,.title::after{
+    position: relative;
     content: "";
     display: block;
-    width: 20px;
+    width: 2px;
+    height: 20px;
+    background: #777;
+}
+
+.title::before{
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 1px);
+}
+
+.title::after{
+    top: -5px;
+    width: 4px;
     height: 4px;
-    margin: 0 auto;
-    background: #fafad2;
+    border-radius: 50%;
+    margin: 15px auto;
 }
 
 .rainbow{
@@ -47,18 +93,21 @@ section,header{
     width: 100px;
     height: 2px;
     margin: 0 auto;
+    background-size: 200%;
+    background-repeat: repeat-x;
     background-image: linear-gradient(90deg, hsl(284,91%,69%) 0%, hsl(284,91%,69%) 12.5%,hsl(329,91%,69%) 12.5%, hsl(329,91%,69%) 25%,hsl(14,91%,69%) 25%, hsl(14,91%,69%) 37.5%,hsl(59,91%,69%) 37.5%, hsl(59,91%,69%) 50%,hsl(104,91%,69%) 50%, hsl(104,91%,69%) 62.5%,hsl(149,91%,69%) 62.5%, hsl(149,91%,69%) 75%,hsl(194,91%,69%) 75%, hsl(194,91%,69%) 87.5%,hsl(239,91%,69%) 87.5%, hsl(239,91%,69%) 100%);
+    animation: flow_bg 5s linear infinite alternate;
 }
 
-@keyframes flow_text {
+@keyframes flow_bg {
     100%{
-        transform: translateX(100%);
+        background-position: right;
     }
 }
 
 .text_b{
     position: absolute;
-    top: 0;
+    bottom: -30px;
     width: 100%;
     /* text-align: center; */
     font-size: 100px;
@@ -400,18 +449,52 @@ section .container .left{
 
 .top_btn:hover{
     animation: shrink 1.2s ease-in-out 0s infinite forwards alternate;
+
 }
 
-.top_btn span{
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
+.top_btn:hover .body .mouth{
+    box-shadow: 0 13px 0 -10px #fff;
+}
+
+.top_btn:hover .body .mouth::after{
+    content: none;
+}
+
+.top_btn .body{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 0;
+    box-shadow: 1px 1px 20px 1px #555;
+}
+
+.top_btn .body .eye{
+    top: 13px;
+}
+
+.top_btn .body .eye::before,
+.top_btn .body .eye::after{
+    background: #fff;
+    width: 4px;
+    height: 4px;
+}
+
+.top_btn .body .mouth{
+    width: 52px;
+    top: -24px;
+    box-shadow: 0 0 0 0;
+    transition: 0.2s linear;
+}
+
+.top_btn .body .mouth::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
 }
 
 /* 이미지 */
@@ -429,7 +512,7 @@ section .container .left{
 }
 
 .img_box{
-    height: 300px;
+    /* height: 300px; */
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
@@ -437,7 +520,7 @@ section .container .left{
 .p_img_box{
     position: relative;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     overflow: hidden;
     background: url(../img/agency/portfolio/cafe24.png);
     background-size: cover;
@@ -456,7 +539,7 @@ section .container .left{
 
 .p_img_box_h{
     width: 100%;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
     background: url(../img/agency/portfolio/hard.png);
     background-size: cover;
@@ -478,10 +561,24 @@ section .container .left{
     background-position-y: -50px;
 }
 
+#about .title_b{
+    margin-bottom: 50px;
+}
 
+#about h1{
+    font-weight: 200;
+}
 
-#about .content-row{
-    /* margin-top: 120px; */
+#about .bg{
+    z-index: -1;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(343deg, #add8e6 13%,#fff 28%) ,url(../img/agency/backgrounds/bg2.png) no-repeat;
+    background-position: bottom right;
 }
 
 .photo{
@@ -491,7 +588,7 @@ section .container .left{
 
 .photo_zone{
     height: 300px;
-    background-color: #ccc;
+    background-color: #add8e6;
     margin: 20px 0 0;
     float: none;
 }
@@ -505,7 +602,7 @@ section .container .left{
     /* width: 300px; */
 }
 
-.about_me li{
+.about_me > li{
     width: 33.33%;
 }
 
@@ -564,8 +661,13 @@ section .container .left{
 }
 
 .certificate td{
-    width: 200px;
-    padding: 6px 0;
+    /* width: 200px; */
+    padding: 15px;
+    text-align: left;
+}
+
+.certificate td:last-child{
+    padding: 0 15px;
 }
 
 .certificate td i{
@@ -590,8 +692,32 @@ section a{
     font-size: 50px;
 }
 
-#cms{
-    background: #e8faff;
+.info p{
+    position: relative;
+    z-index: 1;
+}
+
+.info p::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #bef;
+    z-index: -1;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.info p:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#cms,#hard{
+    background: linear-gradient(197deg, #add8e6 13%,#e8faff 28%) ;
+
     color: #555;
 }
 
@@ -602,17 +728,17 @@ section a{
 }
 
 #cms h2 span:nth-of-type(1){
-    display: inline-block;
-    margin-bottom: 30px;
+    /* display: inline-block;
+    margin-bottom: 30px; */
 }
 
 #cms h2 span:nth-of-type(2){
-    font-size: 0.8em;
-    display: block;
+    /* font-size: 0.8em;
+    display: block; */
 }
 
 #cms h2 p:nth-of-type(1){
-    margin: 10px 0 0;
+    /* margin: 10px 0 0; */
 }
 
 /* 하드코딩 */
@@ -634,7 +760,7 @@ section a{
 }
 
 #hard ul{
-    width: 60%;
+    width: 72%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -646,6 +772,17 @@ section a{
 }
 
 /* 리뉴얼 */
+
+#renewal{
+    background: #e8faff;
+    color: #555;
+}
+
+#renewal .bg{
+    background: linear-gradient(343deg, #add8e6 13%,#e8faff 28%);
+}
+
+
 
 @keyframes flowBtn {
     0%{
@@ -835,7 +972,7 @@ section a{
     width: 90%;
 }
 
-#before_img1:checked + label,
+/* #before_img1:checked + label,
 #before_img2:checked + label,
 #before_img3:checked + label{
     background-color: var(--color);
@@ -897,7 +1034,7 @@ section a{
 .before3{
     background: url(../img/agency/portfolio/monblanc_b1.png) no-repeat;
     background-size: 423px;
-}
+} */
 
 .before::after{
     content: "";
@@ -946,7 +1083,7 @@ section a{
 /* 투두 */
 
 #jas{
-    color: #FFFFFF;
+    background: linear-gradient(197deg, #add8e6 13%,#fff 28%);
 }
 
 #jas .container{
@@ -998,7 +1135,7 @@ section a{
 /* 네비바 */
 
 .nav{
-    font-family: "NanumSquareLight";
+    font-family: 'NanumSquareAcr';
 }
 /* 네비바 픽스 */
 

@@ -107,12 +107,12 @@ $(document).ready(function() {
     });
 
     // Formstone Background - Video Background Settings
-    $("header.video").background({
-        source: {
-            poster: "img/agency/backgrounds/bg-mobile-fallback.jpg",
-            mp4: "mp4/camera.mp4"
-        }
-    });
+    // $("header.video").background({
+    //     source: {
+    //         poster: "img/agency/backgrounds/bg-mobile-fallback.jpg",
+    //         mp4: "mp4/camera.mp4"
+    //     }
+    // });
 
     // Scrollspy: Highlights the navigation menu items while scrolling.
     $('body').scrollspy({

@@ -19,7 +19,8 @@ $(function(){
             var posTop =(page-1) * $(window).height();
             mHtml.animate({scrollTop : posTop}, 500);
         }
-    }, 2500)
+    }, 3500)
+
 
         const mHtml = $("html");
         var page = 1;
@@ -32,7 +33,7 @@ $(function(){
                     $("#topBtn").fadeOut();
                     $("#topBtn span").text("Top")
                 }
-                var elem = $('.chart__bar');
+                var elem = $('.chart__bar span');
     
                 elem.each(function () {
             
@@ -48,20 +49,24 @@ $(function(){
                 }
                 });
             },
-            // wheel: function(e){
-            //     if(mHtml.is(":animated")) return;
-            //     if(e.originalEvent.deltaY > 0) {
-            //         isScroll = true;
-            //         if(page == 9) return;
-            //         page++;
-            //     } else if(e.originalEvent.deltaY < 0) {
-            //         if(page == 1) return;
-            //         page--;
-            //     } 
-            //     if(page == 1) isScroll = false;
-            //     var posTop =(page-1) * $(window).height();
-            //     mHtml.animate({scrollTop : posTop}, 500);
-            // }
+            load: function(){
+                $("#load").fadeOut();
+            }
+            ,wheel: function(e){
+                // if(mHtml.is(":animated")) return;
+                if(e.originalEvent.deltaY > 0) {
+                    isScroll = true;
+                    // if(page == 9) return;
+                    // page++;
+                } 
+                // else if(e.originalEvent.deltaY < 0) {
+                //     if(page == 1) return;
+                //     page--;
+                // } 
+                if(page == 1) isScroll = false;
+                // var posTop =(page-1) * $(window).height();
+                // mHtml.animate({scrollTop : posTop}, 500);
+            }
         })
 
 
