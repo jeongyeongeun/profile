@@ -118,10 +118,10 @@ section{
     /* animation: flow_text 10s 0s alternate infinite; */
 }
 
-#hard .text_b{
+/* #hard .text_b{
     color: #222;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-}
+} */
 
 #about .text_b,
 #renewal .text_b{
@@ -132,6 +132,7 @@ section{
 
 .container_lg h2{
     /* font-size: 70px; */
+    /* font-weight: 300; */
 }
 
 a,button,label{
@@ -525,7 +526,7 @@ section .container .left{
     background: url(../img/agency/portfolio/cafe24.png);
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     z-index: 2;
 }
@@ -577,8 +578,7 @@ section .container .left{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(343deg, #add8e6 13%,#fff 28%) ,url(../img/agency/backgrounds/bg2.png) no-repeat;
-    background-position: bottom right;
+    background: linear-gradient(343deg, #add8e6 13%,#fff 28%);
 }
 
 .photo{
@@ -618,6 +618,7 @@ section .container .left{
 
 .about_me li input:checked ~ .about_depth{
     z-index: 10;
+    animation: fadeIn 0.2s linear;
 }
 
 .about_me li label{
@@ -715,13 +716,18 @@ section a{
     transform-origin: bottom left;
 }
 
-#cms,#hard{
-    background: linear-gradient(197deg, #add8e6 13%,#e8faff 28%) ;
+#cms{
+    background: linear-gradient(111deg, #f8ffff 13%,#e8faff 28%);
+    color: #555;
+}
+
+#hard{
+    background: linear-gradient(278deg, #f8ffff 13%,#e8faff 28%) ;
 
     color: #555;
 }
 
-#cms .info{
+#cms .info, #react .info{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -776,6 +782,10 @@ section a{
 #renewal{
     background: #e8faff;
     color: #555;
+}
+
+#renewal h2{
+    font-weight: 300;
 }
 
 #renewal .bg{
@@ -1060,7 +1070,7 @@ section a{
     display: block;
     width: 8px;
     height: 8px;
-    background: #fff;
+    background: #555;
     border-radius: 50%;
     animation: shrink 1s 0.5s infinite alternate;
 }
@@ -1161,12 +1171,25 @@ section a{
 
 #navi.navbar-left .navbar-nav >li>a{
     color: #555;
+    display: flex;
+    align-items: center;
 }
 
 #navi.navbar-left .navbar-nav > .active > a,
 #navi.navbar-left .navbar-nav > .active > a:hover,
 #navi.navbar-left .navbar-nav >li>a:hover{
     color: var(--color);
+}
+
+#navi.navbar-left .navbar-nav > .active > a::before
+{
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color);
+    margin-right: 5px;
 }
 
 @media (max-width:768px) {

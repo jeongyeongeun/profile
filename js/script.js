@@ -19,7 +19,7 @@ $(function(){
             var posTop =(page-1) * $(window).height();
             mHtml.animate({scrollTop : posTop}, 500);
         }
-    }, 3500)
+    }, 2500)
 
 
         const mHtml = $("html");
@@ -31,7 +31,6 @@ $(function(){
                     $("#topBtn").fadeIn();
                 } else {
                     $("#topBtn").fadeOut();
-                    $("#topBtn span").text("Top")
                 }
                 var elem = $('.chart__bar span');
     
@@ -76,7 +75,6 @@ $(function(){
             $('html').animate({
                 scrollTop : 0
             }, 600);
-            $("#topBtn span").text("슈웅");
         });
 
         // 텍스트 쪼개서 서로 다른 색 나오게 하기
