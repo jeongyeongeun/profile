@@ -11,15 +11,15 @@ $(function(){
 
     // f_scroll();
 
-    setTimeout(function(){
-        console.log(isScroll)
-        if(isScroll == 0){
-            console.log("1")
-            page = 2
-            var posTop =(page-1) * $(window).height();
-            mHtml.animate({scrollTop : posTop}, 500);
-        }
-    }, 2500)
+    // setTimeout(function(){
+    //     console.log(isScroll)
+    //     if(isScroll == 0){
+    //         console.log("1")
+    //         page = 2
+    //         var posTop =(page-1) * $(window).height();
+    //         mHtml.animate({scrollTop : posTop}, 500);
+    //     }
+    // }, 2500)
 
 
         const mHtml = $("html");

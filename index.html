@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -149,12 +149,11 @@
             <div class="demo">
                 <canvas id="particles"></canvas>
                 <div id="t" class="brand-name">
-                        <div class="tt-holder" data-splitting="items">
-                            <p class="tt " data-splitting="chars">I'm</p>
-                            <p class="tt " data-splitting="chars">get</p>
-                            <p class="tt " data-splitting="chars">ready!</p>
-                            <p class="tt smile" data-splitting="chars">d</p>
-                        </span>
+                    <div class="tt-holder" data-splitting="items">
+                        <p class="tt " data-splitting="chars">I'm</p>
+                        <p class="tt " data-splitting="chars">get</p>
+                        <p class="tt " data-splitting="chars">ready!</p>
+                        <p class="tt smile" data-splitting="chars">d</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +172,7 @@
     <!-- About Section -->
     <section id="about" class=" full">
         <div class="bg"></div>
-        <span class="dot" style="--color: "></span>
+        <span class="dot"></span>
         <div class="left container">
             <div class="row text-center">
                 <div class="col-lg-12 wow fadeIn title_b" data-wow-delay="0.2s">
@@ -281,23 +280,30 @@
                         <label for="cert" style="--color: #3cbdd3">certificate</label>
                         <div class="certificate about_depth">
                             <table>
-                                <tr>
-                                    <th rowspan="4">certificate</th>
-                                    <td>GTQ 1급</td>
-                                    <td>2023-03</td>
-                                </tr>
-                                <tr>
-                                    <td>웹 디자인 기능사</td>
-                                    <td>2023-00</td>
-                                </tr>
-                                <tr>
-                                    <td>JLPT N1</td>
-                                    <td>2019-01</td>
-                                </tr>
-                                <tr>
-                                    <td>ITT 일어전문번역 2급</td>
-                                    <td>2021-10</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>certificate</th>
+                                        <th style="font-size: 0;">date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GTQ 1급</td>
+                                        <td>2023-03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>웹 디자인 기능사</td>
+                                        <td>2023-00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JLPT N1</td>
+                                        <td>2019-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ITT 일어전문번역 2급</td>
+                                        <td>2021-10</td>
+                                    </tr>
+                                </tbody>
                             </table>
                             <!-- <p><span>certificate</span>GTQ 1급</p> -->
                         </div>
@@ -307,18 +313,26 @@
                         <label for="his" style="--color: #9060eb">history</label>
                         <div class="certificate about_depth">
                             <table class="history">
-                                <tr>
-                                    <th rowspan="4">history</th>
-                                    <td><i class="fa fa-graduation-cap"></i> Graduated Suri HighScool</td>
-                                    <td>2015-02</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fa fa-graduation-cap"></i>Graduated Suwon Univ. <br> majoring in Japanese</td>
-                                    <td>2019-02</td>
-                                </tr>
-                                <tr>
-                                    <td>Training for employment <br> UI/UX & web Publisher & frontend</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>history</th>
+                                        <th style="font-size: 0;">date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-graduation-cap"></i> Graduated Suri HighScool</td>
+                                        <td>2015-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-graduation-cap"></i>Graduated Suwon Univ. <br> majoring in Japanese</td>
+                                        <td>2019-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Training for employment <br> UI/UX & web Publisher & frontend</td>
+                                        <td>2023-05</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </li>
@@ -334,9 +348,7 @@
             <div>portfolioportfolioportfolioportfolioportfolioportfolioportfolio</div>
         </div>
         <span class="anim">
-            <span class="dot_top" style="--color: tranparent"></span>
-            <span class="dot" style="--color: "></span>
-            <!-- <span class="dot_bottom" style="--color: #c490fb"></span> -->
+            <span class="dot"></span>
         </span>
         <div class="container_lg text-center wow fadeIn " data-wow-delay="0.5s">
             <div class="row content-row">
@@ -345,8 +357,8 @@
                         <span class="text_bounce" data-splitting>cms tuning</span>
                     </h2>
                     <div class="col-lg-4 wow fadeInLeft" data-wow-delay="1s">
-                        <h2 class="info">
-                            <span class="rainbow">Cafe24</span>
+                        <div class="info">
+                            <h2 class="rainbow">Cafe24</h2>
                             
                             <p>쇼핑몰 솔루션 이용</p>
                             <p>Html,CSS,JQuery,JS,PlugIn</p>
@@ -358,7 +370,7 @@
                                 <span></span>
                                 <span></span>
                             </a>
-                        </h2>
+                        </div>
                     </div>
                     <div class="col-lg-8 img_box">
                         <div class="p_img_box">
@@ -374,9 +386,7 @@
         <div class="text_b">
             <div>portfolioportfolioportfolioportfolioportfolioportfolioportfolio</div>
         </div>
-        <span class="dot_top" style="--color: tranparent"></span>
-        <span class="dot" style="--color: "></span>
-        <!-- <span class="dot_bottom" style="--color: #c490fb"></span> -->
+        <span class="dot"></span>
         <div class="container_lg text-center wow fadeIn" data-wow-delay="0.5s">
             <div class="left row content-row">
                 <div class="col-lg-12">
@@ -384,8 +394,8 @@
                         <span class="text_bounce" data-splitting>HardCoding</span>
                     </h2>
                     <div class="col-lg-5 pull-right wow fadeInRight" data-wow-delay="1s">
-                        <h2 class="info">
-                            <span class="rainbow">Gurumi</span> 
+                        <div class="info">
+                            <h2 class="rainbow">Gurumi</h2> 
                             <p>My PHP admin page, My SQL</p>
                             <p>데이터베이스 연동 회원가입 및 로그인 페이지 작업</p>
                             <p>HTML,CSS,SCSS,JQuery,JS,PlugIn,SQL,PHP<span>(레퍼런스 참조)</span></p>
@@ -420,7 +430,7 @@
                                     <span></span>
                                 </a></li>
                             </ul>
-                        </h2>
+                        </div>
                     </div>
                     <div class="col-lg-7 img_box">
                         <div class="p_img_box_h pull-right">
@@ -436,37 +446,43 @@
             <div>portfolioportfolioportfolioportfolioportfolioportfolioportfolio</div>
         </div>
         <span class="anim">
-            <span class="dot_top" style="--color: tranparent"></span>
-            <span class="dot" style="--color: "></span>
-            <!-- <span class="dot_bottom" style="--color: #c490fb"></span> -->
+            <span class="dot"></span>
         </span>
         <div class="container_lg text-center wow fadeIn " data-wow-delay="0.5s">
-            <div class="row content-row col-lg-12">
+            <div class="row content-row col-lg-12" style="position: relative;">
                 <div class="col-lg-12">
                     <h2 class="title">
                         <span class="text_bounce" data-splitting>React project</span>
                     </h2>
-                    <div class="col-lg-4 wow fadeInLeft" data-wow-delay="1s">
-                        <h2 class="info text-left">
-                            <span class="rainbow">Cafe24</span>
-                            
-                            <p>쇼핑몰 솔루션 이용</p>
-                            <p>Html,CSS,JQuery,JS,PlugIn</p>
-                            <p>Plugin: swiper,slick slider</p>
-                            <a class="btn btn-outline-dark" href="https://yeong1110.cafe24.com/" target="_blank">View more
-                                <i class="fa fa-arrow-right"></i>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                        </h2>
-                    </div>
-                    <div class="col-lg-8 img_box">
-                        <div class="p_img_box">
-                            <!-- <img class="col-lg-12" src="./img/agency/portfolio/Snipaste_2023-03-26_21-25-34.png" alt=""> -->
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="1s">
+                        <div class="info">
+                            <ul class="re_wrap">
+                                <li class="re_cont " id="re_todo">
+                                    <input type="radio" id="r_todo" name="React" class="disN" checked>
+                                    <label for="r_todo">React Todo</label>
+                                    <div class="re_depth">
+                                        <div class="p_img_box">
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="re_cont " id="re_shop">
+                                    <input type="radio" id="r_shop" name="React" class="disN">
+                                    <label for="r_shop">React ShoppingMall</label>
+                                    <div class="re_depth">
+                                        <div class="p_img_box">
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    <!-- <div class="col-lg-6 img_box" style="background-color: aquamarine;">
+                        <div class="p_img_box">
+                            
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -477,8 +493,7 @@
         <div class="text_b">
             <div>portfolioportfolioportfolioportfolioportfolioportfolioportfolio</div>
         </div>
-        <span class="dot_top" style="--color: tranparent"></span>
-        <span class="dot" style="--color: "></span>
+        <span class="dot"></span>
         <div class="container_lg">
             <div class="row ">
                 <div class="col-lg-12 wow fadeIn text_box" data-wow-delay="0.5s">
@@ -497,13 +512,10 @@
                         </div>
                     </div>
                     <div class="col-lg-4 renewal_text">
-                        <h4><em>1</em> Calpis <p>use Html,css, js, jquery</p></h4>
+                        <h4><em>1</em> Calpis </h4>
+                        <p>use Html,css, js, jquery</p>
                         <div class="before_wrap">
                             <a class="btn btn-outline-dark mix identity" href="./img/agency/portfolio/calpis_b.png">Before</a>
-                            <!-- <input class="disN" type="checkbox" id="before_img1">
-                            <label class="b_label mix identity" for="before_img1" style="--color: lightcyan"  href="./img/agency/portfolio/calpis_b.png">Before</label>
-                            <div class="before mix identity" href="./img/agency/portfolio/calpis_b.png" title="Before">
-                            </div> -->
                             <a class="btn btn-outline-dark" href="http://yeong1110.dothome.co.kr/bootstrap/index.html" target="_blank">View more
                                 <i class="fa fa-arrow-right"></i>
                             </a>
@@ -558,8 +570,7 @@
         <div class="text_b">
             <div>portfolioportfolioportfolioportfolioportfolioportfolioportfolio</div>
         </div>
-        <span class="dot_top" style="--color: tranparent"></span>
-        <span class="dot" style="--color: "></span>
+        <span class="dot"></span>
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5">
@@ -578,223 +589,10 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section class="full">
-        <div class="container text-center wow fadeIn">
-            
-            <h2>Portfolio</h2>
-            <hr class="colored">
-            <p>Here are some other projects that we've worked on.</p>
-            <div class="row content-row">
-                <div class="col-lg-12">
-                    <div class="portfolio-filter">
-                        <ul id="filters" class="clearfix">
-                            <li>
-                                <span class="filter active" data-filter="all">All</span>
-                            </li>
-                            <li>
-                                <span class="filter" data-filter=".identity">Identity</span>
-                            </li>
-                            <li>
-                                <span class="filter" data-filter=".graphic">Graphic</span>
-                            </li>
-                            <li>
-                                <span class="filter" data-filter=".web">Web</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="portfoliolist">
-                        <!-- NOTE: You can add more items to the grid, or remove items you don't need! -->
-                        <!-- Grid Item 1 -->
-                        <div class="mix identity" href="img/agency/portfolio/grid/grid-1.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-1.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Brand Identity</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 2 -->
-                        <div class="mix web" href="img/agency/portfolio/grid/grid-2.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-2.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Web Development</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 3 -->
-                        <div class="mix web" href="img/agency/portfolio/grid/grid-3.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-3.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Web Development</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 4 -->
-                        <div class="mix identity" href="img/agency/portfolio/grid/grid-4.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-4.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Brand Identity</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 5 -->
-                        <div class="mix web" href="img/agency/portfolio/grid/grid-5.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-5.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Web Development</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 6 -->
-                        <div class="mix graphic" href="img/agency/portfolio/grid/grid-6.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-6.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Graphic Design</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 7 -->
-                        <div class="mix graphic" href="img/agency/portfolio/grid/grid-7.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-7.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Graphic Design</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 8 -->
-                        <div class="mix web" href="img/agency/portfolio/grid/grid-8.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-8.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Web Development</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Grid Item 9 -->
-                        <div class="mix identity" href="img/agency/portfolio/grid/grid-9.jpg" title="Client Name">
-                            <div class="portfolio-wrapper">
-                                <img src="img/agency/portfolio/grid/grid-9.jpg" alt="">
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <a class="text-title">Client Name</a>
-                                        <span class="text-category">Brand Identity</span>
-                                    </div>
-                                    <div class="caption-bg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Testomonials Section -->
-    <section class="testimonials bg-gray">
-        <div class="container wow fadeIn">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="testimonials-carousel">
-                        <!-- NOTE: You can add more items to the carousel, or remove items you don't need! -->
-                        <!-- Testimonial Item 1 -->
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <p class="lead">"Working with Vitality was both a valuable and rewarding experience."</p>
-                                    <hr class="colored">
-                                    <p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, temporibus, laborum, dignissimos doloremque corporis alias nostrum recusandae culpa id quisquam harum impedit sed sunt non obcaecati vero ipsam aut fugit?</p>
-                                    <div class="testimonial-info">
-                                        <div class="testimonial-img">
-                                            <img src="" class="img-circle img-responsive" alt="">
-                                        </div>
-                                        <div class="testimonial-author">
-                                            <span class="name">Jim Walker</span>
-                                            <p class="small">CEO of Company Name</p>
-                                            <div class="stars">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Item 2 -->
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <p class="lead">"Vitality is a well coded, well documented, and easy to use theme!"</p>
-                                    <hr class="colored">
-                                    <p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem amet rem minus dolorum, facere in soluta explicabo, unde eveniet illo vel, nemo nostrum atque nesciunt facilis quaerat quasi reprehenderit dicta.</p>
-                                    <div class="testimonial-info">
-                                        <div class="testimonial-img">
-                                            <img src="" class="img-circle img-responsive" alt="">
-                                        </div>
-                                        <div class="testimonial-author">
-                                            <span class="name">Ashley Creadle</span>
-                                            <p class="small">Creative Director of Company Name</p>
-                                            <div class="stars">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <div class="top_btn" id="topBtn">
         <div class="body">
@@ -871,14 +669,14 @@
                                         <div class="mockup-carousel">
                                             <div class="item">
                                                 <p>Before</p>
-                                                <img src="" class="img-responsive" alt="">
+                                                <img src="/img/agency/calpisLogo.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="item">
                                                 <p>After</p>
-                                                <img src="" class="img-responsive" alt="">
+                                                <img src="/img/agency/calpisLogo.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="item">
-                                                <img src="" class="img-responsive" alt="">
+                                                <img src="/img/agency/calpisLogo.png" class="img-responsive" alt="">
                                             </div>
                                         </div>
 
