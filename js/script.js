@@ -32,7 +32,7 @@ $(function(){
                 } else {
                     $("#topBtn").fadeOut();
                 }
-                var elem = $('.chart__bar span');
+                var elem = $('.anim');
     
                 elem.each(function () {
             
@@ -41,7 +41,7 @@ $(function(){
                 var scrollPos = $(window).scrollTop();
                 var wh = $(window).height();
             
-                if(scrollPos > elemOffset - wh + (wh / 2)-300){
+                if(scrollPos > elemOffset - wh + (wh / 2)-400){
                     $(this).addClass(isAnimate);
                 }else{
                     $(this).removeClass(isAnimate);
