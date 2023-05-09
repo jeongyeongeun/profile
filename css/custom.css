@@ -719,7 +719,8 @@ section a{
 }
 
 #renewal .pen,
-#jas .pen{
+#jas .pen,
+#last .pen{
     z-index: 1;
     position: relative;
     display: inline-flex;
@@ -730,9 +731,14 @@ section a{
     animation: myPen 1s 0.5s ease forwards;
 }
 
+#last .pen::before{
+    animation-delay: 1.5s;
+}
+
 .info p::before,
 #renewal .pen::before,
-#jas .pen::before{
+#jas .pen::before,
+#last .pen::before{
     content: " ";
     display: block;
     position: absolute;
@@ -1439,6 +1445,7 @@ section a{
 
 #last{
     background: #fff;
+    padding: 0;
 }
 
 
@@ -1446,6 +1453,7 @@ section a{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 120px;
 }
 
 .thanks p{
@@ -1455,24 +1463,37 @@ section a{
 
 .thanks .char{
     text-shadow: 0 0 0 whitesmoke;
-    animation: smoky 5s cubic-bezier(.5, 0, .5, 1) both infinite;
+    /* animation: smoky 5s cubic-bezier(.5, 0, .5, 1) both ; */
     animation-delay: calc(60ms * var(--char-index));
 }
 
-.thanks .char:nth-child(even){
+.goodbye{
+
+
+
+}
+
+.goodbye .char{
+    animation: goodbye 2s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+    animation-iteration-count: 2;
+}
+
+/* .thanks .char:nth-child(even){
     animation-name: smoky-mirror;
     animation-delay: calc(60ms * var(--char-index));
-}
+} */
 
 .footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+    background: #add8e6;
 
 }
 
 .footer .container{
-    color: #add8e6;
+    color: #fff;
 }
 
 .footer .btn{
@@ -1483,3 +1504,190 @@ section a{
 .footer .btn:focus{
     color: #fff;
 }
+
+.flow_banner{
+    display: flex;
+    position: relative;
+}
+
+.flow_banner::before,
+.flow_banner::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    background: linear-gradient(90deg, #fff 10%, #00000000 100%);
+    z-index: 9;
+}
+
+.flow_banner::after{
+    right: 0;
+    top: 0;
+    left: auto;
+    background: linear-gradient(270deg, #fff 10%, #00000000 100%);
+}
+
+.list{
+    display: flex;
+    animation: flow_roll 10s linear infinite;
+}
+
+.list li{
+    width: max-content;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 30px;
+    text-transform: uppercase;
+    color: #add8e6;
+}
+
+.flow_bottom ul{
+    animation-direction: reverse;
+}
+
+@keyframes flow_roll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.pin-wrap{
+    display: flex;
+}
+
+.pin-wrap p{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 100px;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.notion{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    z-index: 9998;
+}
+
+.notion_body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#qr:checked ~ .qr_depth{
+    /* width: 200px;
+    height: 200px; */
+    animation: anime 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#qr:checked ~ .qr_depth a::before{
+    animation: scan 1.5s linear 1s alternate;
+}
+
+#qr:checked ~ .down{
+    display: none;
+}
+
+#qr + label{
+    display: block;
+}
+
+#qr + label img{
+    fill: #ff8b8b;
+}
+
+.qr_depth{
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr_depth a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0;
+    background: #ff8b8b;
+    box-shadow: #ff8b8b 0px 48px 100px 0px;
+}
+
+.notion .down{
+    transform: rotate(45deg) translateY(20px) translateX(-10px);
+}
+
+@keyframes scan {
+    100%{
+        height: 6px;
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.qr_depth p{
+    padding-top: 10px;
+}
+
+@keyframes anime {
+    0% {
+      width: 0;
+      height: 0;
+      background: #f0f0f0;
+      box-shadow:  0 0 0 #cccccc,
+                   0 0 0 #ffffff,
+                    10px 10px 10px #cccccc inset,
+                    -10px -10px 10px #ffffff inset;
+    }
+    25% {
+      width: 60px;
+      height: 60px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    50% {
+      width: 60px;
+      height: 100px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      background: #fafafa;
+      box-shadow:  40px 40px 40px #cccccc,
+                   0 0 0 #ffffff,
+                   0 0 0 #cccccc inset,
+                   2px 2px 2px #ffffff inset;
+    }
+}
+
+

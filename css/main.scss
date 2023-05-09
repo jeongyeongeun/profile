@@ -501,7 +501,7 @@ $chartBarGap: 10px;
         mix-blend-mode: difference;
         pointer-events: none;
         opacity: .5;
-        z-index: 999;
+        z-index: 99999;
     }
 }
 
@@ -675,33 +675,42 @@ a span:nth-of-type(4){
     animation-delay: calc(60ms * var(--char-index));
 }
 
-//smook
+//thanks
 
-@keyframes smoky {
-    60% {
-      text-shadow: 0 0 40px whitesmoke;
+@keyframes goodbye {
+    0%{
+      transform: rotateZ(5deg) scale(0.75) translateY(0);
+      opacity:0.1;
     }
-    to {
-      transform:
-        translate3d(15rem,-8rem,0)
-        rotate(-40deg)
-        skewX(70deg)
-        scale(1.5);
-      text-shadow: 0 0 20px whitesmoke;
-      opacity: 0;
+    50%{
+      transform: rotateZ(-5deg) scale(1) translateY(-0.5em);
+      opacity:1;
+    }
+    100%{
+      transform: rotateZ(5deg) scale(0.75) translateY(0);
+      opacity:0.1;
     }
   }
-  
-  @keyframes smoky-mirror {
-    60% {
-      text-shadow: 0 0 40px whitesmoke; }
-    to {
-      transform:
-        translate3d(18rem,-8rem,0)
-        rotate(-40deg) 
-        skewX(-70deg)
-        scale(2);
-       text-shadow: 0 0 20px whitesmoke;
-      opacity: 0;
-    }
-  }  
+
+  //flow
+
+.animated-title { 
+    position: relative;
+    width: 100%;
+    max-width:100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
+.animated-title .track { 
+    white-space: nowrap;
+    will-change: transform;
+    animation: flow1 60s linear infinite; 
+}
+@keyframes flow1 {
+from { transform: translateX(0); }
+to { transform: translateX(-50%); }
+}
+
+
+
