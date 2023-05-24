@@ -59,6 +59,11 @@ section{
     margin: 50px 0;
     font-weight: 200;
     position: relative;
+    color: #222;
+}
+
+#renewal h2{
+    color: #222;
 }
 
 .title::before,.title::after{
@@ -734,7 +739,7 @@ section a{
 }
 
 .info h2{
-    /* font-weight: 300; */
+    font-size: 45px;
 }
 
 .info span{
@@ -1907,9 +1912,6 @@ section a{
     }
     .thanks_bottom{
         padding-bottom: 0;
-    }
-    footer.footer{
-        padding: 10px;
     }
 }
 @media (max-width:480px) {
