@@ -471,13 +471,6 @@ $chartBarGap: 10px;
         transform: translateY(30%) var(--transform);
     }
 }
-@media (max-width: 768px){
-    .tt{
-        span{
-            width: 50px;
-        }
-    }
-}
 
 // cursor
 .cursor {

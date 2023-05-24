@@ -1731,4 +1731,75 @@ section a{
     }
 }
 
+@media (max-width: 767px) {
+    #navi.navbar-inverse{
+        background: #add8e6;
+    }
+    .custom-shape-divider-bottom-1678639981 svg{
+        width: 500%;
+    }
+    .notion .down{
+        transform: scale(0);
+    }
+    .tt-holder .tt{
+        font-size: 60px;
+    }
+    .smile .word{
+        top: 0;
+        left: 0;
+    }
+    header .intro-content{
+        top: -30px;
+    }
+    .dot{
+        display: none;
+    }
+    .about_me{
+        width: 100%;
+        top: -50px;
+    }
+    .photo{
+        margin: 0;
+        height: 100px;
+    }
+    .photo_zone{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .my_img{
+        width: 100px;
+        height: 100px;
+        top: 114px;
+        left: 19px;
+    }
+    .my_bg{
+        height: 90px;
+        width: 90px;
+        left: 23px;
+        top: 162px;
+    }
+    .my_text{
+        margin: 0;
+        position: absolute;
+        top: -50px;
+        left: 179px;
+    }
+    .about_depth{
+        transform: scale(0.7);
+        top: -60px;
+    }
+    .top_btn{
+        z-index: 999;
+    }
+    #about .bg{
+        background: #fff;
+    }
+    #about{
+        background-size: 508px;
+        background-position-y: -32px;
+    }
+}
+
+
 
