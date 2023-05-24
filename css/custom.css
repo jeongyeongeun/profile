@@ -965,6 +965,7 @@ section a{
 
 .renewal_imgbox{
     box-shadow: rgb(17 12 46 / 37%) -1px 4px 17px 0px;
+    border-radius: 6px;
 }
 
 .renewal_img img{
