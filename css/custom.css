@@ -1799,6 +1799,50 @@ section a{
         background-size: 508px;
         background-position-y: -32px;
     }
+    .title{
+        text-align: center;
+        margin: 0;
+        font-size: 40px;
+    }
+    .title span span{
+        font-size: 40px;
+    }
+    .img_box{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+    .p_img_box, .p_img_box_h{
+        height: 200px;
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.45) -20px 0px 20px -20px;
+    }
+
+    .info h2{
+        font-size: 30px;
+        position: relative;
+        margin: 10px 0;
+    }
+    .container_lg{
+        width: 500px;
+    }
+    #hard .info p{
+        font-size: 14px;
+    }
+    #hard .info p:nth-child(4) span{
+        font-size: 11px;
+    }
+    #cms .info,#hard .info, #react .info{
+        justify-content: center;
+        align-items: center;
+    }
+    #react .title{
+        margin: 0;
+    }
 }
 
 
