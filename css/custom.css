@@ -1680,6 +1680,10 @@ section a{
     transform: rotate(45deg) translateY(20px) translateX(-10px);
 }
 
+.thanks_bottom{
+    padding-bottom: 80px;
+}
+
 @keyframes scan {
     100%{
         height: 6px;
@@ -1830,6 +1834,9 @@ section a{
     .container_lg{
         width: 500px;
     }
+    #hard ul{
+        width: 100%;
+    }
     #hard .info p{
         font-size: 14px;
     }
@@ -1842,6 +1849,72 @@ section a{
     }
     #react .title{
         margin: 0;
+    }
+    .re_depth{
+        top: 100%;
+        left: 0;
+        margin-top: 20px;
+    }
+    #react .p_img_box{
+        height: 200px;
+    }
+    .re_textbox{
+        display: none;
+    }
+    .renewal_img{
+        position: absolute;
+        padding: 0;
+    }
+    #renewal .item{
+        color: #222;
+    }
+
+    .re_right3{
+        color: #fff;
+    }
+    .re_right3 h4{
+        font-size: 35px;
+    }
+    #renewal .owl-pagination{
+        flex-direction: initial;
+        top: -16px;
+        right: 50%;
+    }
+    #renewal .owl-pagination .owl-page{
+        transform: scale(0.6);
+        
+    }
+    .todo{
+        height: 300px;
+    }
+    .todo .todo_img{
+        background-repeat: no-repeat;
+        background-size: 320%;
+        background-position-y: -220px;
+    }
+    .todo .todo_img:hover{
+        background-size: 329%;
+    }
+    .thanks{
+        padding-top: 10px;
+    }
+    .thanks p{
+        font-size: 20px;
+    }
+    .pin-wrap p{
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .thanks_bottom{
+        padding-bottom: 0;
+    }
+    footer.footer{
+        padding: 10px;
+    }
+}
+@media (max-width:480px) {
+    .container_lg{
+        width: 380px;
     }
 }
 
