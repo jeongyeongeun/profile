@@ -37,6 +37,7 @@ section{
 
 #load #L5{
     width: 100px;
+    transform: translateX(22px);
 }
 
 .p_img_box{
@@ -159,32 +160,19 @@ section{
     overflow: hidden;
 }
 
-.dot_top,
-.dot,
-.dot_bottom,
-#hard::before,
-#hard::after{
+.dot{
     content: "";
     width: 300px;
     height: 300px;
-    display: block;
-    background: linear-gradient(90deg, #fff 50%, var(--color) 50%);
-    background-size: 200%;
-    border-radius: 50%;
-    /* background: url(../img/agency/backgrounds/SVG/Asset\ 1.svg) no-repeat ; */
-    background-position: right;
-    position: absolute;
-    transition: 0.4s linear;
-}
-
-
-
-.dot{
     top: -150px;
     right: 60px;
     z-index: 1;
     animation: swingDot 3s 0s infinite alternate;
+    display: block;
+    position: absolute;
+    transition: 0.4s linear;
 }
+
 @keyframes swingDot {
     0%{
         transform: rotate(30deg);
@@ -226,17 +214,10 @@ section{
     font-size: 7rem;
     display: block;
     content: var(--num);
-    /* background: url(../img/agency/cms2.svg) no-repeat bottom; */
-    /* background-size: cover; */
     width: 200px;
     height: 70px;
     bottom: 0;
     left: calc(50% - 100px);
-}
-
-
-#cms::before:hover{
-    background-position: right;
 }
 
 .dot_top{
@@ -307,12 +288,6 @@ section .container .left{
     position: relative;
     left: 100px;
 }
-
-/* @media (min-width: 1200px){
-    section .container{
-        width: calc(1170px - 110px);
-    }
-} */
 
 /* 헤더 */
 
@@ -418,7 +393,7 @@ section .container .left{
     cursor: pointer;
     display: none;
     transition: 0.3s;
-    
+    z-index: 9999;
 }
 .heart {
     /* Modify size here: */
@@ -818,10 +793,11 @@ section a{
 }
 
 #cms h2 span:nth-of-type(1),
-#hard h2 span:nth-of-type(1){
+#hard h2 span:nth-of-type(1),
+#react h2 span:nth-of-type(1),
+#renewal h2 span:nth-of-type(1),
+#jas h2 span:nth-of-type(1){
     font-size: 50px
-    /* display: inline-block;
-    margin-bottom: 30px; */
 }
 
 /* 하드코딩 */
@@ -1572,6 +1548,7 @@ section a{
 .list{
     display: flex;
     animation: flow_roll 10s linear infinite;
+    padding: 0;
 }
 
 .list li{
@@ -1731,10 +1708,95 @@ section a{
                    2px 2px 2px #ffffff inset;
     }
 }
+@media (max-width:1567px) {
+    .container_lg{
+        width: 80%;
+    }
+    #header .intro-content{
+        position: relative;
+        top: -210px;
+    }
+    .my_text{
+        width: max-content;
+    }
+}
+@media (max-width:1199px) {
+    .dot{
+        top: 50px;
+        width: 100%;
+        height: auto;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        animation: none;
+    }
+    .dot::before{
+        position: relative;
+        width: 100px;
+        height: auto;
+        font-size: 30px;
+        left: 0;
+        animation: swingDot 3s 0s infinite alternate;
+    }
+    .about_me{
+        left: 168px;
+    }
+    .photo{
+
+    }
+    .photo_zone{
+        transform: scale(0.8);
+    }
+    #hard .info p{
+        font-size: 13px;
+    }
+    #hard .info span{
+        font-size: 12px;
+    }
+    .img_box{
+        height: 400px;
+    }
+    #hard ul{
+        justify-content: flex-end;
+    }
+    #react .info{
+        position: absolute;
+        left: -254px;
+    }
+    .re_depth{
+        width: 500px;
+        height: 577px;
+    }
+    #renewal .owl-pagination{
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .certificate .history td{
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    .certificate .history td i{
+        left: 0;
+    }
+}
 
 @media (max-width: 767px) {
     #navi.navbar-inverse{
         background: #add8e6;
+    }
+    #navi.navbar-inverse .navbar-toggle{
+        position: absolute;
+        right: -8px;
+    }
+    #navi.navbar-left .navbar-nav >li>a{
+        color: #fff;
+    }
+    .bg{
+        display: none;
+    }
+    #react .text_b, #renewal .text_b, #jas .text_b{
+        display: none;
     }
     .custom-shape-divider-bottom-1678639981 svg{
         width: 500%;
@@ -1750,48 +1812,68 @@ section a{
         left: 0;
     }
     header .intro-content{
-        top: -30px;
+        top: -80px;
     }
     .dot{
         display: none;
     }
     .about_me{
         width: 100%;
-        top: -50px;
-        margin-left: -2px;
+        top: -40px;
+        left: 0;
     }
     .photo{
         margin: 0;
         height: 100px;
+        position: relative;
+        top: -60px;
+        display: flex;
+        justify-content: space-between;
     }
     .photo_zone{
         margin: 0;
         height: 100%;
         width: 100%;
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .my_img{
         width: 100px;
         height: 100px;
-        top: 114px;
-        left: 19px;
+        top: 181px;
+        left: 0;
     }
     .my_bg{
         height: 90px;
         width: 90px;
         left: 23px;
-        top: 162px;
+        top: 230px;
+        display: none;
     }
+    /* .photo{
+        height: 240px;
+        width: 80%;
+        margin: -69px auto 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .photo_zone{
+        transform: scale(0.5);
+    } */
+
     .my_text{
         margin: 0;
-        position: absolute;
-        top: -50px;
-        left: 179px;
+        position: relative;
+        left: -30px;
     }
     .about_depth{
         top: 100%;
     }
     .charts{
-        padding: 10px 0 0;
+        padding: 30px 0 0;
         transform: scale(0.7) translateY(-113px);
     }
     .chart__title{
@@ -1805,9 +1887,6 @@ section a{
     }
     .history{
         transform: scale(0.8);
-    }
-    .top_btn{
-        z-index: 999;
     }
     #about .bg{
         background: #fff;
@@ -1832,6 +1911,7 @@ section a{
         padding: 0;
         box-shadow: none;
         width: 100%;
+        height: auto;
     }
     .p_img_box, .p_img_box_h{
         height: 200px;
@@ -1881,7 +1961,14 @@ section a{
     .re_wrap > li label{
         padding: 10px;
     }
+    #react .info{
+        position: relative;
+        left: 0;
+    }
     .re_depth{
+
+        width: 100%;
+        height: auto;
         top: 100%;
         left: 0;
         margin-top: 20px;
@@ -1907,7 +1994,7 @@ section a{
     }
     .renewal_text h4{
         color: #fff;
-        text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+        text-shadow: -3px 3px 0px #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
     }
 
     .re_right3{
@@ -1920,6 +2007,10 @@ section a{
         flex-direction: initial;
         top: -16px;
         right: calc(50% - 96px);
+        display: none;
+    }
+    .renewal_imgbox{
+        box-shadow: none;
     }
     #renewal .owl-pagination .owl-page{
         transform: scale(0.6);
@@ -1976,6 +2067,13 @@ section a{
     .tt-holder::before{
         width: 100%;
         height: 100%;
+        font-size: 30px;
+        animation: bounce_m var(--interval) calc(var(--interval) / -2)
+        cubic-bezier(0, 0, 0, 1) infinite,
+        color var(--duration) calc(var(--interval) / -2) linear infinite;
+    }
+    .before_wrap{
+        top: 73px;
     }
     #navi.navbar-inverse{
         display: flex;
@@ -2003,6 +2101,7 @@ section a{
         height: 30px;
     }
 }
+
 @media (max-width:480px) {
     .container_lg{
         width: 100%;
@@ -2014,6 +2113,7 @@ section a{
     .certificate td:last-child{
         padding: 0;
     }
+
 }
 
 

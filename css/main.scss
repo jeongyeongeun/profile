@@ -291,6 +291,16 @@ $chartBarGap: 10px;
     }
 }
 
+@keyframes bounce_m {
+    from,
+    to {
+        transform: translateY(-100%) scale(0.8);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0), linear;
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
 
 @keyframes color {
     from,
@@ -379,25 +389,6 @@ $chartBarGap: 10px;
     } 
 }
 
-.tt{
-    // border-right: 3px solid #27ae60;
-
-
-    // left: calc(50% - 300px);
-
-
-    // --delay: calc(var(--interval) * (var(--item-index)));
-    // --transform: translateX(0);
-
-    // animation: word-reveal var(--duration) linear both infinite,
-    // word-bounce var(--duration) ease both infinite;
-    // animation-delay: var(--delay);
-    // .char { 
-    //     animation: char-reveal var(--interval) cubic-bezier(0, 0, 0.2, 1) both
-    //     infinite;
-    //     animation-delay: var(--delay);
-    // }
-}
 .smile{
     transform: rotate(90deg);
     .word{
