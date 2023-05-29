@@ -1897,6 +1897,9 @@ section a{
         background-size: 508px;
         background-position-y: -32px;
     }
+    .chart--horiz {
+    padding: 0;
+    }
     .title{
         text-align: center;
         margin: 0;
@@ -1977,6 +1980,8 @@ section a{
     }
     #react .p_img_box{
         height: 200px;
+    }
+    #react #re_todo .p_img_box{
         background-position: center;
     }
     .re_textbox{
@@ -2050,6 +2055,12 @@ section a{
     }
     .thanks_bottom{
         padding-bottom: 0;
+    }
+    .my_text{
+        margin-top: 10px;
+    }
+    .my_text p{
+        font-size: 13px;
     }
     .my_text p:first-child{
         margin: 0;
