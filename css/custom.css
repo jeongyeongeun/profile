@@ -1811,7 +1811,7 @@ section a{
         top: 0;
         left: 0;
     }
-    header .intro-content{
+    #header .intro-content{
         top: -80px;
     }
     .dot{
@@ -1821,6 +1821,8 @@ section a{
         width: 100%;
         top: -40px;
         left: 0;
+        padding: 0;
+        margin: 0 auto;
     }
     .photo{
         margin: 0;
@@ -1966,7 +1968,7 @@ section a{
         left: 0;
     }
     .re_depth{
-
+        background: #fff;
         width: 100%;
         height: auto;
         top: 100%;
@@ -1975,6 +1977,7 @@ section a{
     }
     #react .p_img_box{
         height: 200px;
+        background-position: center;
     }
     .re_textbox{
         display: none;
@@ -2073,7 +2076,11 @@ section a{
         color var(--duration) calc(var(--interval) / -2) linear infinite;
     }
     .before_wrap{
-        top: 73px;
+        width: 87%;
+        top: 20px;
+    }
+    .before_wrap a{
+        margin: 10px 0 0;
     }
     #navi.navbar-inverse{
         display: flex;
