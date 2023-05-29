@@ -516,6 +516,14 @@ section .container .left{
     z-index: 2;
 }
 
+.p_img_box.img_flow{
+    animation: flow 10s 0.3s linear;
+}
+
+.p_img_box_h.img_flow{
+    animation: flow 10s 0.3s linear;
+}
+
 .p_img_box:hover,
 .p_img_box_h:hover
 {
@@ -2114,7 +2122,7 @@ section a{
         width: max-content;
     }
     .notion{
-        top: 10px;
+        top: 14px;
         width: 30px;
         height: 30px;
     }
