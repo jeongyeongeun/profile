@@ -169,10 +169,6 @@ $chartBarGap: 10px;
     .chart--dev & {
         // animation-delay: 1s;
     }
-
-    .chart--design & {
-    // animation-delay: 1.8s;
-    }
 }
 
 .chart--horiz {
@@ -215,6 +211,18 @@ $chartBarGap: 10px;
     font-size: 12px;
     line-height: 1;
     // margin-left: 5px;
+}
+
+.chart--dev{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chart--design {
+    .chart__label{
+        background: #add8e6;
+    }
+// animation-delay: 1.8s;
 }
 
 //Keyframes
@@ -272,7 +280,7 @@ $chartBarGap: 10px;
 .tt-holder::before{
     content: "";
     display: block;
-    width: 50px;
+    width: 100%;
     height: 50px;
     margin: 0 auto;
     animation: bounce var(--interval) calc(var(--interval) / -2)
@@ -394,8 +402,7 @@ $chartBarGap: 10px;
     .word{
         position: relative;
         top: 50%;
-        left: 40px;
-        // left: calc(50% - 100px);
+        left: 0;
         width: 100px;
         height: 50px;
         border-radius: 50%;

@@ -29,8 +29,10 @@ $(function(){
             scroll:function(){
                 if ($(this).scrollTop() > 250) {
                     $("#topBtn").fadeIn();
+                    $(".notion").addClass('on')
                 } else {
                     $("#topBtn").fadeOut();
+                    $(".notion").removeClass('on')
                 }
                 var elem = $('.anim');
     

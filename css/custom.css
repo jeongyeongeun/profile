@@ -1596,11 +1596,16 @@ section a{
 
 .notion{
     position: fixed;
-    top: 5%;
+    top: 13%;
     left: 5%;
     width: 50px;
     height: 50px;
     z-index: 9998;
+    transition: all 0.5s;
+}
+
+.notion.on{
+    top: 5%;
 }
 
 .notion_body{
@@ -1722,10 +1727,122 @@ section a{
     }
     #header .intro-content{
         position: relative;
-        top: -210px;
+        top: -67%;
     }
     .my_text{
         width: max-content;
+    }
+    .notion .down{
+        transform: rotate(45deg) translateY(0px) translateX(-21px) scale(0.3);
+    }
+}
+@media (max-width:1280px) {
+    .tt-holder::before{
+        width: 100%;
+        top: 0;
+    }
+    .tt-holder .tt{
+        top: -140px;
+    }
+    #about,#cms, #hard, #react, #renewal, #jas{
+        padding: 60px 0;
+    }
+    #cms, #hard, #react, #renewal, #jas{
+        background: #fff;
+    }
+    .title{
+        margin: 0 0 30px 0;
+    }
+    .img_box{
+        height: 300px;
+    }
+    .photo{
+        margin: 0;
+        height: 100px;
+        position: relative;
+        top: -158px;
+    }
+    .photo_zone{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .my{
+        clip-path: none;
+    }
+    .my_img{
+        width: 200px;
+        height: 200px;
+        top: 353px;
+        left: 0;
+    }
+    .my_bg{
+        height: 150px;
+        width: 150px;
+        left: 24px;
+        top: 411px;
+    }
+    .my_text{
+        margin: 234px auto;
+    }
+    .about_me{
+        top: -60px;
+    }
+    .charts{
+        height: 250px;
+        overflow-y: scroll;
+    }
+    .chart__title{
+        display: none;
+    }
+    .certificate table{
+        margin: 30px auto;
+    }
+    #about .bg{
+        background: #fff;
+    }
+    .chart--horiz {
+        padding: 0;
+        }
+    .chart--design{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #hard ul{
+        width: 85%;
+        justify-content: flex-end;
+    }
+    #hard ul li:nth-child(2n - 1){
+        margin-right: 10px;
+    }
+    #hard ul li a{
+        transform: scale(0.8);
+    }
+    #hard ul li:last-child a{
+        transform: scale(0.9);
+    }
+    #hard .info p{
+        font-size: 14px;
+        margin: 1px 0;
+    }
+    #hard .info p:nth-child(4){
+        font-size: 10px;
+    }
+    #hard .info p:nth-child(4) span{
+        font-size: 9px;
+    }
+    #react #re_todo .p_img_box{
+        background-position: center;
+    }
+    .re_textbox{
+        display: none;
+    }
+    #react .p_img_box{
+        height: 300px;
     }
 }
 @media (max-width:1199px) {
@@ -1749,9 +1866,6 @@ section a{
     .about_me{
         left: 168px;
     }
-    .photo{
-
-    }
     .photo_zone{
         transform: scale(0.8);
     }
@@ -1764,9 +1878,6 @@ section a{
     .img_box{
         height: 400px;
     }
-    #hard ul{
-        justify-content: flex-end;
-    }
     #react .info{
         position: absolute;
         left: -254px;
@@ -1777,6 +1888,9 @@ section a{
     }
     #renewal .owl-pagination{
         display: none;
+    }
+        #about .bg{
+        background: #fff;
     }
 }
 @media (max-width: 991px) {
@@ -1809,10 +1923,14 @@ section a{
     .custom-shape-divider-bottom-1678639981 svg{
         width: 500%;
     }
+    .notion.on{
+        top: 14px;
+    }
     .notion .down{
         transform: scale(0);
     }
     .tt-holder .tt{
+        top: -60px;
         font-size: 60px;
     }
     .smile .word{
@@ -1884,13 +2002,6 @@ section a{
     }
     .charts{
         padding: 30px 0 0;
-        transform: scale(0.7) translateY(-113px);
-    }
-    .chart__title{
-        display: none;
-    }
-    .chart--design .chart__label{
-        background: #add8e6;
     }
     .certificate table{
         margin: 0 auto;
@@ -1898,15 +2009,9 @@ section a{
     .history{
         transform: scale(0.8);
     }
-    #about .bg{
-        background: #fff;
-    }
     #about{
         background-size: 508px;
         background-position-y: -32px;
-    }
-    .chart--horiz {
-    padding: 0;
     }
     .title{
         text-align: center;
@@ -1931,7 +2036,11 @@ section a{
         width: 300px;
         box-shadow: rgba(0, 0, 0, 0.45) -20px 0px 20px -20px;
     }
-
+    #hard ul{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
     .info h2{
         font-size: 30px;
         position: relative;
@@ -1939,30 +2048,6 @@ section a{
     }
     .container_lg{
         width: 500px;
-    }
-    #hard ul{
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-    }
-    #hard ul li:nth-child(2n - 1){
-        margin-right: 10px;
-    }
-    #hard ul li a{
-        transform: scale(0.8);
-    }
-    #hard ul li:last-child a{
-        transform: scale(0.9);
-    }
-    #hard .info p{
-        font-size: 14px;
-        margin: 1px 0;
-    }
-    #hard .info p:nth-child(4){
-        font-size: 10px;
-    }
-    #hard .info p:nth-child(4) span{
-        font-size: 9px;
     }
     #cms .info,#hard .info, #react .info{
         justify-content: center;
@@ -1989,12 +2074,6 @@ section a{
     #react .p_img_box{
         height: 200px;
     }
-    #react #re_todo .p_img_box{
-        background-position: center;
-    }
-    .re_textbox{
-        display: none;
-    }
     #renewal h2{
         text-align: center;
     }
@@ -2012,7 +2091,6 @@ section a{
         color: #fff;
         text-shadow: -3px 3px 0px #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
     }
-
     .re_right3{
         color: #fff;
     }
@@ -2075,9 +2153,6 @@ section a{
     }
     .certificate td i{
         left: -10px;
-    }
-    #cms, #hard, #react, #renewal, #jas{
-        background: #fff;
     }
     .flex-sm{
         display: flex;
