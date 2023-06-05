@@ -268,7 +268,6 @@ $chartBarGap: 10px;
 
 
 #t{
-    top: 30%;
     width: 100%;
 }
 
@@ -468,6 +467,31 @@ $chartBarGap: 10px;
     12.5% {
         transform: translateY(30%) var(--transform);
     }
+}
+
+.word_area{
+    width: 30%;
+    margin: 0 auto;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, #FF5C58 10px -10px;
+    .chars{
+        margin: 0;
+        .word{
+            display: flex;
+            background: #FF5C58;
+        }
+        .char{
+            display: flex;
+            font-size: 100px;
+            padding: 40px 56px;
+            animation: flip 2s cubic-bezier(.5, 0, .5, 1) both;
+            animation-delay: calc(var(--interval) * (var(--item-index)));
+        }
+    }
+}
+
+@keyframes flip {
+    0%{visibility: hidden; opacity: 0; transform: scaleX(calc(var(--distance-sine)));}
+    100%{visibility: visible; opacity: 1; color: #fff;}
 }
 
 // cursor

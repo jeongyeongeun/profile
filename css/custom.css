@@ -300,12 +300,6 @@ section .container .left{
     font-family: 'NanumSquareAceb';
 }
 
-#header .intro-content .brand-name-subtext{
-    text-align: end;
-    transform: rotate(352deg);
-    margin: 15px;
-}
-
 .text_wave .char{
     animation: waveText 1s cubic-bezier(.5, 0, .5, 1) both infinite alternate;
     animation-delay: calc(60ms * var(--char-index));
@@ -313,7 +307,7 @@ section .container .left{
 
 @keyframes waveText {
     100%{
-        transform: translateY(-0.2em) ;
+        transform: translateY(-0.5em) ;
     }
 }
 
@@ -341,7 +335,7 @@ section .container .left{
 }
 
 .custom-shape-divider-bottom-1678639981 .shape-fill {
-    fill: #add8e6;
+    fill: #ff8b8b;
 }
 
 /* 캔버스 */
@@ -354,7 +348,7 @@ section .container .left{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(352deg, #fff 43%, #add8e6 50%);
+    background: linear-gradient(352deg, #fff 43%, #ff8b8b 50%);
 }
 
 .demo .brand-name{
