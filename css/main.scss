@@ -173,6 +173,7 @@ $chartBarGap: 10px;
 
 .chart--horiz {
     overflow: hidden;
+    padding: 0;
 }
 
 .chart__bar {
@@ -213,7 +214,7 @@ $chartBarGap: 10px;
     // margin-left: 5px;
 }
 
-.chart--dev{
+.chart--dev, .chart--design{
     width: 80%;
     margin: 0 auto;
 }
@@ -469,15 +470,41 @@ $chartBarGap: 10px;
     }
 }
 
+.brand-name{
+    position: relative;
+    z-index: 1;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
 .word_area{
+    position: relative;
     width: 756px;
     margin: 0 auto;
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, #FF5C58 10px -10px;
+    &::before{
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+            var(--rotate)
+            , #009fff, #ec2F4B 43%, #4e00c2);
+        position: absolute;
+        z-index: -1;
+        top: -1%;
+        left: -2%;
+        animation: spin1 5s linear infinite both;
+    }
     .chars{
         margin: 0;
         .word{
             display: flex;
-            background: #FF5C58;
+            background: #e94c49;
         }
         .char{
             display: flex;
@@ -487,7 +514,27 @@ $chartBarGap: 10px;
             animation-delay: calc(var(--interval) * (var(--item-index)));
         }
     }
+    .word1{
+        .char{
+            &:first-child{
+                animation: flip 2s cubic-bezier(.5, 0, .5, 1) both infinite alternate;
+            }
+        }
+    }
 }
+@keyframes spin1 {
+    0% {
+        --rotate: 0deg;
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1) rotate(360deg);
+    }
+    100% {
+        --rotate: 360deg;
+        transform: scale(0.8) rotate(360deg);
+    }
+  }
 
 @keyframes flip {
     0%{visibility: hidden; opacity: 0; transform: scaleX(calc(var(--distance-sine)));}

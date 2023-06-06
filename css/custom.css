@@ -29,7 +29,7 @@ section{
     width: 100%;
     height: 100%;
     z-index: 999999999;
-    background: #add8e6;
+    background: #33343b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,28 +58,27 @@ section{
 .title{
     font-family: 'NanumSquareExtraBold';
     margin: 50px 0;
+    padding: 20px 0;
     font-weight: 200;
     position: relative;
     color: #222;
+    background: url(../img/agency/deco2.svg) no-repeat;
+    background-position: 500px;
 }
 
 #renewal h2{
     color: #222;
 }
 
-.title::before,.title::after{
-    position: relative;
-    content: "";
-    display: block;
-    width: 2px;
-    height: 20px;
-    background: #777;
-}
-
 .title::before{
     position: absolute;
+    display: block;
+    content: "";
     bottom: -12px;
     left: calc(50% - 1px);
+    background: url(../img/agency/deco1.svg) no-repeat;
+    width: 20px;
+    height: 20px;
 }
 
 .title::after{
@@ -88,6 +87,16 @@ section{
     height: 4px;
     border-radius: 50%;
     margin: 15px auto;
+}
+
+#react .title{
+    background-position: 440px;
+}
+
+.title_info{
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 
 .rainbow{
@@ -122,6 +131,7 @@ section{
     font-style: italic;
     color: #fff;
     text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+    text-wrap: nowrap;
     /* animation: flow_text 10s 0s alternate infinite; */
 }
 
@@ -160,17 +170,75 @@ section{
     overflow: hidden;
 }
 
+.introduce_textbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #33343b60;
+    color: #fff;
+    font-size: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 111;
+    visibility: hidden;
+}
+
+.introduce_textbox.appear2{
+    animation: appear 1s ease forwards;
+}
+@keyframes appear {
+    0%{}
+    100%{visibility: visible; transform: scaleY(0);}
+}
+
 .dot{
     content: "";
-    width: 300px;
+    width: 100px;
     height: 300px;
-    top: -150px;
-    right: 60px;
+    top: 0;
+    right: 100px;
     z-index: 1;
     /* animation: swingDot 3s 0s infinite alternate; */
-    display: block;
+    display: flex;
+    align-items: end;
+    justify-content: center;
     position: absolute;
     transition: 0.4s linear;
+    background: #33343b;
+    text-align: center;
+}
+
+.dot .num{
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-size: 7rem;
+    color: #fff;
+}
+
+.dot .num::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #f95d5d;
+}
+
+.dot .num::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 103%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    border-top: 1px solid #fff;
 }
 
 @keyframes swingDot {
@@ -228,7 +296,6 @@ section{
     left: 18%;
     width: 80px;
     height: 6px;
-    border-top: 1px solid;
 }
 
 @keyframes spin {
@@ -311,7 +378,7 @@ section .container .left{
 }
 
 .custom-shape-divider-bottom-1678639981 .shape-fill {
-    fill: #ff8b8b;
+    fill: #33343b;
 }
 
 /* 캔버스 */
@@ -324,7 +391,20 @@ section .container .left{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(352deg, #fff 43%, #ff8b8b 50%);
+    background: linear-gradient(353deg, #fff 49%, #33343b 50%);
+}
+
+.demo2{
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    top: -500px;
+    left: 50%;
+    overflow: hidden;
+    background: #fff;
+    background: linear-gradient(175deg, #fff 43%, #ff8b8b 50%);
+    transform: rotate(357deg);
+    visibility: hidden;
 }
 
 .demo .brand-name{
@@ -471,6 +551,7 @@ section .container .left{
     /* height: 300px; */
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding: 0;
 }
 
 .p_img_box{
@@ -520,18 +601,22 @@ section .container .left{
 
 #about{
     color: #555;
-    background: url(../img/agency/aboutMe.svg) no-repeat;
-    background-size: 700px;
+    background: #fff;
+    background-size: 100px;
     background-position-y: -50px;
 }
 
 #about .title_b{
     margin-bottom: 50px;
+    background: url(../img/agency/deco2.svg) no-repeat;
+    background-position: 300px;
 }
 
-/* #about h1{
-    font-weight: 200;
-} */
+#about .title_b p{
+    background: url(../img/agency/deco1.svg) no-repeat;
+    background-size: 20px;
+    background-position: 200px;
+}
 
 #about .bg{
     z-index: -1;
@@ -610,8 +695,10 @@ section .container .left{
 }
 
 .about_me li input:checked +label{
-    color: var(--color);
+    background: var(--color);
     border-bottom: var(--color);
+    border-radius: 10px 10px 0 0;
+    color: #fff;
 }
 
 .about_me li input:checked +label:after{
@@ -621,10 +708,13 @@ section .container .left{
 
 .about_me li input:checked ~ .about_depth{
     z-index: 10;
+    border: 2px solid var(--color);
 }
 
 .about_me li label{
     cursor: pointer;
+    display: block;
+    transition: 0.4s;
 }
 
 .about_me li label::after{
@@ -644,6 +734,9 @@ section .container .left{
     top: 100%;
     left: 0;
     background-color: #fff;
+    border-radius: 20px;
+    box-shadow: var(--color) 0px 25px 50px -12px;
+    transition: 0.2s;
 }
 
 .certificate{
@@ -754,12 +847,12 @@ section a{
 }
 
 #cms{
-    background: linear-gradient(111deg, #f8ffff 13%,#fffbf6 28%);
+    background: linear-gradient(111deg, #f8ffff 13%,#dfd8d0 28%);
     color: #555;
 }
 
 #hard{
-    background: linear-gradient(278deg, #f8ffff 13%,#fffbf6 28%) ;
+    background: linear-gradient(278deg, #f8ffff 13%,#dfd8d0 28%) ;
 
     color: #555;
 }
@@ -861,11 +954,6 @@ section a{
 
 #renewal .container_lg{
     flex-direction: column;
-}
-
-#renewal >div >div{
-    position: relative;
-    /* left: 100px; */
 }
 
 #renewal .owl-carousel{
@@ -1185,6 +1273,14 @@ section a{
     overflow: hidden;
 }
 
+.todo_info{
+    margin-top: 10px;
+}
+
+.todo_info span{
+    font-size: 12px;
+}
+
 .todo .todo_img{
     width: 100%;
     height: 100%;
@@ -1327,14 +1423,15 @@ section a{
 
 .re_wrap > li input:checked + label{
     background: #ff8b8b;
+    color: #fff;
 }
 
 .re_wrap > li input:hover +label{
-    /* background: #add8e6; */
+    color: #fff;
 }
 
 .re_wrap > li input:hover +label::before,
-.re_wrap > li input:focus +label::before{
+.re_wrap > li input:focus-visible +label::before{
     animation: spread 0.1s ease-in-out forwards;
 }
 
@@ -1575,8 +1672,16 @@ section a{
     transition: all 0.5s;
 }
 
+.cls-1{
+    fill: #fff;
+}
+
 .notion.on{
     top: 5%;
+}
+
+.notion.on .cls-1{
+    fill: #222;
 }
 
 .notion_body{
@@ -1601,10 +1706,6 @@ section a{
 
 #qr + label{
     display: block;
-}
-
-#qr + label img{
-    fill: #ff8b8b;
 }
 
 .qr_depth{
@@ -1635,7 +1736,12 @@ section a{
 }
 
 .notion .down{
+    color: #fff;
     transform: rotate(45deg) translateY(20px) translateX(-10px);
+}
+
+.notion.on .down{
+    visibility: hidden;
 }
 
 .thanks_bottom{
@@ -1659,37 +1765,21 @@ section a{
       width: 0;
       height: 0;
       background: #f0f0f0;
-      box-shadow:  0 0 0 #cccccc,
-                   0 0 0 #ffffff,
-                    10px 10px 10px #cccccc inset,
-                    -10px -10px 10px #ffffff inset;
     }
     25% {
       width: 60px;
       height: 60px;
       background: #f8f8f8;
-      box-shadow:  10px 10px 10px #cccccc,
-                   10px 10px 10px #ffffff,
-                   0 0 0 #cccccc inset,
-                   0 0 0 #ffffff inset;
     }
     50% {
       width: 60px;
       height: 100px;
       background: #f8f8f8;
-      box-shadow:  10px 10px 10px #cccccc,
-                   10px 10px 10px #ffffff,
-                   0 0 0 #cccccc inset,
-                   0 0 0 #ffffff inset;
     }
     100% {
       width: 200px;
       height: 200px;
       background: #fafafa;
-      box-shadow:  40px 40px 40px #cccccc,
-                   0 0 0 #ffffff,
-                   0 0 0 #cccccc inset,
-                   2px 2px 2px #ffffff inset;
     }
 }
 @media (max-width:1567px) {
@@ -1916,6 +2006,14 @@ section a{
     }
     #navi.navbar-left .navbar-nav >li>a{
         color: #fff;
+    }
+    #navi .navbar-inverse .navbar-nav > li > a:hover{
+        color: #fff;
+        font-weight: bold;
+    }
+    #navi.navbar-left .navbar-nav > .active > a, #navi.navbar-left .navbar-nav > .active > a:hover, #navi.navbar-left .navbar-nav >li>a:hover{
+        color: #333;
+        font-weight: bold;
     }
     .bg{
         display: none;
@@ -2199,6 +2297,9 @@ section a{
         height: auto;
         background: #fc7c7c;
         margin: 0;
+    }
+    .navbar-collapse::-webkit-scrollbar{
+        display: none;
     }
     .navbar-left .navbar-collapse ul{
         display: flex;
