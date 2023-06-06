@@ -167,7 +167,7 @@ section{
     top: -150px;
     right: 60px;
     z-index: 1;
-    animation: swingDot 3s 0s infinite alternate;
+    /* animation: swingDot 3s 0s infinite alternate; */
     display: block;
     position: absolute;
     transition: 0.4s linear;
@@ -220,49 +220,21 @@ section{
     left: calc(50% - 100px);
 }
 
-.dot_top{
-    top: -70px;
-    left: -65px;
-
+.dot::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 103%;
+    left: 18%;
+    width: 80px;
+    height: 6px;
+    border-top: 1px solid;
 }
 
 @keyframes spin {
     100%{
         transform: rotate(360deg);
     }
-}
-
-.dot_bottom::after{
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    display: block;
-    background: url(../img/agency/portfolio/project.png) no-repeat;
-    background-size: contain;
-    width: 400px;
-    height: 400px;
-    animation: spin 10s 0s infinite linear;
-}
-
-.dot_bottom::before{
-    content: "";
-    display: block;
-    background: url(../img/agency/Myname.svg) no-repeat;
-    background-size: contain;
-    width: 200px;
-    height: 100px;
-    margin: 78px 50px;
-}
-
-.dot_bottom{
-    bottom: -150px;
-    left: 200px;
-    
-}
-
-#cms .dot_bottom:hover{
-    animation: swing 0.3s 0s linear;
 }
 
 html body{
@@ -298,6 +270,10 @@ section .container .left{
 
 .brand-name-subtext{
     font-family: 'NanumSquareAceb';
+}
+
+.text_wave{
+    margin-top: 10px;
 }
 
 .text_wave .char{
@@ -565,7 +541,7 @@ section .container .left{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(358deg, rgb(222, 242, 248) 13%, rgb(255, 255, 255) 28%);
+    background: linear-gradient(358deg, #FCD2D1 13%, rgb(255, 255, 255) 28%);
 }
 
 .photo{
@@ -594,7 +570,7 @@ section .container .left{
 }
 
 .my_bg{
-    background-color: #bef;
+    background-color: #FCD2D1;
     border-radius: 50%;
     height: 380px;
     left: 10px;
@@ -765,7 +741,7 @@ section a{
     display: block;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: #bef;
+    background: #FCD2D1;
     z-index: -1;
     transition: transform .3s ease;
     transform: scaleX(0);
@@ -778,12 +754,12 @@ section a{
 }
 
 #cms{
-    background: linear-gradient(111deg, #f8ffff 13%,#e8faff 28%);
+    background: linear-gradient(111deg, #f8ffff 13%,#fffbf6 28%);
     color: #555;
 }
 
 #hard{
-    background: linear-gradient(278deg, #f8ffff 13%,#e8faff 28%) ;
+    background: linear-gradient(278deg, #f8ffff 13%,#fffbf6 28%) ;
 
     color: #555;
 }
@@ -1184,7 +1160,7 @@ section a{
 /* 투두 */
 
 #jas{
-    background: linear-gradient(358deg, rgb(222, 242, 248) 13%, rgb(255, 255, 255) 28%);
+    background: linear-gradient(358deg, #fffbf6 13%, rgb(255, 255, 255) 28%);
 }
 
 #jas .container{
@@ -1325,7 +1301,7 @@ section a{
 /* react */
 
 #react{
-    background: #e8faff;
+    background: #fffbf6;
 }
 
 #react .title{
@@ -1350,7 +1326,7 @@ section a{
 }
 
 .re_wrap > li input:checked + label{
-    background: #add8e6;
+    background: #ff8b8b;
 }
 
 .re_wrap > li input:hover +label{
@@ -1372,7 +1348,8 @@ section a{
     position: absolute;
     top: 0;
     left: 0;
-    background: #add8e6;
+    background: #fc7c7c;
+    color: #fff;
     transition: 0.32s ease-in-out;
     /* opacity: 0.4; */
     z-index: -1;
@@ -1411,7 +1388,7 @@ section a{
     width: 100%;
     /* height: 100%; */
 
-    background-color: #e8faff;
+    background-color: #fffbf6;
 }
 
 #react .p_img_box{
@@ -1559,7 +1536,7 @@ section a{
     font-weight: bold;
     margin-left: 30px;
     text-transform: uppercase;
-    color: #add8e6;
+    color: #fc7c7c;
 }
 
 .flow_bottom ul{
@@ -1887,7 +1864,21 @@ section a{
         background: #fff;
     }
 }
+@media (max-width:1024px) {
+    .word_area{
+        width: 30%;
+    }
+    .word_area .chars .char{
+        font-size: 60px;
+        padding: 5px 14px;
+    }
+    .text_wave{
+    }
+}
 @media (max-width: 991px) {
+    .navbar-header{
+        width: 19%;
+    }
     .certificate .history td{
         padding-left: 30px;
         padding-right: 0;
@@ -1895,15 +1886,33 @@ section a{
     .certificate .history td i{
         left: 0;
     }
+    .word_area{
+        width: 25%;
+    }
+    .word_area .chars .char{
+        font-size: 40px;
+        padding: 5px 14px;
+    }
 }
-
+@media (max-width: 957px) {
+    .word_area .chars .char{
+        font-size: 30px;
+        padding: 10px 14px;
+    }
+}
+@media (max-width: 853px) {
+    .word_area .chars .char{
+        font-size: 30px;
+        padding: 10px 12px;
+    }
+}
 @media (max-width: 767px) {
     #navi.navbar-inverse{
-        background: #add8e6;
+        background: #fc7c7c;
     }
     #navi.navbar-inverse .navbar-toggle{
         position: absolute;
-        right: -8px;
+        right: 4px;
     }
     #navi.navbar-left .navbar-nav >li>a{
         color: #fff;
@@ -1917,11 +1926,19 @@ section a{
     .custom-shape-divider-bottom-1678639981 svg{
         width: 500%;
     }
+    .notion{
+        left: 30px;
+        width: 30px;
+        height: 30px;
+    }
     .notion.on{
         top: 14px;
     }
     .notion .down{
         transform: scale(0);
+    }
+    .word_area .chars .char{
+        padding: 10px;
     }
     .tt-holder .tt{
         top: -60px;
@@ -2180,7 +2197,7 @@ section a{
         width: 100%;
         overflow-x: scroll;
         height: auto;
-        background: #add8e6;
+        background: #fc7c7c;
         margin: 0;
     }
     .navbar-left .navbar-collapse ul{
@@ -2190,13 +2207,42 @@ section a{
     .navbar-left .navbar-collapse ul li a{
         width: max-content;
     }
-    .notion{
-        top: 14px;
-        width: 30px;
-        height: 30px;
+    #navi.navbar-left .navbar-nav > .active > a::before{
+        content: none;
+    }
+    .navbar-header{
+        width: 100%;
+        margin: 0 auto;
     }
 }
-
+@media (max-width:697px) {
+    .word_area .chars .char{
+        padding: 8px;
+    }
+}
+@media (max-width:661px) {
+    .word_area{
+        width: 30%;
+    }
+    .word_area .chars .char{
+        padding: 5px 7px;
+    }
+}
+@media (max-width:607px) {
+    .word_area .chars .char{
+        padding: 5px 6px;
+    }
+}
+@media (max-width:577px) {
+    .word_area .chars .char{
+        padding: 5px;
+    }
+}
+@media (max-width:577px) {
+    .word_area .chars .char{
+        padding: 5px;
+    }
+}
 @media (max-width:480px) {
     .container_lg{
         width: 100%;
@@ -2208,7 +2254,14 @@ section a{
     .certificate td:last-child{
         padding: 0;
     }
-
+    .word_area{
+        width: 40%;
+    }
+}
+@media (max-width:347px) {
+    .word_area{
+        width: 50%;
+    }
 }
 
 
