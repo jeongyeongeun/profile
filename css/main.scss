@@ -484,8 +484,30 @@ $chartBarGap: 10px;
 .word_area{
     position: relative;
     width: 756px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
-    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, #FF5C58 10px -10px;
+    animation: apperance3 0.5s 3s linear forwards, apperance4 3s linear forwards; 
+    @keyframes apperance4 {
+        0%{border: #050801 solid 4px; border-radius: 30%;}
+        100%{border-radius: 0; border: 0; }
+    }
+    @keyframes apperance3 {
+        100%{box-shadow: #FF5C58 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, #FF5C58 10px -10px; align-items: flex-start;}
+    }
+    @keyframes apperance1 {
+        0%{transform: scale(0); border-radius: 50%; width: 10px; height: 10px; background: #050801;}
+        60%{ width: 20px; height: 20px;}
+        90%{border-radius: 30%;}
+        100%{transform: scale(1); border-radius: 0; width: 100%; height: 100%; }
+    }
+    @keyframes apperance2 {
+        0%{visibility: hidden; opacity: 0;}
+        100%{visibility: visible; opacity: 1;}
+    }
     &::before{
         content: "";
         width: 104%;
@@ -498,26 +520,36 @@ $chartBarGap: 10px;
         z-index: -1;
         top: -1%;
         left: -2%;
-        animation: spin1 5s linear infinite both;
+        animation: spin1 5s 4s linear infinite both;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #e94c49;
+        animation: apperance1 2s linear forwards;
+        z-index: 0;
     }
     .chars{
+        position: relative;
+        z-index: 1;
         margin: 0;
         .word{
             display: flex;
-            background: #e94c49;
         }
         .char{
             display: flex;
             font-size: 100px;
             padding: 40px 56px;
             animation: flip 2s cubic-bezier(.5, 0, .5, 1) both;
-            animation-delay: calc(var(--interval) * (var(--item-index)));
+            animation-delay: calc(var(--interval) * (var(--item-index)) + 4s );
         }
     }
     .word1{
         .char{
             &:first-child{
-                animation: flip 2s cubic-bezier(.5, 0, .5, 1) both infinite alternate;
+                animation: flip 2s 4s cubic-bezier(.5, 0, .5, 1) both infinite alternate;
             }
         }
     }
@@ -526,6 +558,7 @@ $chartBarGap: 10px;
     0% {
         --rotate: 0deg;
         transform: scale(0.8);
+        visibility: hidden;
     }
     60%{
         transform: scale(1) rotate(360deg);
@@ -533,6 +566,7 @@ $chartBarGap: 10px;
     100% {
         --rotate: 360deg;
         transform: scale(0.8) rotate(360deg);
+        visibility: visible;
     }
   }
 
