@@ -62,12 +62,7 @@ section{
     font-weight: 200;
     position: relative;
     color: #222;
-    background: url(../img/agency/deco2.svg) no-repeat;
     background-position: 500px;
-}
-
-#renewal h2{
-    color: #222;
 }
 
 .title::before{
@@ -87,6 +82,30 @@ section{
     height: 4px;
     border-radius: 50%;
     margin: 15px auto;
+}
+
+.title .chars{
+    position: relative;
+}
+
+.title span:first-child:before,#renewal h2 span:first-child::before,#jas h2 span:first-child::before,#about .title_b h1 span:first-child::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    width: 70px;
+    height: 70px;
+    background: #f95d5d;
+    transform: rotate(63deg);
+}
+
+#about .title_b h1 span{
+    position: relative;
+}
+
+#about .title_b h1 span:first-child::before{
+    width: 90px;
+    height: 90px;
 }
 
 #react .title{
@@ -613,8 +632,6 @@ section .container .left{
 
 #about .title_b{
     margin-bottom: 50px;
-    background: url(../img/agency/deco2.svg) no-repeat;
-    background-position: 300px;
 }
 
 #about .title_b p{
@@ -871,8 +888,8 @@ section a{
 #cms h2 span:nth-of-type(1),
 #hard h2 span:nth-of-type(1),
 #react h2 span:nth-of-type(1),
-#renewal h2 span:nth-of-type(1),
-#jas h2 span:nth-of-type(1){
+#renewal h2 span span span:nth-of-type(1),
+#jas h2 span span span:nth-of-type(1){
     font-size: 50px
 }
 
@@ -915,6 +932,12 @@ section a{
 
 #renewal h2{
     font-family: 'NanumSquareExtraBold';
+    color: #222;
+}
+
+#renewal h2 span:first-child::before{
+    top: 10px;
+    left: 0;
 }
 
 #renewal .bg{
@@ -1245,16 +1268,6 @@ section a{
     animation: shrink 1s 0.5s infinite alternate;
 }
 
-
-
-/* .re_right2 h4:after{
-    right: 110px;
-}
-
-.re_right3 h4:after{
-    right: 70px;
-} */
-
 .renew h4 em{
     font-size: 2em;
     position: relative;
@@ -1270,6 +1283,11 @@ section a{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#jas h2 span:first-child::before{
+    top: 3px;
+    left: 51px;
 }
 
 .pen{
@@ -2068,9 +2086,9 @@ section a{
         display: none;
     }
     .about_me{
-        width: 100%;
+        width: 80%;
         top: -40px;
-        left: 0;
+        left: 10%;
         padding: 0;
         margin: 0 auto;
     }
@@ -2123,12 +2141,13 @@ section a{
     }
     .about_depth{
         top: 100%;
+        height: 300px;
     }
     .charts{
         padding: 30px 0 0;
     }
     .certificate table{
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
     .history{
         transform: scale(0.8);
@@ -2244,6 +2263,15 @@ section a{
     }
     .todo{
         height: 300px;
+    }
+    .todo_info p{
+        font-size: 10px;
+    }
+    .todo_info p span{
+        font-size: 8px;
+    }
+    #jas a{
+        margin: 0;
     }
     .todo .todo_img{
         background-repeat: no-repeat;
