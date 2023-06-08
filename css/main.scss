@@ -500,13 +500,9 @@ $chartBarGap: 10px;
     }
     @keyframes apperance1 {
         0%{transform: scale(0); border-radius: 50%; width: 10px; height: 10px; background: #050801;}
-        60%{ width: 20px; height: 20px;}
-        90%{border-radius: 30%;}
+        60%{ width: 20px; height: 20px; background: #050801;}
+        90%{border-radius: 40%;}
         100%{transform: scale(1); border-radius: 0; width: 100%; height: 100%; }
-    }
-    @keyframes apperance2 {
-        0%{visibility: hidden; opacity: 0;}
-        100%{visibility: visible; opacity: 1;}
     }
     &::before{
         content: "";

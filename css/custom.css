@@ -176,22 +176,34 @@ section{
     height: 100%;
     top: 0;
     left: 0;
-    background: #33343b60;
-    color: #fff;
+    background: transparent;
+    color: #ffffff;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
     font-size: 9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 111;
     visibility: hidden;
+    opacity: 0;
+}
+
+.introduce_textbox::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: #fc7c7c;
+    transform: rotate(45deg);
+    z-index: -1;
 }
 
 .introduce_textbox.appear2{
-    animation: appear 1s ease forwards;
+    animation: appear 3s ease forwards;
 }
 @keyframes appear {
-    0%{}
-    100%{visibility: visible; transform: scaleY(0);}
+    0%{visibility: visible; opacity: 1; transform: translate3d(0, -1%, 0);}
+    100%{visibility: hidden; opacity: 0; transform: none;}
 }
 
 .dot{
