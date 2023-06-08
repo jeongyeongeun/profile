@@ -241,15 +241,6 @@ section{
     border-top: 1px solid #fff;
 }
 
-@keyframes swingDot {
-    0%{
-        transform: rotate(30deg);
-    }
-    100%{
-        transform: rotate(-30deg);
-    }
-}
-
 #about .dot::before{
     --num: "01"
 }
@@ -286,6 +277,8 @@ section{
     height: 70px;
     bottom: 0;
     left: calc(50% - 100px);
+    color: #fff;
+    opacity: 0.3;
 }
 
 .dot::after{
