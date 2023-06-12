@@ -1039,7 +1039,7 @@ section a{
     transition: 0.36s ease-in;
     object-fit: cover;
     height: 450px;
-    object-position: left;
+    object-position: top;
     filter: grayscale(20);
     border-radius: 6px;
 }
@@ -1063,30 +1063,35 @@ section a{
 
 #renewal .owl-wrapper-outer{
     position: relative;
+    z-index: 1;
     /* top: 81px; */
 }
 
 #renewal .owl-pagination{
     position: absolute;
     top: 50px;
-    right: 10px;
+    right: 0;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
-#renewal .owl-buttons{
+/*#renewal .owl-buttons{
     position: absolute;
-    height: 100%;
+    height: auto;
     width: 100%;
     top: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
 #renewal .owl-buttons .owl-prev,
 #renewal .owl-buttons .owl-next{
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1097,6 +1102,12 @@ section a{
     transition: 0.43s ease-in-out;
     opacity: 0.9;
     padding: 0;
+    z-index: 1;
+}
+
+#renewal .owl-buttons .owl-next{
+    left: inherit;
+    right: 0;
 }
 
 #renewal .owl-buttons .owl-prev i,
@@ -1174,70 +1185,6 @@ section a{
     position: relative;
     width: 90%;
 }
-
-/* #before_img1:checked + label,
-#before_img2:checked + label,
-#before_img3:checked + label{
-    background-color: var(--color);
-    box-shadow: 0px 0px 7px 0px currentColor;
-}
-
-#before_img1:checked + label:hover,
-#before_img2:checked + label:hover,
-#before_img3:checked + label:hover{
-    box-shadow: 0px 0px 7px 1px #fafad2;
-}
-
-#before_img1:checked ~ .before,
-#before_img2:checked ~ .before,
-#before_img3:checked ~ .before{
-    height: 200px;
-
-}
-
-.b_label{
-    background-color: #FFFFFF;
-    color: #2c2c2c;
-    cursor: pointer;
-    width: 50%;
-    line-height: 40px;
-    margin: 0;
-    text-align: center;
-    border-radius: 8px;
-    transition: 0.46s ease-out;
-
-}
-
-.before,.before2,.before3{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    transition: 0.34s ease;
-    background-color: bisque;
-    background-size: cover;
-    border-radius: 0 0 20px 20px;
-    cursor: pointer;
-    transition: 0.42s ease-in-out;
-}
-
-.before{
-    background: url(../img/agency/portfolio/calpis_b.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.before2{
-    background: url(../img/agency/portfolio/hursh_b.png) no-repeat;
-    background-size: cover;
-}
-
-.before3{
-    background: url(../img/agency/portfolio/monblanc_b1.png) no-repeat;
-    background-size: 423px;
-} */
 
 .before::after{
     content: "";
@@ -1828,6 +1775,71 @@ section a{
     }
     .notion .down{
         transform: rotate(45deg) translateY(0px) translateX(-21px) scale(0.3);
+    }
+}
+@media (max-width:1440px){
+    .word_area{
+        width: 500px;
+    }
+    .word_area .chars .char{
+        padding: 20px 30px;
+        font-size: 82px;
+    }
+    .dot{
+        height: 150px;
+    }
+    .my_img{
+        width: 380px;
+        height: 380px;
+        margin: 0 auto;
+        top: 103px;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .my_bg{
+        top: 134px;
+        left: 14px;
+        clip-path: circle(48% at 50% 50%);
+    }
+    .appear{
+        transform: translateY(20px) scale(1);
+    }
+    .my_text{
+        display: none;
+    }
+    .chart__title{
+        display: none;
+    }
+    .about_depth{
+        height: 420px;
+    }
+    .img_box{
+        height: 350px;
+    }
+    #hard .info p{
+        font-size: 12px;
+    }
+    #hard .info p span{
+        font-size: 10px;
+    }
+    .re_textbox p{
+        font-size: 12px;
+    }
+    #react .p_img_box{
+        height: 280px;
+    }
+    .renewal_img img{
+        height: 350px;
+        box-shadow: rgb(17 12 46 / 37%) -1px 4px 17px 0px;
+    }
+    .renewal_imgbox{
+        box-shadow: none;
+    }
+    .todo{
+        width: 80%;
+        height: 400px;
+    }
+    #jas a{
+        margin: 10px 0;
     }
 }
 @media (max-width:1280px) {
