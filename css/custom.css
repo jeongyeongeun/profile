@@ -1895,7 +1895,6 @@ section a{
         transform: scale(0.9);
     }
     #hard .info p{
-        font-size: 14px;
         margin: 1px 0;
     }
     #hard .info p:nth-child(4){
@@ -2146,7 +2145,8 @@ section a{
         height: 250px;
     }
     .charts{
-        padding: 10px 15px 0;
+        padding: 10px 0 0;
+        margin: 10px 0 0;
     }
     .certificate table{
         margin: 10px auto;
@@ -2186,6 +2186,12 @@ section a{
         padding: 0;
         justify-content: center;
     }
+    #hard .info p{
+        font-size: 11px;
+    }
+    .info p{
+        font-size: 11px;
+    }
     .info h2{
         font-size: 30px;
         position: relative;
@@ -2216,6 +2222,9 @@ section a{
         margin-top: 20px;
         margin-left: 0;
     }
+    .re_textbox p{
+        margin: 4px 0 0;
+    }
     #react .p_img_box{
         height: 200px;
     }
@@ -2235,14 +2244,14 @@ section a{
     }
     #renewal .item{
         color: #222;
-        height: 300px;
+        height: 350px;
     }
     .renewal_text h4{
         color: #fff;
         text-shadow: -3px 3px 0px #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
     }
     .re_right3{
-        color: #fff;
+        /* color: #fff; */
     }
     .re_right3 h4{
         font-size: 35px;
@@ -2260,7 +2269,12 @@ section a{
         
     }
     #renewal .renewal_text p{
-        display: none;
+        /* display: none; */
+        font-size: 11px;
+    }
+    .renewal_textarea{
+        position: absolute;
+        bottom: 0;
     }
     .renewal_img img{
         filter: none;
@@ -2269,8 +2283,12 @@ section a{
         height: 300px;
         width: 80%;
     }
+    .todo_info{
+        margin-bottom: 20px;
+    }
     .todo_info p{
-        font-size: 10px;
+        margin: 4px 0 0;
+        font-size: 11px;
     }
     .todo_info p span{
         font-size: 8px;
@@ -2280,6 +2298,9 @@ section a{
     }
     .todo .todo_img{
         background-position-y: 0;
+        background-size: cover;
+    }
+    .todo .todo_img:hover{
         background-size: cover;
     }
     .thanks{
