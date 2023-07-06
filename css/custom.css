@@ -635,7 +635,7 @@ section .container .left{
 .p_img_box_h:hover
 {
     /* height: 1000px; */
-    animation: flow2 10s 0.3s linear;
+    /* animation: flow2 10s 0.3s linear; */
 }
 
 .p_img_box_h{
