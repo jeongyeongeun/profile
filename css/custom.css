@@ -591,6 +591,18 @@ section .container .left{
     }
 }
 
+@keyframes flow2{
+    0%{
+        background-position-y: 0;
+    }
+    50%{
+        background-position-y: 100%;
+    }
+    100%{
+        background-position-y: 0;
+    }
+}
+
 .img_box{
     /* height: 300px; */
     overflow: hidden;
@@ -623,7 +635,7 @@ section .container .left{
 .p_img_box_h:hover
 {
     /* height: 1000px; */
-    animation: flow 10s 0.3s linear;
+    animation: flow2 10s 0.3s linear;
 }
 
 .p_img_box_h{
