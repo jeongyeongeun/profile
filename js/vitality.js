@@ -81,7 +81,7 @@ $(document).ready(function() {
             "<i class='fa fa-angle-left'></i>",
             "<i class='fa fa-angle-right'></i>"
         ],
-        transitionStyle: "fadeUp"
+        // transitionStyle: "fadeUp"
     });
 
     $(".portfolio-gallery").owlCarousel({

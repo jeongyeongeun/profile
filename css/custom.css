@@ -77,8 +77,8 @@ section{
 
 .title{
     font-family: 'NanumSquareExtraBold';
-    margin: 50px 0;
-    padding: 20px 0;
+    margin: 50px 0 0;
+    padding: 20px 0 0;
     font-weight: 200;
     position: relative;
     color: #222;
@@ -86,14 +86,14 @@ section{
 }
 
 .title::before{
-    position: absolute;
+    /* position: absolute;
     display: block;
     content: "";
-    bottom: -12px;
+    bottom: 4px;
     left: calc(50% - 1px);
     background: url(../img/agency/deco1.svg) no-repeat;
     width: 20px;
-    height: 20px;
+    height: 20px; */
 }
 
 .title::after{
@@ -133,9 +133,24 @@ section{
 }
 
 .title_info{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.title_info::before{
+    position: absolute;
     display: block;
-    font-size: 1.4rem;
-    margin-top: 10px;
+    content: "";
+    bottom: -20px;
+    left: calc(50% - 1px);
+    background: url(../img/agency/deco1.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+#renewal .title_info::before{
+    left: calc(30% - 1px);
+    bottom: 0;
 }
 
 .rainbow{
@@ -248,7 +263,7 @@ section{
 .dot{
     content: "";
     width: 100px;
-    height: 300px;
+    height: 250px;
     top: 0;
     right: 100px;
     z-index: 1;
@@ -739,6 +754,19 @@ section .container .left{
     margin: 100px 0 0 100px;
 }
 
+.my_text .my_num{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+.my_em{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 2px;
+    background: #fff;
+}
+
 .about_me{
     position: relative;
     /* width: 300px; */
@@ -900,14 +928,8 @@ section a{
     transform-origin: bottom left;
 }
 
-#cms{
-    background: linear-gradient(111deg, #f8ffff 13%,#dfd8d0 28%);
-    color: #555;
-}
-
-#hard{
-    background: linear-gradient(278deg, #f8ffff 13%,#dfd8d0 28%) ;
-
+#cms,#hard{
+    background: #dfd8d0;
     color: #555;
 }
 
@@ -958,7 +980,7 @@ section a{
 /* 리뉴얼 */
 
 #renewal{
-    background: linear-gradient(278deg, #f8ffff 13%,#dfd8d0 28%);
+    background: #dfd8d0 28%;
     color: #555;
 }
 
@@ -1106,6 +1128,7 @@ section a{
     display: flex;
     flex-direction: column;
     z-index: 1;
+    display: none;
 }
 
 /*#renewal .owl-buttons{
@@ -1255,7 +1278,7 @@ section a{
 /* 투두 */
 
 #jas{
-    background: linear-gradient(111deg, #f8ffff 13%,#dfd8d0 28%);
+    background: #dfd8d0 28%;
 }
 
 #jas .container{
@@ -1266,7 +1289,7 @@ section a{
 
 #jas h2 span:first-child::before{
     top: 3px;
-    left: 51px;
+    left: -10px;
 }
 
 .pen{
@@ -1415,7 +1438,7 @@ section a{
 }
 
 #react .title{
-    margin: 0 0 50px 0;
+    /* margin: 0 0 50px 0; */
 }
 
 .re_wrap{
@@ -1536,6 +1559,7 @@ section a{
     display: flex;
     align-items: start;
     flex-direction: column;
+    height: 200px;
 }
 
 .re_textbox p:hover{
@@ -1552,12 +1576,15 @@ section a{
     padding: 0;
 }
 
+#last .container_lg{
+    flex-direction: column;
+}
+
 
 .thanks{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 120px;
 }
 
 .thanks p{
@@ -1611,7 +1638,9 @@ section a{
 
 .flow_banner{
     display: flex;
+    flex-direction: row-reverse;
     position: relative;
+    width: 100%;
 }
 
 .flow_banner::before,
@@ -1637,17 +1666,22 @@ section a{
 
 .list{
     display: flex;
-    animation: flow_roll 10s linear infinite;
     padding: 0;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: flow_roll 30s linear infinite;
 }
 
 .list li{
+    display: flex;
+
     width: max-content;
     font-size: 3rem;
     font-weight: bold;
     margin-left: 30px;
     text-transform: uppercase;
     color: #fc7c7c;
+
 }
 
 .flow_bottom ul{
@@ -1656,33 +1690,43 @@ section a{
 
 @keyframes flow_roll {
     0% {
-        transform: translateX(-100%);
-    }
-    100% {
         transform: translateX(0);
     }
+    100% {
+        transform: translateX(calc(100% - calc(100px / 14)));
+    }
+}
+
+.sectionPin{
+    position: absolute;
+    width: 100%;
+    bottom: 6%;
 }
 
 .pin-wrap{
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .pin-wrap p{
+    display: flex;
+    justify-content: space-around;
     text-transform: uppercase;
     color: #fff;
     font-size: 100px;
     text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
     font-weight: bold;
     line-height: 100px;
+    animation: flow_roll 30s linear infinite;
 }
 
 .notion{
     position: fixed;
     top: 13%;
     left: 5%;
-    width: 50px;
-    height: 50px;
-    z-index: 9998;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
     transition: all 0.5s;
 }
 
@@ -1718,8 +1762,21 @@ section a{
     display: none;
 }
 
-#qr + label{
-    display: block;
+#qr + label::before{
+    content: "이력서";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s;
+    animation: ani1 5s 0s ease infinite alternate;
+}
+
+@keyframes ani1 {
+    50%{color: #f95d5d; content: "click!!";}
 }
 
 .qr_depth{
@@ -1752,6 +1809,11 @@ section a{
 .notion .down{
     color: #fff;
     transform: rotate(45deg) translateY(20px) translateX(-10px);
+}
+
+.notion.on #qr + label::before{
+    background: #33343b;
+    color: #fff;
 }
 
 .notion.on .down{
@@ -1808,7 +1870,7 @@ section a{
         width: max-content;
     }
     .notion .down{
-        transform: rotate(45deg) translateY(0px) translateX(-21px) scale(0.3);
+        transform: rotate(45deg) translateY(17px) translateX(-21px) scale(0.8);
     }
 }
 @media (max-width:1440px){
@@ -1838,7 +1900,8 @@ section a{
         transform: translateY(20px) scale(1);
     }
     .my_text{
-        display: none;
+        margin: 0 0 0 100px;
+        /* display: none; */
     }
     .chart__title{
         display: none;
@@ -1866,6 +1929,9 @@ section a{
     }
     #renewal .owl-pagination{
         display: none;
+    }
+    #renewal .title_info::before{
+        left: 30%;
     }
     .renewal_imgbox{
     }
@@ -2089,14 +2155,35 @@ section a{
     }
     .notion{
         left: 30px;
-        width: 30px;
-        height: 30px;
+    }
+    #qr + label{
+        width: 40px;
+        height: 40px;
     }
     .notion.on{
-        top: 14px;
+        top: inherit;
+        bottom: 6%;
+        left: inherit;
+        right: 3%;
+        width: 50px;
+    }
+    .top_btn{
+        right: 3%;
+        bottom: 1%;
+    }
+
+    .notion #qr + label::before{
+        width: 50px;
+        height: 50px;
     }
     .notion .down{
         transform: scale(0);
+    }
+    .notion.on .qr_depth{
+        top: inherit;
+        bottom: calc(100% + 10px);
+        left: inherit;
+        right: 3px;
     }
     .word_area .chars .char{
         padding: 10px;
@@ -2126,17 +2213,19 @@ section a{
         margin: 0 auto;
     }
     .photo{
-        margin: 0;
+        width: 80%;
+        margin: 0 auto;
         height: 100px;
         position: relative;
         top: -60px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
     .photo_zone{
         margin: 0;
         height: 100%;
-        width: 100%;
+        width: 150px;
         transform: none;
         display: flex;
         align-items: center;
@@ -2149,11 +2238,10 @@ section a{
         left: 0;
     }
     .my_bg{
-        height: 90px;
-        width: 90px;
-        left: 23px;
-        top: 230px;
-        display: none;
+        height: 70px;
+        width: 70px;
+        left: 15px;
+        top: 235px;
     }
     /* .photo{
         height: 240px;
@@ -2179,6 +2267,7 @@ section a{
     .charts{
         padding: 10px 0 0;
         margin: 10px 0 0;
+        height: 228px;
     }
     .certificate table{
         margin: 10px auto;
@@ -2197,6 +2286,13 @@ section a{
     }
     .title span span{
         font-size: 40px;
+    }
+    .title_info{
+        margin-bottom: 19px;
+    }
+    #renewal .title_info::before{
+        bottom: -24px;
+        left: calc(50% - 1px);
     }
     .img_box{
         margin-top: 6px;
@@ -2222,7 +2318,7 @@ section a{
         font-size: 11px;
     }
     .info p{
-        font-size: 11px;
+        margin: 0 0 4px;
     }
     .info h2{
         font-size: 30px;
@@ -2255,7 +2351,7 @@ section a{
         margin-left: 0;
     }
     .re_textbox p{
-        margin: 4px 0 0;
+        text-align: start;
     }
     #react .p_img_box{
         height: 200px;
@@ -2301,12 +2397,12 @@ section a{
         
     }
     #renewal .renewal_text p{
-        /* display: none; */
-        font-size: 11px;
+        font-size: 13px;
+        margin: 0 0 4px;
     }
     .renewal_textarea{
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
     }
     .renewal_img img{
         filter: none;
@@ -2342,17 +2438,13 @@ section a{
         font-size: 20px;
     }
     .pin-wrap p{
-        font-size: 60px;
-        line-height: 60px;
+        /* line-height: 60px; */
     }
     .thanks_bottom{
         padding-bottom: 0;
     }
-    .my_text{
-        margin-top: 10px;
-    }
     .my_text p{
-        font-size: 13px;
+        font-size: 10px;
     }
     .my_text p:first-child{
         margin: 0;
