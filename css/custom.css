@@ -148,6 +148,10 @@ section{
     height: 20px;
 }
 
+#about .title_info::before{
+    display: none;
+}
+
 #renewal .title_info::before{
     left: calc(30% - 1px);
     bottom: 0;
@@ -200,6 +204,9 @@ section{
     bottom: -25px;
 }
 
+#react .text_b{
+    z-index: 21;
+}
 
 .container_lg h2{
     /* font-size: 70px; */
@@ -1862,6 +1869,15 @@ section a{
       background: #fafafa;
     }
 }
+@media (max-width:1920px) {
+    .word_area{
+        width: 500px;
+    }
+    .word_area .chars .char{
+        padding: 20px 30px;
+        font-size: 82px;
+    }
+}
 @media (max-width:1567px) {
     .container_lg{
         width: 80%;
@@ -1935,7 +1951,7 @@ section a{
         display: none;
     }
     #renewal .title_info::before{
-        left: 30%;
+        left: 50%;
     }
     .renewal_imgbox{
     }
@@ -1948,6 +1964,56 @@ section a{
     }
     #jas a{
         margin: 10px 0;
+    }
+}
+@media (max-width:1351px) {
+
+    .renewal_img{
+        position: absolute;
+        padding: 0;
+    }
+    #renewal .item{
+        color: #222;
+        height: 350px;
+    }
+    .renewal_text h4{
+        color: #fff;
+        text-shadow: -3px 3px 0px #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+        width: max-content;
+    }
+    .re_right3{
+        /* color: #fff; */
+    }
+
+    .renewal_imgbox{
+    }
+
+    #renewal .renewal_text p{
+        font-size: 13px;
+        margin: 0 0 4px;
+    }
+    .renewal_textarea{
+        position: absolute;
+        bottom: 10%;
+        width: max-content;
+        background: #ffffffc4;
+        border-radius: 10px;
+        padding: 2px 5px;
+        border: 1px solid #33343b;
+        box-sizing: border-box;
+    }
+    .before_wrap{
+        width: max-content;
+    }
+    .renewal_img img{
+        filter: none;
+    }
+    #renewal .owl-carousel{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .renewal_img{
+        width: 100%;
     }
 }
 @media (max-width:1280px) {
@@ -2034,6 +2100,9 @@ section a{
     #about .title_b p{
         background: none;
     }
+    #about .title_info::before{
+        display: block;
+    }
     #hard .info p{
         font-size: 13px;
     }
@@ -2112,6 +2181,52 @@ section a{
     .word_area .chars .char{
         font-size: 40px;
         padding: 5px 14px;
+    }
+    .flex-sm{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .img_box{
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+    }
+    .p_img_box, .p_img_box_h{
+        height: 250px;
+        width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.45) -20px 0px 20px -20px;
+    }
+    #cms .info, #hard .info{
+        align-items: center;
+    }
+    #hard ul{
+        justify-content: center;
+    }
+    .re_wrap > li label{
+        padding: 10px;
+    }
+    #react .info{
+        position: relative;
+        left: 0;
+    }
+    .re_depth{
+        width: 100%;
+        height: auto;
+        top: 100%;
+        left: 0;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .re_textbox p{
+        text-align: start;
+    }
+    #react .p_img_box{
+        height: 200px;
     }
 }
 @media (max-width: 957px) {
@@ -2216,6 +2331,9 @@ section a{
     .introduce_textbox{
         font-size: 5rem;
     }
+    #about .title_info::before{
+        display: none;
+    }
     .about_me{
         width: 80%;
         top: -40px;
@@ -2241,6 +2359,7 @@ section a{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
     }
     .my{
         top: -200px;
@@ -2257,22 +2376,14 @@ section a{
         left: 15px;
         top: 235px;
     }
-    /* .photo{
-        height: 240px;
-        width: 80%;
-        margin: -69px auto 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .photo_zone{
-        transform: scale(0.5);
-    } */
 
     .my_text{
         margin: 0;
         position: relative;
-        left: -30px;
+        width: 100%;
+    }
+    .my_text p{
+        margin: 0;
     }
     .about_depth{
         top: 100%;
@@ -2396,30 +2507,22 @@ section a{
         /* color: #fff; */
     }
     .re_right3 h4{
-        font-size: 35px;
-    }
-    #renewal .owl-pagination{
-        flex-direction: initial;
-        top: -16px;
-        right: calc(50% - 96px);
-        display: none;
-    }
-    .renewal_imgbox{
-    }
-    #renewal .owl-pagination .owl-page{
-        transform: scale(0.6);
-        
+        font-size: 30px;
     }
     #renewal .renewal_text p{
         font-size: 13px;
         margin: 0 0 4px;
     }
     .renewal_textarea{
-        position: absolute;
-        bottom: 10px;
+        bottom: 0;
+        width: auto;
+        position: relative;
     }
-    .renewal_img img{
-        filter: none;
+    #renewal .renewal_text{
+        margin-left: 0;
+        display: grid;
+        align-content: space-evenly;
+        justify-items: center;
     }
     .todo{
         height: 300px;
@@ -2483,7 +2586,12 @@ section a{
     }
     .before_wrap{
         width: 87%;
-        top: 20px;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .before_wrap a{
         margin: 10px 0 0;
@@ -2562,7 +2670,7 @@ section a{
         padding: 0;
     }
     .word_area{
-        width: 40%;
+        width: 33%;
     }
     #about .title_b p{
         background-position: 18px;
@@ -2580,6 +2688,16 @@ section a{
         width: 52px;
         font-size: 10px;
         padding: 2px 0;
+    }
+}
+@media (max-width:444px){
+    .word_area{
+        width: 35%;
+    }
+}
+@media (max-width:416px){
+    .word_area{
+        width: 40%;
     }
 }
 @media (max-width:347px) {
