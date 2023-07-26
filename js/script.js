@@ -1,26 +1,8 @@
 let isScroll = false;
 
-// window.addEventListener("wheel", function(e){
-//     e.preventDefault();
-// },{passive : false});
-
 
 $(function(){
     Splitting();
-
-
-    // f_scroll();
-
-    // setTimeout(function(){
-    //     console.log(isScroll)
-    //     if(isScroll == 0){
-    //         console.log("1")
-    //         page = 2
-    //         var posTop =(page-1) * $(window).height();
-    //         mHtml.animate({scrollTop : posTop}, 500);
-    //     }
-    // }, 2500)
-
 
         const mHtml = $("html");
         var page = 1;
@@ -55,7 +37,6 @@ $(function(){
             }
         })
 
-
         $("#topBtn").on("click",function() {
             page = 1;
             isScroll = false;
@@ -63,20 +44,6 @@ $(function(){
                 scrollTop : 0
             }, 600);
         });
-
-        // 텍스트 쪼개서 서로 다른 색 나오게 하기
-        // $('.text').html(function(i, html) {
-        //     let chars = $.trim(html).split("");
-        
-        //     return '<span>' + chars.join('</span><span>') + '</span>';
-        // });
-        
-
-        
-        
-
-
-
 
         const canvas = document.getElementById("particles");
         if (canvas.getContext){
@@ -226,8 +193,6 @@ $(function(){
     window.addEventListener('touchstart', mousedown, false);
     window.addEventListener('touchend', mouseup, false);
     window.addEventListener('mouseup', mouseup, false);
-
-
 
 })
 

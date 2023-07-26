@@ -242,28 +242,6 @@ $chartBarGap: 10px;
     animation: 1s anim-lightspeed-in ease forwards;
 }
 
-// 타이틀 텍스트 타이핑 애니메이션
-@keyframes typing {
-    from { width: 0; 
-    }
-    to   { width: 100%; 
-    }
-}
-
-@keyframes blink-start {
-    from, to { border-color: #ae274f; 
-    }
-    50% { border-color: transparent; 
-    }
-}
-
-@keyframes blink-end {
-    from, to { border-color: transparent; 
-    }
-    50% { border-color: transparent; 
-    }
-}
-
 // 
 
 
