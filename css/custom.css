@@ -260,7 +260,7 @@ section{
 }
 
 .introduce_textbox.appear2{
-    animation: appear 3s ease forwards;
+    animation: appear 1.2s ease forwards;
 }
 @keyframes appear {
     0%{visibility: visible; opacity: 1; transform: translate3d(0, -1%, 0);}
