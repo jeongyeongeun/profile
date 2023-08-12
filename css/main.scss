@@ -554,11 +554,10 @@ $chartBarGap: 10px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background: white;
+    background: #f95d5d;
     position: fixed;
     z-index: 99999;
     pointer-events: none;
-    mix-blend-mode: difference;
 
     &-f {
         width: var(--size);
