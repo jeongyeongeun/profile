@@ -11,10 +11,10 @@ body {
   margin: 0 auto;
 }
 .content-row {
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 .bg-gray {
   background-color: #f5f5f5;
@@ -296,11 +296,9 @@ hr.colored {
 .navbar .navbar-nav li a:focus {
   outline: none;
 }
-header {
+#intro {
   position: relative;
   display: block;
-  height: auto;
-  width: auto;
   background-color: #222;
   background: no-repeat center center;
   background-attachment: scroll;
@@ -311,12 +309,12 @@ header {
   padding: 100px 0;
   overflow: hidden;
 }
-header .intro-content {
+#intro .intro-content {
   color: white;
   text-align: center;
   position: relative;
 }
-header .brand-name {
+#intro .brand-name {
   position: relative;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 55px;
@@ -326,24 +324,24 @@ header .brand-name {
   margin-top: 15px;
   text-align: center;
 }
-header .brand-name-subtext {
+#intro .brand-name-subtext {
   position: relative;
   font-size: 20px;
   line-height: 20px;
   font-weight: 300;
   color: #222;
 }
-header img {
+#intro img {
   max-width: 150px;
   max-height: 150px;
 }
-header .scroll-down {
+#intro .scroll-down {
   position: absolute;
   width: 100%;
   bottom: 20px;
   text-align: center;
 }
-header .scroll-down .btn {
+#intro .scroll-down .btn {
   height: 50px;
   width: 50px;
   border: 2px solid rgb(0, 0, 0);
@@ -357,26 +355,26 @@ header .scroll-down .btn {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-header .scroll-down .btn:hover {
+#intro .scroll-down .btn:hover {
   color: #9836ff;
   border-color:#9836ff;
   outline: none;
 }
 
-header .scroll-down .btn::after{
+#intro .scroll-down .btn::after{
   display: block;
   content: GO!;
 
 
 }
 @media (min-width: 768px) {
-  header {
+  #intro {
     height: 100%;
     width: 100%;
     padding: 0;
     background-attachment: scroll;
   }
-  header .intro-content {
+  #intro .intro-content {
     color: white;
     text-align: center;
     width: 100%;
@@ -388,26 +386,26 @@ header .scroll-down .btn::after{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  header .brand-name {
+  #intro .brand-name {
     font-size: 80px;
     line-height: 80px;
   }
-  header .brand-name-subtext {
+  #intro .brand-name-subtext {
     top: 10px;
     font-size: 30px;
     line-height: 30px;
   }
-  header img {
+  #intro img {
     max-width: 250px;
     max-height: 250px;
   }
 }
 @media (min-width: 1025px) {
-  header {
+  #intro {
     background-attachment: fixed;
   }
 }
-header.video .overlay {
+#intro.video .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -415,14 +413,14 @@ header.video .overlay {
   z-index: 998;
   opacity: 0;
 }
-header.video .intro-content {
+#intro.video .intro-content {
   z-index: 999;
 }
-header.video .scroll-down {
+#intro.video .scroll-down {
   z-index: 999;
 }
 @media (min-width: 768px) {
-  header.video .overlay {
+  #intro.video .overlay {
     opacity: 0.5;
   }
 }
@@ -1201,7 +1199,7 @@ body.modern h5,
 body.modern h6,
 body.modern .navbar-brand,
 body.modern p.lead,
-body.modern header .brand-name,
+body.modern #intro .brand-name,
 body.modern .portfolio-carousel .project-name,
 body.modern .testimonials .testimonial-author .name {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -1226,7 +1224,7 @@ body.vintage h5,
 body.vintage h6,
 body.vintage .navbar-brand,
 body.vintage p.lead,
-body.vintage header .brand-name,
+body.vintage #intro .brand-name,
 body.vintage .portfolio-carousel .project-name,
 body.vintage .testimonials .testimonial-author .name {
   font-family: "Sanchez", "Helvetica Neue", Helvetica, Arial, sans-serif !important;

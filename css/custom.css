@@ -10,7 +10,7 @@ ul,ol,dl{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999999999;
+    z-index: 9999;
     background: #33343b;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ ul,ol,dl{
 
 
 .container_lg{
-    width: 1400px;
+    width: 1280px;
     margin: 0 auto;
     display: flex;
     /* align-items: center; */
@@ -59,7 +59,7 @@ ul,ol,dl{
 
 .title{
     font-family: 'NanumSquareExtraBold';
-    margin: 50px 0 0;
+    /* margin: 50px 0 0; */
     padding: 20px 0 0;
     font-weight: 200;
     position: relative;
@@ -105,9 +105,19 @@ ul,ol,dl{
     position: relative;
 }
 
-#about .title_b h1 span:first-child::before{
+#about .title_b h1 span .word:first-child::before{
+    content: "INT";
     width: 90px;
     height: 90px;
+    transform: none;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: none;
+}
+
+#about .title_b h1 span .word .char[data-char="I"], #about .title_b h1 span .word .char[data-char="n"]{
+    visibility: hidden;
 }
 
 #react .title{
@@ -116,14 +126,14 @@ ul,ol,dl{
 
 .title_info{
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .title_info::before{
     position: absolute;
     display: block;
     content: "";
-    bottom: -20px;
+    bottom: -30px;
     left: calc(50% - 1px);
     background: url(../img/agency/deco1.svg) no-repeat;
     width: 20px;
@@ -238,6 +248,8 @@ section{
     z-index: -1;
 }
 
+
+
 .introduce_textbox.appear2{
     animation: appear 1.2s ease forwards;
 }
@@ -249,7 +261,7 @@ section{
 .dot{
     content: "";
     width: 100px;
-    height: 250px;
+    height: 180px;
     top: 0;
     right: 5%;
     z-index: 1;
@@ -267,7 +279,7 @@ section{
     position: absolute;
     display: block;
     width: 100%;
-    font-size: 7rem;
+    font-size: 6rem;
     color: #fff;
 }
 
@@ -375,9 +387,10 @@ section .container .left{
 
 /* 헤더 */
 
-#header{
+#intro{
     width: 100%;
     height: 100%;
+    padding: 0;
 }
 
 .brand-name-subtext{
@@ -452,7 +465,7 @@ section .container .left{
     visibility: hidden;
 }
 
-.demo .brand-name{
+#intro .demo .brand-name{
     position: absolute;
     font-size: 100px;
     /* font-weight: 300; */
@@ -636,7 +649,7 @@ section .container .left{
 .p_img_box{
     position: relative;
     width: 100%;
-    /* height: 300px; */
+    height: 400px;
     overflow: hidden;
     background: url(../img/agency/portfolio/cafe24.png);
     background-size: cover;
@@ -656,7 +669,7 @@ section .container .left{
 
 .p_img_box_h{
     width: 100%;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     background: url(../img/agency/portfolio/hard.png);
     background-size: cover;
@@ -674,16 +687,21 @@ section .container .left{
     background: #fffbf6;
     background-size: 100px;
     background-position-y: -50px;
+    padding: 80px 0;
 }
 
 #about .title_b{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #about .title_b p{
     background: url(../img/agency/deco1.svg) no-repeat;
     background-size: 20px;
     background-position: 200px;
+}
+
+#about .title_info{
+    margin-bottom: 30px;
 }
 
 #about .container_lg{
@@ -701,6 +719,7 @@ section .container .left{
 }
 
 .photo{
+    transform: scale(0.8);
     height: 400px;
 }
 
@@ -770,6 +789,7 @@ section .container .left{
 
 .about_me{
     position: relative;
+    transform: scale(0.9);
     /* width: 300px; */
 }
 
@@ -791,7 +811,7 @@ section .container .left{
 
 .about_me li input:checked ~ .about_depth{
     z-index: 10;
-    border: 2px solid var(--color);
+    border: 1px solid var(--color);
 }
 
 .about_me li label{
@@ -818,6 +838,7 @@ section .container .left{
     left: 0;
     background-color: #fff;
     border-radius: 20px;
+    border: 1px solid var(--color);
     box-shadow: var(--color) 0px 25px 50px -12px;
     transition: 0.2s;
 }
@@ -828,6 +849,7 @@ section .container .left{
 }
 .certificate table{
     margin: 70px auto;
+    width: 90%;
 }
 
 .certificate th{
@@ -843,6 +865,7 @@ section .container .left{
 
 .certificate td:last-child{
     padding: 0 15px;
+    text-align: end;
 }
 
 .certificate td i{
@@ -963,10 +986,8 @@ section a{
 }
 
 #hard ul{
-    width: 72%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #hard ul li{
@@ -1235,8 +1256,8 @@ section a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 500px;
+    width:  60%;
+    height: 350px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
@@ -1254,14 +1275,14 @@ section a{
     height: 100%;
     background-color: #bd85f9;
     background: url(../img/agency/portfolio/todo.png) no-repeat;
-    background-size: 1280px;
+    background-size: 166%;
     background-position: center -67px;
     transition: 0.3s;
     border-radius: 6px;
 }
 
 .todo .todo_img:hover{
-    background-size: 120%;
+    /* background-size: 120%; */
 }
 
 #jas a{
@@ -1359,7 +1380,7 @@ section a{
         top: 0;
         transform: inherit;
     }
-    #header .brand-name{
+    #intro .brand-name{
         margin-top: 40px;
     }
 }
@@ -1788,7 +1809,7 @@ section a{
     .container_lg{
         width: 80%;
     }
-    #header .intro-content{
+    #intro .intro-content{
         position: relative;
         top: -67%;
     }
@@ -2231,7 +2252,7 @@ section a{
         top: 0;
         left: 0;
     }
-    #header .intro-content{
+    #intro .intro-content{
         top: -80px;
     }
     .dot{
