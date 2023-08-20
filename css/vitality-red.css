@@ -138,14 +138,12 @@ h1,h2{
   font-size: 50px;
   font-family: 'NanumSquareExtraBold';
 }
-@media (max-width: 481px) {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 40px;
+@media (max-width: 1280px) {
+  h1,h2{
+    font-size: 36px;
   }
 }
+
 hr {
   max-width: 100px;
   border-top: 1px solid white;
@@ -210,7 +208,7 @@ hr.colored {
 .navbar-default .navbar-toggle,
 .navbar-inverse .navbar-toggle {
   color: white;
-  font-size: 14px;
+  font-size: 30px;
   padding: 6px 10px;
   border: 0;
   transition: 0.3s;
@@ -250,8 +248,8 @@ hr.colored {
 }
 .navbar-default .navbar-brand img,
 .navbar-inverse .navbar-brand img {
-  margin-top: -8px;
-  height: 40px;
+  margin-top: -4px;
+  height: 30px;
 }
 .navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {

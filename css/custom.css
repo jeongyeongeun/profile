@@ -105,7 +105,7 @@ ul,ol,dl{
     position: relative;
 }
 
-#about .title_b h1 span .word:first-child::before{
+/* #about .title_b h1 span .word:first-child::before{
     content: "INT";
     width: 90px;
     height: 90px;
@@ -114,11 +114,11 @@ ul,ol,dl{
     left: 0;
     color: #fff;
     background: none;
-}
+} */
 
-#about .title_b h1 span .word .char[data-char="I"], #about .title_b h1 span .word .char[data-char="n"]{
+/* #about .title_b h1 span .word .char[data-char="I"], #about .title_b h1 span .word .char[data-char="n"]{
     visibility: hidden;
-}
+} */
 
 #react .title{
     background-position: 440px;
@@ -1360,7 +1360,7 @@ section a{
     }
     
     .navbar-left .container{
-        width: auto;
+        display: flex;
     }
     
     .navbar-left .navbar-header{
@@ -1960,9 +1960,9 @@ section a{
     #about, #cms, #hard, #renewal, #jas{
         background: #fffbf6;
     }
-    .title{
+    /* .title{
         margin: 0 0 30px 0;
-    }
+    } */
     .chart__title{
         display: none;
     }
@@ -2077,10 +2077,10 @@ section a{
         height: 52%;
     }
     .my_bg{
-        /* top: 27px; */
+        top: 27px;
     }
     .my_img{
-        /* top: 0; */
+        top: 0;
     }
     .word_area{
         width: 30%;
@@ -2098,9 +2098,8 @@ section a{
     .navbar-header{
         width: 19%;
     }
-    .certificate .history td{
-        padding-left: 30px;
-        padding-right: 0;
+    .certificate td{
+        padding: 10px 0;
     }
     .certificate .history td i{
         left: 0;
@@ -2188,6 +2187,8 @@ section a{
     #navi.navbar-inverse .navbar-toggle{
         position: absolute;
         right: 4px;
+        top: -6px;
+        margin-right: 0;
     }
     #navi.navbar-left .navbar-nav >li>a{
         color: #fff;
@@ -2258,6 +2259,12 @@ section a{
     .dot{
         display: none;
     }
+    #about .title_b{
+        margin-bottom: 0;
+    }
+    #about .title_info{
+        margin-bottom: 0;
+    }
     .title span:first-child:before, #renewal h2 span:first-child::before, #jas h2 span:first-child::before, #about .title_b h1 span:first-child::before{
         display: none;
     }
@@ -2269,17 +2276,16 @@ section a{
     }
     .about_me{
         width: 80%;
-        top: -40px;
+        top: 0;
         left: 10%;
         padding: 0;
         margin: 0 auto;
     }
     .photo{
-        width: 80%;
         margin: 0 auto;
         height: 100px;
         position: relative;
-        top: -60px;
+        top: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -2317,6 +2323,7 @@ section a{
     }
     .my_text p{
         margin: 0;
+        font-size: 13px;
     }
     .about_depth{
         top: 100%;
@@ -2347,6 +2354,9 @@ section a{
     }
     .title_info{
         margin-bottom: 19px;
+    }
+    .title_info::before{
+        display: none;
     }
     #renewal .title_info::before{
         bottom: -24px;
@@ -2493,9 +2503,6 @@ section a{
     }
     .thanks_bottom{
         padding-bottom: 0;
-    }
-    .my_text p{
-        font-size: 10px;
     }
     .my_text p:first-child{
         margin: 0;
